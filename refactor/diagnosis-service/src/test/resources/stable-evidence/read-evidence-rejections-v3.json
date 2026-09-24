@@ -1,0 +1,54 @@
+{
+  "source": "evaluation\\results\\stable-development-v3\\exports\\DEV-P2\\rounds.json",
+  "kind": "ACTUAL_SANITIZED_ACTIONS_NOT_EXPECTED_CAUSAL_ANSWERS",
+  "actions": [
+    {
+      "type": "tool",
+      "tool": "readEvidence",
+      "evidenceId": "48644bc8-80aa-450c-93c4-51a6016b1d45",
+      "page": 1,
+      "retainFactIds": [
+        "Fed1e53605a71517b1075c7df",
+        "F15aeea830b5e73a7a9f6859a",
+        "F4b8cf518af1ffcec8c31e53a",
+        "Ff5d59df93c33acbe6009322a",
+        "Ff98844daadd2ddd7f3da7362",
+        "F4137f81c3080405dbaf6aa5d",
+        "Ff88600cfdb790b9c50c0451c",
+        "F553e8b2f2cbd5a585dcf9648",
+        "Fe5fd5874d90523aad263e556",
+        "Fc13da5aecd08dbc12bf03141",
+        "F84848ee812f62e6fc4d88cec",
+        "F93c5dc0b3f5e3525837f59f3",
+        "Fa99f31cc8775e5ccb3f94fbf",
+        "F2dbded789bd89c01953a2076",
+        "Ffc1e73d2f439ca9965d847fb",
+        "F708f0efcfadbf8cec13c895a"
+      ]
+    },
+    {
+      "type": "tool",
+      "tool": "readEvidence",
+      "evidenceId": "48644bc8-80aa-450c-93c4-51a6016b1d45",
+      "page": 1,
+      "retainFactIds": [
+        "Fed1e53605a71517b1075c7df",
+        "F15aeea830b5e73a7a9f6859a",
+        "F4b8cf518af1ffcec8c31e53a",
+        "Ff5d59df93c33acbe6009322a",
+        "Ff98844daadd2ddd7f3da7362",
+        "F4137f81c3080405dbaf6aa5d",
+        "Ff88600cfdb790b9c50c0451c",
+        "F553e8b2f2cbd5a585dcf9648",
+        "Fe5fd5874d90523aad263e556",
+        "Fc13da5aecd08dbc12bf03141",
+        "F84848ee812f62e6fc4d88cec",
+        "F93c5dc0b3f5e3525837f59f3",
+        "Fa99f31cc8775e5ccb3f94fbf",
+        "F2dbded789bd89c01953a2076",
+        "Ffc1e73d2f439ca9965d847fb",
+        "F708f0efcfadbf8cec13c895a"
+      ]
+    }
+  ]
+}

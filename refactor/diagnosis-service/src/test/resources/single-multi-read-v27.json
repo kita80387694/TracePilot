@@ -1,0 +1,3428 @@
+{
+  "request": {
+    "service": "tracepilot-business",
+    "environment": "demo",
+    "start": "2026-09-24T06:56:20.010541+00:00",
+    "end": "2026-09-24T06:56:50.021461+00:00",
+    "symptom": "这一段几乎没有访问，请判断是否有异常依据。"
+  },
+  "evidence": [
+    {
+      "id": "3d5a7d4b-2a68-46ad-a66f-116483cdc49a",
+      "source": "overview",
+      "status": "AVAILABLE",
+      "start": "2026-09-24T06:56:50.224835400Z",
+      "end": "2026-09-24T06:56:50.224835400Z",
+      "locator": {
+        "query": {
+          "args": {},
+          "tool": "overview"
+        },
+        "service": "tracepilot-business",
+        "endpoint": "/ops/snapshot",
+        "environment": "demo",
+        "queryFingerprint": "2428633d967daa423372f8e1c2ad5a31481aee50f767ff5b78ffd5d3aebe7533"
+      },
+      "data": {
+        "http": {
+          "count": 608,
+          "routes": [
+            {
+              "count": 529,
+              "maxMs": 27.4056,
+              "route": "/api/slots",
+              "method": "GET",
+              "status": 200,
+              "totalMs": 1514.6921
+            },
+            {
+              "count": 2,
+              "maxMs": 0.0,
+              "route": "/api/me/notifications",
+              "method": "GET",
+              "status": 200,
+              "totalMs": 42.0961
+            },
+            {
+              "count": 60,
+              "maxMs": 0.0,
+              "route": "/api/reports/usage",
+              "method": "GET",
+              "status": 500,
+              "totalMs": 181157.5299
+            },
+            {
+              "count": 1,
+              "maxMs": 16.2082,
+              "route": "/api/reservations/{id}/cancel",
+              "method": "POST",
+              "status": 200,
+              "totalMs": 16.2082
+            },
+            {
+              "count": 2,
+              "maxMs": 29.3555,
+              "route": "/api/admin/slots",
+              "method": "POST",
+              "status": 200,
+              "totalMs": 311.679
+            },
+            {
+              "count": 10,
+              "maxMs": 0.0,
+              "route": "/api/reports/usage",
+              "method": "GET",
+              "status": 200,
+              "totalMs": 76.165
+            },
+            {
+              "count": 2,
+              "maxMs": 32.1758,
+              "route": "/api/reservations",
+              "method": "POST",
+              "status": 200,
+              "totalMs": 63.4819
+            },
+            {
+              "count": 2,
+              "maxMs": 24.3645,
+              "route": "/api/admin/resources",
+              "method": "POST",
+              "status": 200,
+              "totalMs": 92.2512
+            }
+          ],
+          "status": "NO_REQUESTS",
+          "totalMs": 183274.1034,
+          "averageMs": null,
+          "errorRate": null,
+          "errors5xx": 60,
+          "intervalEnd": "2026-09-24T06:56:50.224835400Z",
+          "intervalCount": 0,
+          "intervalStart": "2026-09-24T06:56:49.208377500Z",
+          "intervalCoverage": "BETWEEN_SAMPLES",
+          "businessRejections": 0
+        },
+        "pool": {
+          "max": 4,
+          "idle": 3,
+          "total": 4,
+          "active": 1,
+          "status": "AVAILABLE",
+          "pending": 0,
+          "sampledAt": "2026-09-24T06:56:50.224835400Z"
+        },
+        "time": "2026-09-24T06:56:50.224835400Z",
+        "events": {
+          "status": "AVAILABLE",
+          "failure": 1.0,
+          "pending": 0,
+          "success": 3.0,
+          "oldestSeconds": 0.0
+        },
+        "status": "AVAILABLE",
+        "service": "tracepilot-business",
+        "evidenceId": "4d185194-2e90-40f5-bd38-440bafebc7c2",
+        "instanceId": "a2a7b4ae-5832-4f08-8fe7-064f440bfdb0",
+        "collectedAt": "2026-09-24T06:56:50.224835400Z",
+        "environment": "demo",
+        "sampleAgeMs": 187,
+        "deploymentVersion": "sha256-18a70c8fd2baebc3ff5affc3921c5f7c91b91f884b3dc7b04135d88783035079",
+        "collectionDurationMs": 0
+      }
+    },
+    {
+      "id": "5aaca226-137e-4195-a373-cce7883d5a1a",
+      "source": "metrics",
+      "status": "AVAILABLE",
+      "start": "2026-09-24T06:56:20.010541Z",
+      "end": "2026-09-24T06:56:50.021461Z",
+      "locator": {
+        "query": {
+          "args": {
+            "limit": "200"
+          },
+          "tool": "metrics"
+        },
+        "service": "tracepilot-business",
+        "endpoint": "/ops/samples?start=2026-09-24T06%3A56%3A20.010541Z&end=2026-09-24T06%3A56%3A50.021461Z&limit=200&cursor=0",
+        "environment": "demo",
+        "queryFingerprint": "d119d02bb504911f2a790ef6e9bd185009bdcb129a2412952071fdfac6b8770c"
+      },
+      "data": {
+        "end": "2026-09-24T06:56:50.021461Z",
+        "gap": "NONE",
+        "data": [
+          {
+            "http": {
+              "count": 608,
+              "routes": [
+                {
+                  "count": 529,
+                  "maxMs": 27.4056,
+                  "route": "/api/slots",
+                  "method": "GET",
+                  "status": 200,
+                  "totalMs": 1514.6921
+                },
+                {
+                  "count": 2,
+                  "maxMs": 0.0,
+                  "route": "/api/me/notifications",
+                  "method": "GET",
+                  "status": 200,
+                  "totalMs": 42.0961
+                },
+                {
+                  "count": 60,
+                  "maxMs": 0.0,
+                  "route": "/api/reports/usage",
+                  "method": "GET",
+                  "status": 500,
+                  "totalMs": 181157.5299
+                },
+                {
+                  "count": 1,
+                  "maxMs": 16.2082,
+                  "route": "/api/reservations/{id}/cancel",
+                  "method": "POST",
+                  "status": 200,
+                  "totalMs": 16.2082
+                },
+                {
+                  "count": 2,
+                  "maxMs": 29.3555,
+                  "route": "/api/admin/slots",
+                  "method": "POST",
+                  "status": 200,
+                  "totalMs": 311.679
+                },
+                {
+                  "count": 10,
+                  "maxMs": 0.0,
+                  "route": "/api/reports/usage",
+                  "method": "GET",
+                  "status": 200,
+                  "totalMs": 76.165
+                },
+                {
+                  "count": 2,
+                  "maxMs": 32.1758,
+                  "route": "/api/reservations",
+                  "method": "POST",
+                  "status": 200,
+                  "totalMs": 63.4819
+                },
+                {
+                  "count": 2,
+                  "maxMs": 24.3645,
+                  "route": "/api/admin/resources",
+                  "method": "POST",
+                  "status": 200,
+                  "totalMs": 92.2512
+                }
+              ],
+              "status": "NO_REQUESTS",
+              "totalMs": 183274.1034,
+              "averageMs": null,
+              "errorRate": null,
+              "errors5xx": 60,
+              "intervalEnd": "2026-09-24T06:56:49.208377500Z",
+              "intervalCount": 0,
+              "intervalStart": "2026-09-24T06:56:48.196623200Z",
+              "intervalCoverage": "BETWEEN_SAMPLES",
+              "businessRejections": 0
+            },
+            "pool": {
+              "max": 4,
+              "idle": 4,
+              "total": 4,
+              "active": 0,
+              "status": "AVAILABLE",
+              "pending": 0,
+              "sampledAt": "2026-09-24T06:56:49.208377500Z"
+            },
+            "time": "2026-09-24T06:56:49.208377500Z",
+            "events": {
+              "status": "AVAILABLE",
+              "failure": 1.0,
+              "pending": 0,
+              "success": 3.0,
+              "oldestSeconds": 0.0
+            },
+            "status": "AVAILABLE",
+            "service": "tracepilot-business",
+            "evidenceId": "ba4c2c9e-a5b0-4993-99b6-cef08245e6f0",
+            "instanceId": "a2a7b4ae-5832-4f08-8fe7-064f440bfdb0",
+            "collectedAt": "2026-09-24T06:56:49.208956700Z",
+            "environment": "demo",
+            "deploymentVersion": "sha256-18a70c8fd2baebc3ff5affc3921c5f7c91b91f884b3dc7b04135d88783035079",
+            "collectionDurationMs": 0
+          },
+          {
+            "http": {
+              "count": 608,
+              "routes": [
+                {
+                  "count": 529,
+                  "maxMs": 27.4056,
+                  "route": "/api/slots",
+                  "method": "GET",
+                  "status": 200,
+                  "totalMs": 1514.6921
+                },
+                {
+                  "count": 2,
+                  "maxMs": 0.0,
+                  "route": "/api/me/notifications",
+                  "method": "GET",
+                  "status": 200,
+                  "totalMs": 42.0961
+                },
+                {
+                  "count": 60,
+                  "maxMs": 0.0,
+                  "route": "/api/reports/usage",
+                  "method": "GET",
+                  "status": 500,
+                  "totalMs": 181157.5299
+                },
+                {
+                  "count": 1,
+                  "maxMs": 16.2082,
+                  "route": "/api/reservations/{id}/cancel",
+                  "method": "POST",
+                  "status": 200,
+                  "totalMs": 16.2082
+                },
+                {
+                  "count": 2,
+                  "maxMs": 29.3555,
+                  "route": "/api/admin/slots",
+                  "method": "POST",
+                  "status": 200,
+                  "totalMs": 311.679
+                },
+                {
+                  "count": 10,
+                  "maxMs": 0.0,
+                  "route": "/api/reports/usage",
+                  "method": "GET",
+                  "status": 200,
+                  "totalMs": 76.165
+                },
+                {
+                  "count": 2,
+                  "maxMs": 32.1758,
+                  "route": "/api/reservations",
+                  "method": "POST",
+                  "status": 200,
+                  "totalMs": 63.4819
+                },
+                {
+                  "count": 2,
+                  "maxMs": 24.3645,
+                  "route": "/api/admin/resources",
+                  "method": "POST",
+                  "status": 200,
+                  "totalMs": 92.2512
+                }
+              ],
+              "status": "NO_REQUESTS",
+              "totalMs": 183274.1034,
+              "averageMs": null,
+              "errorRate": null,
+              "errors5xx": 60,
+              "intervalEnd": "2026-09-24T06:56:48.196623200Z",
+              "intervalCount": 0,
+              "intervalStart": "2026-09-24T06:56:47.192666100Z",
+              "intervalCoverage": "BETWEEN_SAMPLES",
+              "businessRejections": 0
+            },
+            "pool": {
+              "max": 4,
+              "idle": 4,
+              "total": 4,
+              "active": 0,
+              "status": "AVAILABLE",
+              "pending": 0,
+              "sampledAt": "2026-09-24T06:56:48.196623200Z"
+            },
+            "time": "2026-09-24T06:56:48.196623200Z",
+            "events": {
+              "status": "AVAILABLE",
+              "failure": 1.0,
+              "pending": 0,
+              "success": 3.0,
+              "oldestSeconds": 0.0
+            },
+            "status": "AVAILABLE",
+            "service": "tracepilot-business",
+            "evidenceId": "e50bdaa0-718c-45dc-a162-b89e92715918",
+            "instanceId": "a2a7b4ae-5832-4f08-8fe7-064f440bfdb0",
+            "collectedAt": "2026-09-24T06:56:48.196623200Z",
+            "environment": "demo",
+            "deploymentVersion": "sha256-18a70c8fd2baebc3ff5affc3921c5f7c91b91f884b3dc7b04135d88783035079",
+            "collectionDurationMs": 0
+          },
+          {
+            "http": {
+              "count": 608,
+              "routes": [
+                {
+                  "count": 529,
+                  "maxMs": 27.4056,
+                  "route": "/api/slots",
+                  "method": "GET",
+                  "status": 200,
+                  "totalMs": 1514.6921
+                },
+                {
+                  "count": 2,
+                  "maxMs": 0.0,
+                  "route": "/api/me/notifications",
+                  "method": "GET",
+                  "status": 200,
+                  "totalMs": 42.0961
+                },
+                {
+                  "count": 60,
+                  "maxMs": 0.0,
+                  "route": "/api/reports/usage",
+                  "method": "GET",
+                  "status": 500,
+                  "totalMs": 181157.5299
+                },
+                {
+                  "count": 1,
+                  "maxMs": 16.2082,
+                  "route": "/api/reservations/{id}/cancel",
+                  "method": "POST",
+                  "status": 200,
+                  "totalMs": 16.2082
+                },
+                {
+                  "count": 2,
+                  "maxMs": 29.3555,
+                  "route": "/api/admin/slots",
+                  "method": "POST",
+                  "status": 200,
+                  "totalMs": 311.679
+                },
+                {
+                  "count": 10,
+                  "maxMs": 0.0,
+                  "route": "/api/reports/usage",
+                  "method": "GET",
+                  "status": 200,
+                  "totalMs": 76.165
+                },
+                {
+                  "count": 2,
+                  "maxMs": 32.1758,
+                  "route": "/api/reservations",
+                  "method": "POST",
+                  "status": 200,
+                  "totalMs": 63.4819
+                },
+                {
+                  "count": 2,
+                  "maxMs": 24.3645,
+                  "route": "/api/admin/resources",
+                  "method": "POST",
+                  "status": 200,
+                  "totalMs": 92.2512
+                }
+              ],
+              "status": "NO_REQUESTS",
+              "totalMs": 183274.1034,
+              "averageMs": null,
+              "errorRate": null,
+              "errors5xx": 60,
+              "intervalEnd": "2026-09-24T06:56:47.192666100Z",
+              "intervalCount": 0,
+              "intervalStart": "2026-09-24T06:56:46.179449Z",
+              "intervalCoverage": "BETWEEN_SAMPLES",
+              "businessRejections": 0
+            },
+            "pool": {
+              "max": 4,
+              "idle": 3,
+              "total": 4,
+              "active": 1,
+              "status": "AVAILABLE",
+              "pending": 0,
+              "sampledAt": "2026-09-24T06:56:47.192666100Z"
+            },
+            "time": "2026-09-24T06:56:47.192666100Z",
+            "events": {
+              "status": "AVAILABLE",
+              "failure": 1.0,
+              "pending": 0,
+              "success": 3.0,
+              "oldestSeconds": 0.0
+            },
+            "status": "AVAILABLE",
+            "service": "tracepilot-business",
+            "evidenceId": "b70916a2-40d5-4e44-94a3-6db033571bd0",
+            "instanceId": "a2a7b4ae-5832-4f08-8fe7-064f440bfdb0",
+            "collectedAt": "2026-09-24T06:56:47.193312700Z",
+            "environment": "demo",
+            "deploymentVersion": "sha256-18a70c8fd2baebc3ff5affc3921c5f7c91b91f884b3dc7b04135d88783035079",
+            "collectionDurationMs": 0
+          },
+          {
+            "http": {
+              "count": 608,
+              "routes": [
+                {
+                  "count": 529,
+                  "maxMs": 27.4056,
+                  "route": "/api/slots",
+                  "method": "GET",
+                  "status": 200,
+                  "totalMs": 1514.6921
+                },
+                {
+                  "count": 2,
+                  "maxMs": 0.0,
+                  "route": "/api/me/notifications",
+                  "method": "GET",
+                  "status": 200,
+                  "totalMs": 42.0961
+                },
+                {
+                  "count": 60,
+                  "maxMs": 0.0,
+                  "route": "/api/reports/usage",
+                  "method": "GET",
+                  "status": 500,
+                  "totalMs": 181157.5299
+                },
+                {
+                  "count": 1,
+                  "maxMs": 16.2082,
+                  "route": "/api/reservations/{id}/cancel",
+                  "method": "POST",
+                  "status": 200,
+                  "totalMs": 16.2082
+                },
+                {
+                  "count": 2,
+                  "maxMs": 29.3555,
+                  "route": "/api/admin/slots",
+                  "method": "POST",
+                  "status": 200,
+                  "totalMs": 311.679
+                },
+                {
+                  "count": 10,
+                  "maxMs": 0.0,
+                  "route": "/api/reports/usage",
+                  "method": "GET",
+                  "status": 200,
+                  "totalMs": 76.165
+                },
+                {
+                  "count": 2,
+                  "maxMs": 32.1758,
+                  "route": "/api/reservations",
+                  "method": "POST",
+                  "status": 200,
+                  "totalMs": 63.4819
+                },
+                {
+                  "count": 2,
+                  "maxMs": 24.3645,
+                  "route": "/api/admin/resources",
+                  "method": "POST",
+                  "status": 200,
+                  "totalMs": 92.2512
+                }
+              ],
+              "status": "NO_REQUESTS",
+              "totalMs": 183274.1034,
+              "averageMs": null,
+              "errorRate": null,
+              "errors5xx": 60,
+              "intervalEnd": "2026-09-24T06:56:46.179449Z",
+              "intervalCount": 0,
+              "intervalStart": "2026-09-24T06:56:45.168222300Z",
+              "intervalCoverage": "BETWEEN_SAMPLES",
+              "businessRejections": 0
+            },
+            "pool": {
+              "max": 4,
+              "idle": 4,
+              "total": 4,
+              "active": 0,
+              "status": "AVAILABLE",
+              "pending": 0,
+              "sampledAt": "2026-09-24T06:56:46.179449Z"
+            },
+            "time": "2026-09-24T06:56:46.179449Z",
+            "events": {
+              "status": "AVAILABLE",
+              "failure": 1.0,
+              "pending": 0,
+              "success": 3.0,
+              "oldestSeconds": 0.0
+            },
+            "status": "AVAILABLE",
+            "service": "tracepilot-business",
+            "evidenceId": "38449128-ae21-4d60-8990-9c7be1249b6f",
+            "instanceId": "a2a7b4ae-5832-4f08-8fe7-064f440bfdb0",
+            "collectedAt": "2026-09-24T06:56:46.180449100Z",
+            "environment": "demo",
+            "deploymentVersion": "sha256-18a70c8fd2baebc3ff5affc3921c5f7c91b91f884b3dc7b04135d88783035079",
+            "collectionDurationMs": 1
+          },
+          {
+            "http": {
+              "count": 608,
+              "routes": [
+                {
+                  "count": 529,
+                  "maxMs": 27.4056,
+                  "route": "/api/slots",
+                  "method": "GET",
+                  "status": 200,
+                  "totalMs": 1514.6921
+                },
+                {
+                  "count": 2,
+                  "maxMs": 0.0,
+                  "route": "/api/me/notifications",
+                  "method": "GET",
+                  "status": 200,
+                  "totalMs": 42.0961
+                },
+                {
+                  "count": 60,
+                  "maxMs": 0.0,
+                  "route": "/api/reports/usage",
+                  "method": "GET",
+                  "status": 500,
+                  "totalMs": 181157.5299
+                },
+                {
+                  "count": 1,
+                  "maxMs": 16.2082,
+                  "route": "/api/reservations/{id}/cancel",
+                  "method": "POST",
+                  "status": 200,
+                  "totalMs": 16.2082
+                },
+                {
+                  "count": 2,
+                  "maxMs": 29.3555,
+                  "route": "/api/admin/slots",
+                  "method": "POST",
+                  "status": 200,
+                  "totalMs": 311.679
+                },
+                {
+                  "count": 10,
+                  "maxMs": 0.0,
+                  "route": "/api/reports/usage",
+                  "method": "GET",
+                  "status": 200,
+                  "totalMs": 76.165
+                },
+                {
+                  "count": 2,
+                  "maxMs": 32.1758,
+                  "route": "/api/reservations",
+                  "method": "POST",
+                  "status": 200,
+                  "totalMs": 63.4819
+                },
+                {
+                  "count": 2,
+                  "maxMs": 24.3645,
+                  "route": "/api/admin/resources",
+                  "method": "POST",
+                  "status": 200,
+                  "totalMs": 92.2512
+                }
+              ],
+              "status": "NO_REQUESTS",
+              "totalMs": 183274.1034,
+              "averageMs": null,
+              "errorRate": null,
+              "errors5xx": 60,
+              "intervalEnd": "2026-09-24T06:56:45.168222300Z",
+              "intervalCount": 0,
+              "intervalStart": "2026-09-24T06:56:44.165701300Z",
+              "intervalCoverage": "BETWEEN_SAMPLES",
+              "businessRejections": 0
+            },
+            "pool": {
+              "max": 4,
+              "idle": 3,
+              "total": 4,
+              "active": 1,
+              "status": "AVAILABLE",
+              "pending": 0,
+              "sampledAt": "2026-09-24T06:56:45.168222300Z"
+            },
+            "time": "2026-09-24T06:56:45.168222300Z",
+            "events": {
+              "status": "AVAILABLE",
+              "failure": 1.0,
+              "pending": 0,
+              "success": 3.0,
+              "oldestSeconds": 0.0
+            },
+            "status": "AVAILABLE",
+            "service": "tracepilot-business",
+            "evidenceId": "69f3c3dc-0e04-4f3b-9666-59626f32576c",
+            "instanceId": "a2a7b4ae-5832-4f08-8fe7-064f440bfdb0",
+            "collectedAt": "2026-09-24T06:56:45.169222500Z",
+            "environment": "demo",
+            "deploymentVersion": "sha256-18a70c8fd2baebc3ff5affc3921c5f7c91b91f884b3dc7b04135d88783035079",
+            "collectionDurationMs": 1
+          },
+          {
+            "http": {
+              "count": 608,
+              "routes": [
+                {
+                  "count": 529,
+                  "maxMs": 27.4056,
+                  "route": "/api/slots",
+                  "method": "GET",
+                  "status": 200,
+                  "totalMs": 1514.6921
+                },
+                {
+                  "count": 2,
+                  "maxMs": 0.0,
+                  "route": "/api/me/notifications",
+                  "method": "GET",
+                  "status": 200,
+                  "totalMs": 42.0961
+                },
+                {
+                  "count": 60,
+                  "maxMs": 0.0,
+                  "route": "/api/reports/usage",
+                  "method": "GET",
+                  "status": 500,
+                  "totalMs": 181157.5299
+                },
+                {
+                  "count": 1,
+                  "maxMs": 16.2082,
+                  "route": "/api/reservations/{id}/cancel",
+                  "method": "POST",
+                  "status": 200,
+                  "totalMs": 16.2082
+                },
+                {
+                  "count": 2,
+                  "maxMs": 29.3555,
+                  "route": "/api/admin/slots",
+                  "method": "POST",
+                  "status": 200,
+                  "totalMs": 311.679
+                },
+                {
+                  "count": 10,
+                  "maxMs": 0.0,
+                  "route": "/api/reports/usage",
+                  "method": "GET",
+                  "status": 200,
+                  "totalMs": 76.165
+                },
+                {
+                  "count": 2,
+                  "maxMs": 32.1758,
+                  "route": "/api/reservations",
+                  "method": "POST",
+                  "status": 200,
+                  "totalMs": 63.4819
+                },
+                {
+                  "count": 2,
+                  "maxMs": 24.3645,
+                  "route": "/api/admin/resources",
+                  "method": "POST",
+                  "status": 200,
+                  "totalMs": 92.2512
+                }
+              ],
+              "status": "NO_REQUESTS",
+              "totalMs": 183274.1034,
+              "averageMs": null,
+              "errorRate": null,
+              "errors5xx": 60,
+              "intervalEnd": "2026-09-24T06:56:44.165701300Z",
+              "intervalCount": 0,
+              "intervalStart": "2026-09-24T06:56:43.155792900Z",
+              "intervalCoverage": "BETWEEN_SAMPLES",
+              "businessRejections": 0
+            },
+            "pool": {
+              "max": 4,
+              "idle": 3,
+              "total": 4,
+              "active": 1,
+              "status": "AVAILABLE",
+              "pending": 0,
+              "sampledAt": "2026-09-24T06:56:44.165701300Z"
+            },
+            "time": "2026-09-24T06:56:44.165701300Z",
+            "events": {
+              "status": "AVAILABLE",
+              "failure": 1.0,
+              "pending": 0,
+              "success": 3.0,
+              "oldestSeconds": 0.0
+            },
+            "status": "AVAILABLE",
+            "service": "tracepilot-business",
+            "evidenceId": "17c553f2-04fd-4038-978b-7e2db6666596",
+            "instanceId": "a2a7b4ae-5832-4f08-8fe7-064f440bfdb0",
+            "collectedAt": "2026-09-24T06:56:44.166539900Z",
+            "environment": "demo",
+            "deploymentVersion": "sha256-18a70c8fd2baebc3ff5affc3921c5f7c91b91f884b3dc7b04135d88783035079",
+            "collectionDurationMs": 0
+          },
+          {
+            "http": {
+              "count": 608,
+              "routes": [
+                {
+                  "count": 529,
+                  "maxMs": 27.4056,
+                  "route": "/api/slots",
+                  "method": "GET",
+                  "status": 200,
+                  "totalMs": 1514.6921
+                },
+                {
+                  "count": 2,
+                  "maxMs": 0.0,
+                  "route": "/api/me/notifications",
+                  "method": "GET",
+                  "status": 200,
+                  "totalMs": 42.0961
+                },
+                {
+                  "count": 60,
+                  "maxMs": 0.0,
+                  "route": "/api/reports/usage",
+                  "method": "GET",
+                  "status": 500,
+                  "totalMs": 181157.5299
+                },
+                {
+                  "count": 1,
+                  "maxMs": 16.2082,
+                  "route": "/api/reservations/{id}/cancel",
+                  "method": "POST",
+                  "status": 200,
+                  "totalMs": 16.2082
+                },
+                {
+                  "count": 2,
+                  "maxMs": 29.3555,
+                  "route": "/api/admin/slots",
+                  "method": "POST",
+                  "status": 200,
+                  "totalMs": 311.679
+                },
+                {
+                  "count": 10,
+                  "maxMs": 0.0,
+                  "route": "/api/reports/usage",
+                  "method": "GET",
+                  "status": 200,
+                  "totalMs": 76.165
+                },
+                {
+                  "count": 2,
+                  "maxMs": 32.1758,
+                  "route": "/api/reservations",
+                  "method": "POST",
+                  "status": 200,
+                  "totalMs": 63.4819
+                },
+                {
+                  "count": 2,
+                  "maxMs": 24.3645,
+                  "route": "/api/admin/resources",
+                  "method": "POST",
+                  "status": 200,
+                  "totalMs": 92.2512
+                }
+              ],
+              "status": "NO_REQUESTS",
+              "totalMs": 183274.1034,
+              "averageMs": null,
+              "errorRate": null,
+              "errors5xx": 60,
+              "intervalEnd": "2026-09-24T06:56:43.155792900Z",
+              "intervalCount": 0,
+              "intervalStart": "2026-09-24T06:56:42.143627700Z",
+              "intervalCoverage": "BETWEEN_SAMPLES",
+              "businessRejections": 0
+            },
+            "pool": {
+              "max": 4,
+              "idle": 4,
+              "total": 4,
+              "active": 0,
+              "status": "AVAILABLE",
+              "pending": 0,
+              "sampledAt": "2026-09-24T06:56:43.155792900Z"
+            },
+            "time": "2026-09-24T06:56:43.155792900Z",
+            "events": {
+              "status": "AVAILABLE",
+              "failure": 1.0,
+              "pending": 0,
+              "success": 3.0,
+              "oldestSeconds": 0.0
+            },
+            "status": "AVAILABLE",
+            "service": "tracepilot-business",
+            "evidenceId": "428cc1bc-e8b0-4654-b1be-7f0e7875ebaf",
+            "instanceId": "a2a7b4ae-5832-4f08-8fe7-064f440bfdb0",
+            "collectedAt": "2026-09-24T06:56:43.156400100Z",
+            "environment": "demo",
+            "deploymentVersion": "sha256-18a70c8fd2baebc3ff5affc3921c5f7c91b91f884b3dc7b04135d88783035079",
+            "collectionDurationMs": 0
+          },
+          {
+            "http": {
+              "count": 608,
+              "routes": [
+                {
+                  "count": 529,
+                  "maxMs": 27.4056,
+                  "route": "/api/slots",
+                  "method": "GET",
+                  "status": 200,
+                  "totalMs": 1514.6921
+                },
+                {
+                  "count": 2,
+                  "maxMs": 0.0,
+                  "route": "/api/me/notifications",
+                  "method": "GET",
+                  "status": 200,
+                  "totalMs": 42.0961
+                },
+                {
+                  "count": 60,
+                  "maxMs": 0.0,
+                  "route": "/api/reports/usage",
+                  "method": "GET",
+                  "status": 500,
+                  "totalMs": 181157.5299
+                },
+                {
+                  "count": 1,
+                  "maxMs": 16.2082,
+                  "route": "/api/reservations/{id}/cancel",
+                  "method": "POST",
+                  "status": 200,
+                  "totalMs": 16.2082
+                },
+                {
+                  "count": 2,
+                  "maxMs": 29.3555,
+                  "route": "/api/admin/slots",
+                  "method": "POST",
+                  "status": 200,
+                  "totalMs": 311.679
+                },
+                {
+                  "count": 10,
+                  "maxMs": 0.0,
+                  "route": "/api/reports/usage",
+                  "method": "GET",
+                  "status": 200,
+                  "totalMs": 76.165
+                },
+                {
+                  "count": 2,
+                  "maxMs": 32.1758,
+                  "route": "/api/reservations",
+                  "method": "POST",
+                  "status": 200,
+                  "totalMs": 63.4819
+                },
+                {
+                  "count": 2,
+                  "maxMs": 24.3645,
+                  "route": "/api/admin/resources",
+                  "method": "POST",
+                  "status": 200,
+                  "totalMs": 92.2512
+                }
+              ],
+              "status": "NO_REQUESTS",
+              "totalMs": 183274.1034,
+              "averageMs": null,
+              "errorRate": null,
+              "errors5xx": 60,
+              "intervalEnd": "2026-09-24T06:56:42.143627700Z",
+              "intervalCount": 0,
+              "intervalStart": "2026-09-24T06:56:41.133988Z",
+              "intervalCoverage": "BETWEEN_SAMPLES",
+              "businessRejections": 0
+            },
+            "pool": {
+              "max": 4,
+              "idle": 3,
+              "total": 4,
+              "active": 1,
+              "status": "AVAILABLE",
+              "pending": 0,
+              "sampledAt": "2026-09-24T06:56:42.143627700Z"
+            },
+            "time": "2026-09-24T06:56:42.143627700Z",
+            "events": {
+              "status": "AVAILABLE",
+              "failure": 1.0,
+              "pending": 0,
+              "success": 3.0,
+              "oldestSeconds": 0.0
+            },
+            "status": "AVAILABLE",
+            "service": "tracepilot-business",
+            "evidenceId": "0174677e-1a0c-467e-b3bb-913ccca9a22e",
+            "instanceId": "a2a7b4ae-5832-4f08-8fe7-064f440bfdb0",
+            "collectedAt": "2026-09-24T06:56:42.144628800Z",
+            "environment": "demo",
+            "deploymentVersion": "sha256-18a70c8fd2baebc3ff5affc3921c5f7c91b91f884b3dc7b04135d88783035079",
+            "collectionDurationMs": 1
+          },
+          {
+            "http": {
+              "count": 608,
+              "routes": [
+                {
+                  "count": 529,
+                  "maxMs": 27.4056,
+                  "route": "/api/slots",
+                  "method": "GET",
+                  "status": 200,
+                  "totalMs": 1514.6921
+                },
+                {
+                  "count": 2,
+                  "maxMs": 0.0,
+                  "route": "/api/me/notifications",
+                  "method": "GET",
+                  "status": 200,
+                  "totalMs": 42.0961
+                },
+                {
+                  "count": 60,
+                  "maxMs": 0.0,
+                  "route": "/api/reports/usage",
+                  "method": "GET",
+                  "status": 500,
+                  "totalMs": 181157.5299
+                },
+                {
+                  "count": 1,
+                  "maxMs": 16.2082,
+                  "route": "/api/reservations/{id}/cancel",
+                  "method": "POST",
+                  "status": 200,
+                  "totalMs": 16.2082
+                },
+                {
+                  "count": 2,
+                  "maxMs": 29.3555,
+                  "route": "/api/admin/slots",
+                  "method": "POST",
+                  "status": 200,
+                  "totalMs": 311.679
+                },
+                {
+                  "count": 10,
+                  "maxMs": 0.0,
+                  "route": "/api/reports/usage",
+                  "method": "GET",
+                  "status": 200,
+                  "totalMs": 76.165
+                },
+                {
+                  "count": 2,
+                  "maxMs": 32.1758,
+                  "route": "/api/reservations",
+                  "method": "POST",
+                  "status": 200,
+                  "totalMs": 63.4819
+                },
+                {
+                  "count": 2,
+                  "maxMs": 24.3645,
+                  "route": "/api/admin/resources",
+                  "method": "POST",
+                  "status": 200,
+                  "totalMs": 92.2512
+                }
+              ],
+              "status": "NO_REQUESTS",
+              "totalMs": 183274.1034,
+              "averageMs": null,
+              "errorRate": null,
+              "errors5xx": 60,
+              "intervalEnd": "2026-09-24T06:56:41.133988Z",
+              "intervalCount": 0,
+              "intervalStart": "2026-09-24T06:56:40.118722400Z",
+              "intervalCoverage": "BETWEEN_SAMPLES",
+              "businessRejections": 0
+            },
+            "pool": {
+              "max": 4,
+              "idle": 4,
+              "total": 4,
+              "active": 0,
+              "status": "AVAILABLE",
+              "pending": 0,
+              "sampledAt": "2026-09-24T06:56:41.133988Z"
+            },
+            "time": "2026-09-24T06:56:41.133988Z",
+            "events": {
+              "status": "AVAILABLE",
+              "failure": 1.0,
+              "pending": 0,
+              "success": 3.0,
+              "oldestSeconds": 0.0
+            },
+            "status": "AVAILABLE",
+            "service": "tracepilot-business",
+            "evidenceId": "97d457e4-245d-48d3-90d3-5a034848a5f5",
+            "instanceId": "a2a7b4ae-5832-4f08-8fe7-064f440bfdb0",
+            "collectedAt": "2026-09-24T06:56:41.134988100Z",
+            "environment": "demo",
+            "deploymentVersion": "sha256-18a70c8fd2baebc3ff5affc3921c5f7c91b91f884b3dc7b04135d88783035079",
+            "collectionDurationMs": 1
+          },
+          {
+            "http": {
+              "count": 608,
+              "routes": [
+                {
+                  "count": 529,
+                  "maxMs": 27.4056,
+                  "route": "/api/slots",
+                  "method": "GET",
+                  "status": 200,
+                  "totalMs": 1514.6921
+                },
+                {
+                  "count": 2,
+                  "maxMs": 0.0,
+                  "route": "/api/me/notifications",
+                  "method": "GET",
+                  "status": 200,
+                  "totalMs": 42.0961
+                },
+                {
+                  "count": 60,
+                  "maxMs": 0.0,
+                  "route": "/api/reports/usage",
+                  "method": "GET",
+                  "status": 500,
+                  "totalMs": 181157.5299
+                },
+                {
+                  "count": 1,
+                  "maxMs": 16.2082,
+                  "route": "/api/reservations/{id}/cancel",
+                  "method": "POST",
+                  "status": 200,
+                  "totalMs": 16.2082
+                },
+                {
+                  "count": 2,
+                  "maxMs": 29.3555,
+                  "route": "/api/admin/slots",
+                  "method": "POST",
+                  "status": 200,
+                  "totalMs": 311.679
+                },
+                {
+                  "count": 10,
+                  "maxMs": 0.0,
+                  "route": "/api/reports/usage",
+                  "method": "GET",
+                  "status": 200,
+                  "totalMs": 76.165
+                },
+                {
+                  "count": 2,
+                  "maxMs": 32.1758,
+                  "route": "/api/reservations",
+                  "method": "POST",
+                  "status": 200,
+                  "totalMs": 63.4819
+                },
+                {
+                  "count": 2,
+                  "maxMs": 24.3645,
+                  "route": "/api/admin/resources",
+                  "method": "POST",
+                  "status": 200,
+                  "totalMs": 92.2512
+                }
+              ],
+              "status": "NO_REQUESTS",
+              "totalMs": 183274.1034,
+              "averageMs": null,
+              "errorRate": null,
+              "errors5xx": 60,
+              "intervalEnd": "2026-09-24T06:56:40.118722400Z",
+              "intervalCount": 0,
+              "intervalStart": "2026-09-24T06:56:39.104807700Z",
+              "intervalCoverage": "BETWEEN_SAMPLES",
+              "businessRejections": 0
+            },
+            "pool": {
+              "max": 4,
+              "idle": 3,
+              "total": 4,
+              "active": 1,
+              "status": "AVAILABLE",
+              "pending": 0,
+              "sampledAt": "2026-09-24T06:56:40.118722400Z"
+            },
+            "time": "2026-09-24T06:56:40.118722400Z",
+            "events": {
+              "status": "AVAILABLE",
+              "failure": 1.0,
+              "pending": 0,
+              "success": 3.0,
+              "oldestSeconds": 0.0
+            },
+            "status": "AVAILABLE",
+            "service": "tracepilot-business",
+            "evidenceId": "83a07729-8def-42b9-8017-9ced7574ee61",
+            "instanceId": "a2a7b4ae-5832-4f08-8fe7-064f440bfdb0",
+            "collectedAt": "2026-09-24T06:56:40.119725100Z",
+            "environment": "demo",
+            "deploymentVersion": "sha256-18a70c8fd2baebc3ff5affc3921c5f7c91b91f884b3dc7b04135d88783035079",
+            "collectionDurationMs": 1
+          },
+          {
+            "http": {
+              "count": 608,
+              "routes": [
+                {
+                  "count": 529,
+                  "maxMs": 27.4056,
+                  "route": "/api/slots",
+                  "method": "GET",
+                  "status": 200,
+                  "totalMs": 1514.6921
+                },
+                {
+                  "count": 2,
+                  "maxMs": 0.0,
+                  "route": "/api/me/notifications",
+                  "method": "GET",
+                  "status": 200,
+                  "totalMs": 42.0961
+                },
+                {
+                  "count": 60,
+                  "maxMs": 0.0,
+                  "route": "/api/reports/usage",
+                  "method": "GET",
+                  "status": 500,
+                  "totalMs": 181157.5299
+                },
+                {
+                  "count": 1,
+                  "maxMs": 16.2082,
+                  "route": "/api/reservations/{id}/cancel",
+                  "method": "POST",
+                  "status": 200,
+                  "totalMs": 16.2082
+                },
+                {
+                  "count": 2,
+                  "maxMs": 29.3555,
+                  "route": "/api/admin/slots",
+                  "method": "POST",
+                  "status": 200,
+                  "totalMs": 311.679
+                },
+                {
+                  "count": 10,
+                  "maxMs": 0.0,
+                  "route": "/api/reports/usage",
+                  "method": "GET",
+                  "status": 200,
+                  "totalMs": 76.165
+                },
+                {
+                  "count": 2,
+                  "maxMs": 32.1758,
+                  "route": "/api/reservations",
+                  "method": "POST",
+                  "status": 200,
+                  "totalMs": 63.4819
+                },
+                {
+                  "count": 2,
+                  "maxMs": 24.3645,
+                  "route": "/api/admin/resources",
+                  "method": "POST",
+                  "status": 200,
+                  "totalMs": 92.2512
+                }
+              ],
+              "status": "NO_REQUESTS",
+              "totalMs": 183274.1034,
+              "averageMs": null,
+              "errorRate": null,
+              "errors5xx": 60,
+              "intervalEnd": "2026-09-24T06:56:39.104807700Z",
+              "intervalCount": 0,
+              "intervalStart": "2026-09-24T06:56:38.098237500Z",
+              "intervalCoverage": "BETWEEN_SAMPLES",
+              "businessRejections": 0
+            },
+            "pool": {
+              "max": 4,
+              "idle": 4,
+              "total": 4,
+              "active": 0,
+              "status": "AVAILABLE",
+              "pending": 0,
+              "sampledAt": "2026-09-24T06:56:39.104807700Z"
+            },
+            "time": "2026-09-24T06:56:39.104807700Z",
+            "events": {
+              "status": "AVAILABLE",
+              "failure": 1.0,
+              "pending": 0,
+              "success": 3.0,
+              "oldestSeconds": 0.0
+            },
+            "status": "AVAILABLE",
+            "service": "tracepilot-business",
+            "evidenceId": "f3713d73-353a-41c7-badb-f28e058ef734",
+            "instanceId": "a2a7b4ae-5832-4f08-8fe7-064f440bfdb0",
+            "collectedAt": "2026-09-24T06:56:39.105423200Z",
+            "environment": "demo",
+            "deploymentVersion": "sha256-18a70c8fd2baebc3ff5affc3921c5f7c91b91f884b3dc7b04135d88783035079",
+            "collectionDurationMs": 0
+          },
+          {
+            "http": {
+              "count": 608,
+              "routes": [
+                {
+                  "count": 529,
+                  "maxMs": 27.4056,
+                  "route": "/api/slots",
+                  "method": "GET",
+                  "status": 200,
+                  "totalMs": 1514.6921
+                },
+                {
+                  "count": 2,
+                  "maxMs": 0.0,
+                  "route": "/api/me/notifications",
+                  "method": "GET",
+                  "status": 200,
+                  "totalMs": 42.0961
+                },
+                {
+                  "count": 60,
+                  "maxMs": 0.0,
+                  "route": "/api/reports/usage",
+                  "method": "GET",
+                  "status": 500,
+                  "totalMs": 181157.5299
+                },
+                {
+                  "count": 1,
+                  "maxMs": 16.2082,
+                  "route": "/api/reservations/{id}/cancel",
+                  "method": "POST",
+                  "status": 200,
+                  "totalMs": 16.2082
+                },
+                {
+                  "count": 2,
+                  "maxMs": 29.3555,
+                  "route": "/api/admin/slots",
+                  "method": "POST",
+                  "status": 200,
+                  "totalMs": 311.679
+                },
+                {
+                  "count": 10,
+                  "maxMs": 0.0,
+                  "route": "/api/reports/usage",
+                  "method": "GET",
+                  "status": 200,
+                  "totalMs": 76.165
+                },
+                {
+                  "count": 2,
+                  "maxMs": 32.1758,
+                  "route": "/api/reservations",
+                  "method": "POST",
+                  "status": 200,
+                  "totalMs": 63.4819
+                },
+                {
+                  "count": 2,
+                  "maxMs": 24.3645,
+                  "route": "/api/admin/resources",
+                  "method": "POST",
+                  "status": 200,
+                  "totalMs": 92.2512
+                }
+              ],
+              "status": "NO_REQUESTS",
+              "totalMs": 183274.1034,
+              "averageMs": null,
+              "errorRate": null,
+              "errors5xx": 60,
+              "intervalEnd": "2026-09-24T06:56:38.098237500Z",
+              "intervalCount": 0,
+              "intervalStart": "2026-09-24T06:56:37.084467200Z",
+              "intervalCoverage": "BETWEEN_SAMPLES",
+              "businessRejections": 0
+            },
+            "pool": {
+              "max": 4,
+              "idle": 4,
+              "total": 4,
+              "active": 0,
+              "status": "AVAILABLE",
+              "pending": 0,
+              "sampledAt": "2026-09-24T06:56:38.098237500Z"
+            },
+            "time": "2026-09-24T06:56:38.098237500Z",
+            "events": {
+              "status": "AVAILABLE",
+              "failure": 1.0,
+              "pending": 0,
+              "success": 3.0,
+              "oldestSeconds": 0.0
+            },
+            "status": "AVAILABLE",
+            "service": "tracepilot-business",
+            "evidenceId": "6fffe977-b41c-475d-8e30-058338995927",
+            "instanceId": "a2a7b4ae-5832-4f08-8fe7-064f440bfdb0",
+            "collectedAt": "2026-09-24T06:56:38.099239400Z",
+            "environment": "demo",
+            "deploymentVersion": "sha256-18a70c8fd2baebc3ff5affc3921c5f7c91b91f884b3dc7b04135d88783035079",
+            "collectionDurationMs": 1
+          },
+          {
+            "http": {
+              "count": 608,
+              "routes": [
+                {
+                  "count": 529,
+                  "maxMs": 27.4056,
+                  "route": "/api/slots",
+                  "method": "GET",
+                  "status": 200,
+                  "totalMs": 1514.6921
+                },
+                {
+                  "count": 2,
+                  "maxMs": 0.0,
+                  "route": "/api/me/notifications",
+                  "method": "GET",
+                  "status": 200,
+                  "totalMs": 42.0961
+                },
+                {
+                  "count": 60,
+                  "maxMs": 0.0,
+                  "route": "/api/reports/usage",
+                  "method": "GET",
+                  "status": 500,
+                  "totalMs": 181157.5299
+                },
+                {
+                  "count": 1,
+                  "maxMs": 16.2082,
+                  "route": "/api/reservations/{id}/cancel",
+                  "method": "POST",
+                  "status": 200,
+                  "totalMs": 16.2082
+                },
+                {
+                  "count": 2,
+                  "maxMs": 29.3555,
+                  "route": "/api/admin/slots",
+                  "method": "POST",
+                  "status": 200,
+                  "totalMs": 311.679
+                },
+                {
+                  "count": 10,
+                  "maxMs": 0.0,
+                  "route": "/api/reports/usage",
+                  "method": "GET",
+                  "status": 200,
+                  "totalMs": 76.165
+                },
+                {
+                  "count": 2,
+                  "maxMs": 32.1758,
+                  "route": "/api/reservations",
+                  "method": "POST",
+                  "status": 200,
+                  "totalMs": 63.4819
+                },
+                {
+                  "count": 2,
+                  "maxMs": 24.3645,
+                  "route": "/api/admin/resources",
+                  "method": "POST",
+                  "status": 200,
+                  "totalMs": 92.2512
+                }
+              ],
+              "status": "NO_REQUESTS",
+              "totalMs": 183274.1034,
+              "averageMs": null,
+              "errorRate": null,
+              "errors5xx": 60,
+              "intervalEnd": "2026-09-24T06:56:37.084467200Z",
+              "intervalCount": 0,
+              "intervalStart": "2026-09-24T06:56:36.070906500Z",
+              "intervalCoverage": "BETWEEN_SAMPLES",
+              "businessRejections": 0
+            },
+            "pool": {
+              "max": 4,
+              "idle": 3,
+              "total": 4,
+              "active": 1,
+              "status": "AVAILABLE",
+              "pending": 0,
+              "sampledAt": "2026-09-24T06:56:37.084467200Z"
+            },
+            "time": "2026-09-24T06:56:37.084467200Z",
+            "events": {
+              "status": "AVAILABLE",
+              "failure": 1.0,
+              "pending": 0,
+              "success": 3.0,
+              "oldestSeconds": 0.0
+            },
+            "status": "AVAILABLE",
+            "service": "tracepilot-business",
+            "evidenceId": "862bc23c-a911-4295-a8ad-33e3542d3e3c",
+            "instanceId": "a2a7b4ae-5832-4f08-8fe7-064f440bfdb0",
+            "collectedAt": "2026-09-24T06:56:37.085473Z",
+            "environment": "demo",
+            "deploymentVersion": "sha256-18a70c8fd2baebc3ff5affc3921c5f7c91b91f884b3dc7b04135d88783035079",
+            "collectionDurationMs": 1
+          },
+          {
+            "http": {
+              "count": 608,
+              "routes": [
+                {
+                  "count": 529,
+                  "maxMs": 27.4056,
+                  "route": "/api/slots",
+                  "method": "GET",
+                  "status": 200,
+                  "totalMs": 1514.6921
+                },
+                {
+                  "count": 2,
+                  "maxMs": 0.0,
+                  "route": "/api/me/notifications",
+                  "method": "GET",
+                  "status": 200,
+                  "totalMs": 42.0961
+                },
+                {
+                  "count": 60,
+                  "maxMs": 0.0,
+                  "route": "/api/reports/usage",
+                  "method": "GET",
+                  "status": 500,
+                  "totalMs": 181157.5299
+                },
+                {
+                  "count": 1,
+                  "maxMs": 16.2082,
+                  "route": "/api/reservations/{id}/cancel",
+                  "method": "POST",
+                  "status": 200,
+                  "totalMs": 16.2082
+                },
+                {
+                  "count": 2,
+                  "maxMs": 29.3555,
+                  "route": "/api/admin/slots",
+                  "method": "POST",
+                  "status": 200,
+                  "totalMs": 311.679
+                },
+                {
+                  "count": 10,
+                  "maxMs": 0.0,
+                  "route": "/api/reports/usage",
+                  "method": "GET",
+                  "status": 200,
+                  "totalMs": 76.165
+                },
+                {
+                  "count": 2,
+                  "maxMs": 32.1758,
+                  "route": "/api/reservations",
+                  "method": "POST",
+                  "status": 200,
+                  "totalMs": 63.4819
+                },
+                {
+                  "count": 2,
+                  "maxMs": 24.3645,
+                  "route": "/api/admin/resources",
+                  "method": "POST",
+                  "status": 200,
+                  "totalMs": 92.2512
+                }
+              ],
+              "status": "NO_REQUESTS",
+              "totalMs": 183274.1034,
+              "averageMs": null,
+              "errorRate": null,
+              "errors5xx": 60,
+              "intervalEnd": "2026-09-24T06:56:36.070906500Z",
+              "intervalCount": 0,
+              "intervalStart": "2026-09-24T06:56:35.062679500Z",
+              "intervalCoverage": "BETWEEN_SAMPLES",
+              "businessRejections": 0
+            },
+            "pool": {
+              "max": 4,
+              "idle": 4,
+              "total": 4,
+              "active": 0,
+              "status": "AVAILABLE",
+              "pending": 0,
+              "sampledAt": "2026-09-24T06:56:36.070906500Z"
+            },
+            "time": "2026-09-24T06:56:36.070906500Z",
+            "events": {
+              "status": "AVAILABLE",
+              "failure": 1.0,
+              "pending": 0,
+              "success": 3.0,
+              "oldestSeconds": 0.0
+            },
+            "status": "AVAILABLE",
+            "service": "tracepilot-business",
+            "evidenceId": "ad2f8cf9-8dbc-4691-a7df-175a39cd56da",
+            "instanceId": "a2a7b4ae-5832-4f08-8fe7-064f440bfdb0",
+            "collectedAt": "2026-09-24T06:56:36.071909200Z",
+            "environment": "demo",
+            "deploymentVersion": "sha256-18a70c8fd2baebc3ff5affc3921c5f7c91b91f884b3dc7b04135d88783035079",
+            "collectionDurationMs": 1
+          },
+          {
+            "http": {
+              "count": 608,
+              "routes": [
+                {
+                  "count": 529,
+                  "maxMs": 27.4056,
+                  "route": "/api/slots",
+                  "method": "GET",
+                  "status": 200,
+                  "totalMs": 1514.6921
+                },
+                {
+                  "count": 2,
+                  "maxMs": 0.0,
+                  "route": "/api/me/notifications",
+                  "method": "GET",
+                  "status": 200,
+                  "totalMs": 42.0961
+                },
+                {
+                  "count": 60,
+                  "maxMs": 0.0,
+                  "route": "/api/reports/usage",
+                  "method": "GET",
+                  "status": 500,
+                  "totalMs": 181157.5299
+                },
+                {
+                  "count": 1,
+                  "maxMs": 16.2082,
+                  "route": "/api/reservations/{id}/cancel",
+                  "method": "POST",
+                  "status": 200,
+                  "totalMs": 16.2082
+                },
+                {
+                  "count": 2,
+                  "maxMs": 29.3555,
+                  "route": "/api/admin/slots",
+                  "method": "POST",
+                  "status": 200,
+                  "totalMs": 311.679
+                },
+                {
+                  "count": 10,
+                  "maxMs": 0.0,
+                  "route": "/api/reports/usage",
+                  "method": "GET",
+                  "status": 200,
+                  "totalMs": 76.165
+                },
+                {
+                  "count": 2,
+                  "maxMs": 32.1758,
+                  "route": "/api/reservations",
+                  "method": "POST",
+                  "status": 200,
+                  "totalMs": 63.4819
+                },
+                {
+                  "count": 2,
+                  "maxMs": 24.3645,
+                  "route": "/api/admin/resources",
+                  "method": "POST",
+                  "status": 200,
+                  "totalMs": 92.2512
+                }
+              ],
+              "status": "NO_REQUESTS",
+              "totalMs": 183274.1034,
+              "averageMs": null,
+              "errorRate": null,
+              "errors5xx": 60,
+              "intervalEnd": "2026-09-24T06:56:35.062679500Z",
+              "intervalCount": 0,
+              "intervalStart": "2026-09-24T06:56:34.051199900Z",
+              "intervalCoverage": "BETWEEN_SAMPLES",
+              "businessRejections": 0
+            },
+            "pool": {
+              "max": 4,
+              "idle": 3,
+              "total": 4,
+              "active": 1,
+              "status": "AVAILABLE",
+              "pending": 0,
+              "sampledAt": "2026-09-24T06:56:35.062679500Z"
+            },
+            "time": "2026-09-24T06:56:35.062679500Z",
+            "events": {
+              "status": "AVAILABLE",
+              "failure": 1.0,
+              "pending": 0,
+              "success": 3.0,
+              "oldestSeconds": 0.0
+            },
+            "status": "AVAILABLE",
+            "service": "tracepilot-business",
+            "evidenceId": "539b413c-3b70-4b97-beda-0a95caa4325e",
+            "instanceId": "a2a7b4ae-5832-4f08-8fe7-064f440bfdb0",
+            "collectedAt": "2026-09-24T06:56:35.063681700Z",
+            "environment": "demo",
+            "deploymentVersion": "sha256-18a70c8fd2baebc3ff5affc3921c5f7c91b91f884b3dc7b04135d88783035079",
+            "collectionDurationMs": 1
+          },
+          {
+            "http": {
+              "count": 608,
+              "routes": [
+                {
+                  "count": 529,
+                  "maxMs": 27.4056,
+                  "route": "/api/slots",
+                  "method": "GET",
+                  "status": 200,
+                  "totalMs": 1514.6921
+                },
+                {
+                  "count": 2,
+                  "maxMs": 0.0,
+                  "route": "/api/me/notifications",
+                  "method": "GET",
+                  "status": 200,
+                  "totalMs": 42.0961
+                },
+                {
+                  "count": 60,
+                  "maxMs": 0.0,
+                  "route": "/api/reports/usage",
+                  "method": "GET",
+                  "status": 500,
+                  "totalMs": 181157.5299
+                },
+                {
+                  "count": 1,
+                  "maxMs": 16.2082,
+                  "route": "/api/reservations/{id}/cancel",
+                  "method": "POST",
+                  "status": 200,
+                  "totalMs": 16.2082
+                },
+                {
+                  "count": 2,
+                  "maxMs": 29.3555,
+                  "route": "/api/admin/slots",
+                  "method": "POST",
+                  "status": 200,
+                  "totalMs": 311.679
+                },
+                {
+                  "count": 10,
+                  "maxMs": 0.0,
+                  "route": "/api/reports/usage",
+                  "method": "GET",
+                  "status": 200,
+                  "totalMs": 76.165
+                },
+                {
+                  "count": 2,
+                  "maxMs": 32.1758,
+                  "route": "/api/reservations",
+                  "method": "POST",
+                  "status": 200,
+                  "totalMs": 63.4819
+                },
+                {
+                  "count": 2,
+                  "maxMs": 24.3645,
+                  "route": "/api/admin/resources",
+                  "method": "POST",
+                  "status": 200,
+                  "totalMs": 92.2512
+                }
+              ],
+              "status": "NO_REQUESTS",
+              "totalMs": 183274.1034,
+              "averageMs": null,
+              "errorRate": null,
+              "errors5xx": 60,
+              "intervalEnd": "2026-09-24T06:56:34.051199900Z",
+              "intervalCount": 0,
+              "intervalStart": "2026-09-24T06:56:33.036997700Z",
+              "intervalCoverage": "BETWEEN_SAMPLES",
+              "businessRejections": 0
+            },
+            "pool": {
+              "max": 4,
+              "idle": 4,
+              "total": 4,
+              "active": 0,
+              "status": "AVAILABLE",
+              "pending": 0,
+              "sampledAt": "2026-09-24T06:56:34.051199900Z"
+            },
+            "time": "2026-09-24T06:56:34.051199900Z",
+            "events": {
+              "status": "AVAILABLE",
+              "failure": 1.0,
+              "pending": 0,
+              "success": 3.0,
+              "oldestSeconds": 0.0
+            },
+            "status": "AVAILABLE",
+            "service": "tracepilot-business",
+            "evidenceId": "5a4a2c89-7f49-4d2a-b4da-ca17c1eac716",
+            "instanceId": "a2a7b4ae-5832-4f08-8fe7-064f440bfdb0",
+            "collectedAt": "2026-09-24T06:56:34.052200500Z",
+            "environment": "demo",
+            "deploymentVersion": "sha256-18a70c8fd2baebc3ff5affc3921c5f7c91b91f884b3dc7b04135d88783035079",
+            "collectionDurationMs": 1
+          },
+          {
+            "http": {
+              "count": 608,
+              "routes": [
+                {
+                  "count": 529,
+                  "maxMs": 27.4056,
+                  "route": "/api/slots",
+                  "method": "GET",
+                  "status": 200,
+                  "totalMs": 1514.6921
+                },
+                {
+                  "count": 2,
+                  "maxMs": 0.0,
+                  "route": "/api/me/notifications",
+                  "method": "GET",
+                  "status": 200,
+                  "totalMs": 42.0961
+                },
+                {
+                  "count": 60,
+                  "maxMs": 0.0,
+                  "route": "/api/reports/usage",
+                  "method": "GET",
+                  "status": 500,
+                  "totalMs": 181157.5299
+                },
+                {
+                  "count": 1,
+                  "maxMs": 16.2082,
+                  "route": "/api/reservations/{id}/cancel",
+                  "method": "POST",
+                  "status": 200,
+                  "totalMs": 16.2082
+                },
+                {
+                  "count": 2,
+                  "maxMs": 29.3555,
+                  "route": "/api/admin/slots",
+                  "method": "POST",
+                  "status": 200,
+                  "totalMs": 311.679
+                },
+                {
+                  "count": 10,
+                  "maxMs": 0.0,
+                  "route": "/api/reports/usage",
+                  "method": "GET",
+                  "status": 200,
+                  "totalMs": 76.165
+                },
+                {
+                  "count": 2,
+                  "maxMs": 32.1758,
+                  "route": "/api/reservations",
+                  "method": "POST",
+                  "status": 200,
+                  "totalMs": 63.4819
+                },
+                {
+                  "count": 2,
+                  "maxMs": 24.3645,
+                  "route": "/api/admin/resources",
+                  "method": "POST",
+                  "status": 200,
+                  "totalMs": 92.2512
+                }
+              ],
+              "status": "NO_REQUESTS",
+              "totalMs": 183274.1034,
+              "averageMs": null,
+              "errorRate": null,
+              "errors5xx": 60,
+              "intervalEnd": "2026-09-24T06:56:33.036997700Z",
+              "intervalCount": 0,
+              "intervalStart": "2026-09-24T06:56:32.022008300Z",
+              "intervalCoverage": "BETWEEN_SAMPLES",
+              "businessRejections": 0
+            },
+            "pool": {
+              "max": 4,
+              "idle": 3,
+              "total": 4,
+              "active": 1,
+              "status": "AVAILABLE",
+              "pending": 0,
+              "sampledAt": "2026-09-24T06:56:33.036997700Z"
+            },
+            "time": "2026-09-24T06:56:33.036997700Z",
+            "events": {
+              "status": "AVAILABLE",
+              "failure": 1.0,
+              "pending": 0,
+              "success": 3.0,
+              "oldestSeconds": 0.0
+            },
+            "status": "AVAILABLE",
+            "service": "tracepilot-business",
+            "evidenceId": "d96938f4-483c-4a1f-bf66-5728414e7b9f",
+            "instanceId": "a2a7b4ae-5832-4f08-8fe7-064f440bfdb0",
+            "collectedAt": "2026-09-24T06:56:33.038000400Z",
+            "environment": "demo",
+            "deploymentVersion": "sha256-18a70c8fd2baebc3ff5affc3921c5f7c91b91f884b3dc7b04135d88783035079",
+            "collectionDurationMs": 1
+          },
+          {
+            "http": {
+              "count": 608,
+              "routes": [
+                {
+                  "count": 529,
+                  "maxMs": 27.4056,
+                  "route": "/api/slots",
+                  "method": "GET",
+                  "status": 200,
+                  "totalMs": 1514.6921
+                },
+                {
+                  "count": 2,
+                  "maxMs": 0.0,
+                  "route": "/api/me/notifications",
+                  "method": "GET",
+                  "status": 200,
+                  "totalMs": 42.0961
+                },
+                {
+                  "count": 60,
+                  "maxMs": 0.0,
+                  "route": "/api/reports/usage",
+                  "method": "GET",
+                  "status": 500,
+                  "totalMs": 181157.5299
+                },
+                {
+                  "count": 1,
+                  "maxMs": 16.2082,
+                  "route": "/api/reservations/{id}/cancel",
+                  "method": "POST",
+                  "status": 200,
+                  "totalMs": 16.2082
+                },
+                {
+                  "count": 2,
+                  "maxMs": 29.3555,
+                  "route": "/api/admin/slots",
+                  "method": "POST",
+                  "status": 200,
+                  "totalMs": 311.679
+                },
+                {
+                  "count": 10,
+                  "maxMs": 0.0,
+                  "route": "/api/reports/usage",
+                  "method": "GET",
+                  "status": 200,
+                  "totalMs": 76.165
+                },
+                {
+                  "count": 2,
+                  "maxMs": 32.1758,
+                  "route": "/api/reservations",
+                  "method": "POST",
+                  "status": 200,
+                  "totalMs": 63.4819
+                },
+                {
+                  "count": 2,
+                  "maxMs": 24.3645,
+                  "route": "/api/admin/resources",
+                  "method": "POST",
+                  "status": 200,
+                  "totalMs": 92.2512
+                }
+              ],
+              "status": "NO_REQUESTS",
+              "totalMs": 183274.1034,
+              "averageMs": null,
+              "errorRate": null,
+              "errors5xx": 60,
+              "intervalEnd": "2026-09-24T06:56:32.022008300Z",
+              "intervalCount": 0,
+              "intervalStart": "2026-09-24T06:56:31.010254600Z",
+              "intervalCoverage": "BETWEEN_SAMPLES",
+              "businessRejections": 0
+            },
+            "pool": {
+              "max": 4,
+              "idle": 4,
+              "total": 4,
+              "active": 0,
+              "status": "AVAILABLE",
+              "pending": 0,
+              "sampledAt": "2026-09-24T06:56:32.022008300Z"
+            },
+            "time": "2026-09-24T06:56:32.022008300Z",
+            "events": {
+              "status": "AVAILABLE",
+              "failure": 1.0,
+              "pending": 0,
+              "success": 3.0,
+              "oldestSeconds": 0.0
+            },
+            "status": "AVAILABLE",
+            "service": "tracepilot-business",
+            "evidenceId": "80abeaf0-4c4f-49d1-b703-9bc08213ef41",
+            "instanceId": "a2a7b4ae-5832-4f08-8fe7-064f440bfdb0",
+            "collectedAt": "2026-09-24T06:56:32.023008800Z",
+            "environment": "demo",
+            "deploymentVersion": "sha256-18a70c8fd2baebc3ff5affc3921c5f7c91b91f884b3dc7b04135d88783035079",
+            "collectionDurationMs": 1
+          },
+          {
+            "http": {
+              "count": 608,
+              "routes": [
+                {
+                  "count": 529,
+                  "maxMs": 27.4056,
+                  "route": "/api/slots",
+                  "method": "GET",
+                  "status": 200,
+                  "totalMs": 1514.6921
+                },
+                {
+                  "count": 2,
+                  "maxMs": 0.0,
+                  "route": "/api/me/notifications",
+                  "method": "GET",
+                  "status": 200,
+                  "totalMs": 42.0961
+                },
+                {
+                  "count": 60,
+                  "maxMs": 0.0,
+                  "route": "/api/reports/usage",
+                  "method": "GET",
+                  "status": 500,
+                  "totalMs": 181157.5299
+                },
+                {
+                  "count": 1,
+                  "maxMs": 16.2082,
+                  "route": "/api/reservations/{id}/cancel",
+                  "method": "POST",
+                  "status": 200,
+                  "totalMs": 16.2082
+                },
+                {
+                  "count": 2,
+                  "maxMs": 29.3555,
+                  "route": "/api/admin/slots",
+                  "method": "POST",
+                  "status": 200,
+                  "totalMs": 311.679
+                },
+                {
+                  "count": 10,
+                  "maxMs": 0.0,
+                  "route": "/api/reports/usage",
+                  "method": "GET",
+                  "status": 200,
+                  "totalMs": 76.165
+                },
+                {
+                  "count": 2,
+                  "maxMs": 32.1758,
+                  "route": "/api/reservations",
+                  "method": "POST",
+                  "status": 200,
+                  "totalMs": 63.4819
+                },
+                {
+                  "count": 2,
+                  "maxMs": 24.3645,
+                  "route": "/api/admin/resources",
+                  "method": "POST",
+                  "status": 200,
+                  "totalMs": 92.2512
+                }
+              ],
+              "status": "NO_REQUESTS",
+              "totalMs": 183274.1034,
+              "averageMs": null,
+              "errorRate": null,
+              "errors5xx": 60,
+              "intervalEnd": "2026-09-24T06:56:31.010254600Z",
+              "intervalCount": 0,
+              "intervalStart": "2026-09-24T06:56:30.007387500Z",
+              "intervalCoverage": "BETWEEN_SAMPLES",
+              "businessRejections": 0
+            },
+            "pool": {
+              "max": 4,
+              "idle": 3,
+              "total": 4,
+              "active": 1,
+              "status": "AVAILABLE",
+              "pending": 0,
+              "sampledAt": "2026-09-24T06:56:31.010254600Z"
+            },
+            "time": "2026-09-24T06:56:31.010254600Z",
+            "events": {
+              "status": "AVAILABLE",
+              "failure": 1.0,
+              "pending": 0,
+              "success": 3.0,
+              "oldestSeconds": 0.0
+            },
+            "status": "AVAILABLE",
+            "service": "tracepilot-business",
+            "evidenceId": "b299510f-426c-407f-b285-1c15d9920094",
+            "instanceId": "a2a7b4ae-5832-4f08-8fe7-064f440bfdb0",
+            "collectedAt": "2026-09-24T06:56:31.010254600Z",
+            "environment": "demo",
+            "deploymentVersion": "sha256-18a70c8fd2baebc3ff5affc3921c5f7c91b91f884b3dc7b04135d88783035079",
+            "collectionDurationMs": 0
+          },
+          {
+            "http": {
+              "count": 608,
+              "routes": [
+                {
+                  "count": 529,
+                  "maxMs": 27.4056,
+                  "route": "/api/slots",
+                  "method": "GET",
+                  "status": 200,
+                  "totalMs": 1514.6921
+                },
+                {
+                  "count": 2,
+                  "maxMs": 0.0,
+                  "route": "/api/me/notifications",
+                  "method": "GET",
+                  "status": 200,
+                  "totalMs": 42.0961
+                },
+                {
+                  "count": 60,
+                  "maxMs": 0.0,
+                  "route": "/api/reports/usage",
+                  "method": "GET",
+                  "status": 500,
+                  "totalMs": 181157.5299
+                },
+                {
+                  "count": 1,
+                  "maxMs": 16.2082,
+                  "route": "/api/reservations/{id}/cancel",
+                  "method": "POST",
+                  "status": 200,
+                  "totalMs": 16.2082
+                },
+                {
+                  "count": 2,
+                  "maxMs": 29.3555,
+                  "route": "/api/admin/slots",
+                  "method": "POST",
+                  "status": 200,
+                  "totalMs": 311.679
+                },
+                {
+                  "count": 10,
+                  "maxMs": 0.0,
+                  "route": "/api/reports/usage",
+                  "method": "GET",
+                  "status": 200,
+                  "totalMs": 76.165
+                },
+                {
+                  "count": 2,
+                  "maxMs": 32.1758,
+                  "route": "/api/reservations",
+                  "method": "POST",
+                  "status": 200,
+                  "totalMs": 63.4819
+                },
+                {
+                  "count": 2,
+                  "maxMs": 24.3645,
+                  "route": "/api/admin/resources",
+                  "method": "POST",
+                  "status": 200,
+                  "totalMs": 92.2512
+                }
+              ],
+              "status": "NO_REQUESTS",
+              "totalMs": 183274.1034,
+              "averageMs": null,
+              "errorRate": null,
+              "errors5xx": 60,
+              "intervalEnd": "2026-09-24T06:56:30.007387500Z",
+              "intervalCount": 0,
+              "intervalStart": "2026-09-24T06:56:28.992891700Z",
+              "intervalCoverage": "BETWEEN_SAMPLES",
+              "businessRejections": 0
+            },
+            "pool": {
+              "max": 4,
+              "idle": 3,
+              "total": 4,
+              "active": 1,
+              "status": "AVAILABLE",
+              "pending": 0,
+              "sampledAt": "2026-09-24T06:56:30.007387500Z"
+            },
+            "time": "2026-09-24T06:56:30.007387500Z",
+            "events": {
+              "status": "AVAILABLE",
+              "failure": 1.0,
+              "pending": 0,
+              "success": 3.0,
+              "oldestSeconds": 0.0
+            },
+            "status": "AVAILABLE",
+            "service": "tracepilot-business",
+            "evidenceId": "d49a803f-90f4-4208-9649-61f83b019cb9",
+            "instanceId": "a2a7b4ae-5832-4f08-8fe7-064f440bfdb0",
+            "collectedAt": "2026-09-24T06:56:30.008391200Z",
+            "environment": "demo",
+            "deploymentVersion": "sha256-18a70c8fd2baebc3ff5affc3921c5f7c91b91f884b3dc7b04135d88783035079",
+            "collectionDurationMs": 1
+          },
+          {
+            "http": {
+              "count": 608,
+              "routes": [
+                {
+                  "count": 529,
+                  "maxMs": 27.4056,
+                  "route": "/api/slots",
+                  "method": "GET",
+                  "status": 200,
+                  "totalMs": 1514.6921
+                },
+                {
+                  "count": 2,
+                  "maxMs": 0.0,
+                  "route": "/api/me/notifications",
+                  "method": "GET",
+                  "status": 200,
+                  "totalMs": 42.0961
+                },
+                {
+                  "count": 60,
+                  "maxMs": 0.0,
+                  "route": "/api/reports/usage",
+                  "method": "GET",
+                  "status": 500,
+                  "totalMs": 181157.5299
+                },
+                {
+                  "count": 1,
+                  "maxMs": 16.2082,
+                  "route": "/api/reservations/{id}/cancel",
+                  "method": "POST",
+                  "status": 200,
+                  "totalMs": 16.2082
+                },
+                {
+                  "count": 2,
+                  "maxMs": 29.3555,
+                  "route": "/api/admin/slots",
+                  "method": "POST",
+                  "status": 200,
+                  "totalMs": 311.679
+                },
+                {
+                  "count": 10,
+                  "maxMs": 0.0,
+                  "route": "/api/reports/usage",
+                  "method": "GET",
+                  "status": 200,
+                  "totalMs": 76.165
+                },
+                {
+                  "count": 2,
+                  "maxMs": 32.1758,
+                  "route": "/api/reservations",
+                  "method": "POST",
+                  "status": 200,
+                  "totalMs": 63.4819
+                },
+                {
+                  "count": 2,
+                  "maxMs": 24.3645,
+                  "route": "/api/admin/resources",
+                  "method": "POST",
+                  "status": 200,
+                  "totalMs": 92.2512
+                }
+              ],
+              "status": "NO_REQUESTS",
+              "totalMs": 183274.1034,
+              "averageMs": null,
+              "errorRate": null,
+              "errors5xx": 60,
+              "intervalEnd": "2026-09-24T06:56:28.992891700Z",
+              "intervalCount": 0,
+              "intervalStart": "2026-09-24T06:56:27.982815300Z",
+              "intervalCoverage": "BETWEEN_SAMPLES",
+              "businessRejections": 0
+            },
+            "pool": {
+              "max": 4,
+              "idle": 4,
+              "total": 4,
+              "active": 0,
+              "status": "AVAILABLE",
+              "pending": 0,
+              "sampledAt": "2026-09-24T06:56:28.992891700Z"
+            },
+            "time": "2026-09-24T06:56:28.992891700Z",
+            "events": {
+              "status": "AVAILABLE",
+              "failure": 1.0,
+              "pending": 0,
+              "success": 3.0,
+              "oldestSeconds": 0.0
+            },
+            "status": "AVAILABLE",
+            "service": "tracepilot-business",
+            "evidenceId": "9861261f-8e1e-46bf-bd75-44088682460b",
+            "instanceId": "a2a7b4ae-5832-4f08-8fe7-064f440bfdb0",
+            "collectedAt": "2026-09-24T06:56:28.993892200Z",
+            "environment": "demo",
+            "deploymentVersion": "sha256-18a70c8fd2baebc3ff5affc3921c5f7c91b91f884b3dc7b04135d88783035079",
+            "collectionDurationMs": 1
+          },
+          {
+            "http": {
+              "count": 608,
+              "routes": [
+                {
+                  "count": 529,
+                  "maxMs": 27.4056,
+                  "route": "/api/slots",
+                  "method": "GET",
+                  "status": 200,
+                  "totalMs": 1514.6921
+                },
+                {
+                  "count": 2,
+                  "maxMs": 0.0,
+                  "route": "/api/me/notifications",
+                  "method": "GET",
+                  "status": 200,
+                  "totalMs": 42.0961
+                },
+                {
+                  "count": 60,
+                  "maxMs": 0.0,
+                  "route": "/api/reports/usage",
+                  "method": "GET",
+                  "status": 500,
+                  "totalMs": 181157.5299
+                },
+                {
+                  "count": 1,
+                  "maxMs": 16.2082,
+                  "route": "/api/reservations/{id}/cancel",
+                  "method": "POST",
+                  "status": 200,
+                  "totalMs": 16.2082
+                },
+                {
+                  "count": 2,
+                  "maxMs": 29.3555,
+                  "route": "/api/admin/slots",
+                  "method": "POST",
+                  "status": 200,
+                  "totalMs": 311.679
+                },
+                {
+                  "count": 10,
+                  "maxMs": 0.0,
+                  "route": "/api/reports/usage",
+                  "method": "GET",
+                  "status": 200,
+                  "totalMs": 76.165
+                },
+                {
+                  "count": 2,
+                  "maxMs": 32.1758,
+                  "route": "/api/reservations",
+                  "method": "POST",
+                  "status": 200,
+                  "totalMs": 63.4819
+                },
+                {
+                  "count": 2,
+                  "maxMs": 24.3645,
+                  "route": "/api/admin/resources",
+                  "method": "POST",
+                  "status": 200,
+                  "totalMs": 92.2512
+                }
+              ],
+              "status": "NO_REQUESTS",
+              "totalMs": 183274.1034,
+              "averageMs": null,
+              "errorRate": null,
+              "errors5xx": 60,
+              "intervalEnd": "2026-09-24T06:56:27.982815300Z",
+              "intervalCount": 0,
+              "intervalStart": "2026-09-24T06:56:26.972044Z",
+              "intervalCoverage": "BETWEEN_SAMPLES",
+              "businessRejections": 0
+            },
+            "pool": {
+              "max": 4,
+              "idle": 3,
+              "total": 4,
+              "active": 1,
+              "status": "AVAILABLE",
+              "pending": 0,
+              "sampledAt": "2026-09-24T06:56:27.982815300Z"
+            },
+            "time": "2026-09-24T06:56:27.982815300Z",
+            "events": {
+              "status": "AVAILABLE",
+              "failure": 1.0,
+              "pending": 0,
+              "success": 3.0,
+              "oldestSeconds": 0.0
+            },
+            "status": "AVAILABLE",
+            "service": "tracepilot-business",
+            "evidenceId": "479ecf48-f61e-4d13-a377-769e84b15062",
+            "instanceId": "a2a7b4ae-5832-4f08-8fe7-064f440bfdb0",
+            "collectedAt": "2026-09-24T06:56:27.983828300Z",
+            "environment": "demo",
+            "deploymentVersion": "sha256-18a70c8fd2baebc3ff5affc3921c5f7c91b91f884b3dc7b04135d88783035079",
+            "collectionDurationMs": 1
+          },
+          {
+            "http": {
+              "count": 608,
+              "routes": [
+                {
+                  "count": 529,
+                  "maxMs": 27.4056,
+                  "route": "/api/slots",
+                  "method": "GET",
+                  "status": 200,
+                  "totalMs": 1514.6921
+                },
+                {
+                  "count": 2,
+                  "maxMs": 0.0,
+                  "route": "/api/me/notifications",
+                  "method": "GET",
+                  "status": 200,
+                  "totalMs": 42.0961
+                },
+                {
+                  "count": 60,
+                  "maxMs": 0.0,
+                  "route": "/api/reports/usage",
+                  "method": "GET",
+                  "status": 500,
+                  "totalMs": 181157.5299
+                },
+                {
+                  "count": 1,
+                  "maxMs": 16.2082,
+                  "route": "/api/reservations/{id}/cancel",
+                  "method": "POST",
+                  "status": 200,
+                  "totalMs": 16.2082
+                },
+                {
+                  "count": 2,
+                  "maxMs": 29.3555,
+                  "route": "/api/admin/slots",
+                  "method": "POST",
+                  "status": 200,
+                  "totalMs": 311.679
+                },
+                {
+                  "count": 10,
+                  "maxMs": 0.0,
+                  "route": "/api/reports/usage",
+                  "method": "GET",
+                  "status": 200,
+                  "totalMs": 76.165
+                },
+                {
+                  "count": 2,
+                  "maxMs": 32.1758,
+                  "route": "/api/reservations",
+                  "method": "POST",
+                  "status": 200,
+                  "totalMs": 63.4819
+                },
+                {
+                  "count": 2,
+                  "maxMs": 24.3645,
+                  "route": "/api/admin/resources",
+                  "method": "POST",
+                  "status": 200,
+                  "totalMs": 92.2512
+                }
+              ],
+              "status": "NO_REQUESTS",
+              "totalMs": 183274.1034,
+              "averageMs": null,
+              "errorRate": null,
+              "errors5xx": 60,
+              "intervalEnd": "2026-09-24T06:56:26.972044Z",
+              "intervalCount": 0,
+              "intervalStart": "2026-09-24T06:56:25.958114700Z",
+              "intervalCoverage": "BETWEEN_SAMPLES",
+              "businessRejections": 0
+            },
+            "pool": {
+              "max": 4,
+              "idle": 4,
+              "total": 4,
+              "active": 0,
+              "status": "AVAILABLE",
+              "pending": 0,
+              "sampledAt": "2026-09-24T06:56:26.972044Z"
+            },
+            "time": "2026-09-24T06:56:26.972044Z",
+            "events": {
+              "status": "AVAILABLE",
+              "failure": 1.0,
+              "pending": 0,
+              "success": 3.0,
+              "oldestSeconds": 0.0
+            },
+            "status": "AVAILABLE",
+            "service": "tracepilot-business",
+            "evidenceId": "1bb57a69-1dbb-43c2-9a57-bb43a3210e29",
+            "instanceId": "a2a7b4ae-5832-4f08-8fe7-064f440bfdb0",
+            "collectedAt": "2026-09-24T06:56:26.973044700Z",
+            "environment": "demo",
+            "deploymentVersion": "sha256-18a70c8fd2baebc3ff5affc3921c5f7c91b91f884b3dc7b04135d88783035079",
+            "collectionDurationMs": 1
+          },
+          {
+            "http": {
+              "count": 608,
+              "routes": [
+                {
+                  "count": 529,
+                  "maxMs": 27.4056,
+                  "route": "/api/slots",
+                  "method": "GET",
+                  "status": 200,
+                  "totalMs": 1514.6921
+                },
+                {
+                  "count": 2,
+                  "maxMs": 0.0,
+                  "route": "/api/me/notifications",
+                  "method": "GET",
+                  "status": 200,
+                  "totalMs": 42.0961
+                },
+                {
+                  "count": 60,
+                  "maxMs": 0.0,
+                  "route": "/api/reports/usage",
+                  "method": "GET",
+                  "status": 500,
+                  "totalMs": 181157.5299
+                },
+                {
+                  "count": 1,
+                  "maxMs": 16.2082,
+                  "route": "/api/reservations/{id}/cancel",
+                  "method": "POST",
+                  "status": 200,
+                  "totalMs": 16.2082
+                },
+                {
+                  "count": 2,
+                  "maxMs": 29.3555,
+                  "route": "/api/admin/slots",
+                  "method": "POST",
+                  "status": 200,
+                  "totalMs": 311.679
+                },
+                {
+                  "count": 10,
+                  "maxMs": 0.0,
+                  "route": "/api/reports/usage",
+                  "method": "GET",
+                  "status": 200,
+                  "totalMs": 76.165
+                },
+                {
+                  "count": 2,
+                  "maxMs": 32.1758,
+                  "route": "/api/reservations",
+                  "method": "POST",
+                  "status": 200,
+                  "totalMs": 63.4819
+                },
+                {
+                  "count": 2,
+                  "maxMs": 24.3645,
+                  "route": "/api/admin/resources",
+                  "method": "POST",
+                  "status": 200,
+                  "totalMs": 92.2512
+                }
+              ],
+              "status": "NO_REQUESTS",
+              "totalMs": 183274.1034,
+              "averageMs": null,
+              "errorRate": null,
+              "errors5xx": 60,
+              "intervalEnd": "2026-09-24T06:56:25.958114700Z",
+              "intervalCount": 0,
+              "intervalStart": "2026-09-24T06:56:24.946592700Z",
+              "intervalCoverage": "BETWEEN_SAMPLES",
+              "businessRejections": 0
+            },
+            "pool": {
+              "max": 4,
+              "idle": 3,
+              "total": 4,
+              "active": 1,
+              "status": "AVAILABLE",
+              "pending": 0,
+              "sampledAt": "2026-09-24T06:56:25.958114700Z"
+            },
+            "time": "2026-09-24T06:56:25.958114700Z",
+            "events": {
+              "status": "AVAILABLE",
+              "failure": 1.0,
+              "pending": 0,
+              "success": 3.0,
+              "oldestSeconds": 0.0
+            },
+            "status": "AVAILABLE",
+            "service": "tracepilot-business",
+            "evidenceId": "8ac23c1a-f9a3-40e3-b304-ee0ffa6e5ee9",
+            "instanceId": "a2a7b4ae-5832-4f08-8fe7-064f440bfdb0",
+            "collectedAt": "2026-09-24T06:56:25.958770Z",
+            "environment": "demo",
+            "deploymentVersion": "sha256-18a70c8fd2baebc3ff5affc3921c5f7c91b91f884b3dc7b04135d88783035079",
+            "collectionDurationMs": 0
+          },
+          {
+            "http": {
+              "count": 608,
+              "routes": [
+                {
+                  "count": 529,
+                  "maxMs": 27.4056,
+                  "route": "/api/slots",
+                  "method": "GET",
+                  "status": 200,
+                  "totalMs": 1514.6921
+                },
+                {
+                  "count": 2,
+                  "maxMs": 0.0,
+                  "route": "/api/me/notifications",
+                  "method": "GET",
+                  "status": 200,
+                  "totalMs": 42.0961
+                },
+                {
+                  "count": 60,
+                  "maxMs": 0.0,
+                  "route": "/api/reports/usage",
+                  "method": "GET",
+                  "status": 500,
+                  "totalMs": 181157.5299
+                },
+                {
+                  "count": 1,
+                  "maxMs": 16.2082,
+                  "route": "/api/reservations/{id}/cancel",
+                  "method": "POST",
+                  "status": 200,
+                  "totalMs": 16.2082
+                },
+                {
+                  "count": 2,
+                  "maxMs": 29.3555,
+                  "route": "/api/admin/slots",
+                  "method": "POST",
+                  "status": 200,
+                  "totalMs": 311.679
+                },
+                {
+                  "count": 10,
+                  "maxMs": 0.0,
+                  "route": "/api/reports/usage",
+                  "method": "GET",
+                  "status": 200,
+                  "totalMs": 76.165
+                },
+                {
+                  "count": 2,
+                  "maxMs": 32.1758,
+                  "route": "/api/reservations",
+                  "method": "POST",
+                  "status": 200,
+                  "totalMs": 63.4819
+                },
+                {
+                  "count": 2,
+                  "maxMs": 24.3645,
+                  "route": "/api/admin/resources",
+                  "method": "POST",
+                  "status": 200,
+                  "totalMs": 92.2512
+                }
+              ],
+              "status": "NO_REQUESTS",
+              "totalMs": 183274.1034,
+              "averageMs": null,
+              "errorRate": null,
+              "errors5xx": 60,
+              "intervalEnd": "2026-09-24T06:56:24.946592700Z",
+              "intervalCount": 0,
+              "intervalStart": "2026-09-24T06:56:23.932228800Z",
+              "intervalCoverage": "BETWEEN_SAMPLES",
+              "businessRejections": 0
+            },
+            "pool": {
+              "max": 4,
+              "idle": 4,
+              "total": 4,
+              "active": 0,
+              "status": "AVAILABLE",
+              "pending": 0,
+              "sampledAt": "2026-09-24T06:56:24.946592700Z"
+            },
+            "time": "2026-09-24T06:56:24.946592700Z",
+            "events": {
+              "status": "AVAILABLE",
+              "failure": 1.0,
+              "pending": 0,
+              "success": 3.0,
+              "oldestSeconds": 0.0
+            },
+            "status": "AVAILABLE",
+            "service": "tracepilot-business",
+            "evidenceId": "df84d981-9a4b-457b-88a7-fa063b7a670b",
+            "instanceId": "a2a7b4ae-5832-4f08-8fe7-064f440bfdb0",
+            "collectedAt": "2026-09-24T06:56:24.947591700Z",
+            "environment": "demo",
+            "deploymentVersion": "sha256-18a70c8fd2baebc3ff5affc3921c5f7c91b91f884b3dc7b04135d88783035079",
+            "collectionDurationMs": 0
+          },
+          {
+            "http": {
+              "count": 608,
+              "routes": [
+                {
+                  "count": 529,
+                  "maxMs": 27.4056,
+                  "route": "/api/slots",
+                  "method": "GET",
+                  "status": 200,
+                  "totalMs": 1514.6921
+                },
+                {
+                  "count": 2,
+                  "maxMs": 0.0,
+                  "route": "/api/me/notifications",
+                  "method": "GET",
+                  "status": 200,
+                  "totalMs": 42.0961
+                },
+                {
+                  "count": 60,
+                  "maxMs": 0.0,
+                  "route": "/api/reports/usage",
+                  "method": "GET",
+                  "status": 500,
+                  "totalMs": 181157.5299
+                },
+                {
+                  "count": 1,
+                  "maxMs": 16.2082,
+                  "route": "/api/reservations/{id}/cancel",
+                  "method": "POST",
+                  "status": 200,
+                  "totalMs": 16.2082
+                },
+                {
+                  "count": 2,
+                  "maxMs": 29.3555,
+                  "route": "/api/admin/slots",
+                  "method": "POST",
+                  "status": 200,
+                  "totalMs": 311.679
+                },
+                {
+                  "count": 10,
+                  "maxMs": 0.0,
+                  "route": "/api/reports/usage",
+                  "method": "GET",
+                  "status": 200,
+                  "totalMs": 76.165
+                },
+                {
+                  "count": 2,
+                  "maxMs": 32.1758,
+                  "route": "/api/reservations",
+                  "method": "POST",
+                  "status": 200,
+                  "totalMs": 63.4819
+                },
+                {
+                  "count": 2,
+                  "maxMs": 24.3645,
+                  "route": "/api/admin/resources",
+                  "method": "POST",
+                  "status": 200,
+                  "totalMs": 92.2512
+                }
+              ],
+              "status": "NO_REQUESTS",
+              "totalMs": 183274.1034,
+              "averageMs": null,
+              "errorRate": null,
+              "errors5xx": 60,
+              "intervalEnd": "2026-09-24T06:56:23.932228800Z",
+              "intervalCount": 0,
+              "intervalStart": "2026-09-24T06:56:22.920254500Z",
+              "intervalCoverage": "BETWEEN_SAMPLES",
+              "businessRejections": 0
+            },
+            "pool": {
+              "max": 4,
+              "idle": 3,
+              "total": 4,
+              "active": 1,
+              "status": "AVAILABLE",
+              "pending": 0,
+              "sampledAt": "2026-09-24T06:56:23.932228800Z"
+            },
+            "time": "2026-09-24T06:56:23.932228800Z",
+            "events": {
+              "status": "AVAILABLE",
+              "failure": 1.0,
+              "pending": 0,
+              "success": 3.0,
+              "oldestSeconds": 0.0
+            },
+            "status": "AVAILABLE",
+            "service": "tracepilot-business",
+            "evidenceId": "81f35242-1fdc-44ee-b25a-17c59c66a3f2",
+            "instanceId": "a2a7b4ae-5832-4f08-8fe7-064f440bfdb0",
+            "collectedAt": "2026-09-24T06:56:23.933234500Z",
+            "environment": "demo",
+            "deploymentVersion": "sha256-18a70c8fd2baebc3ff5affc3921c5f7c91b91f884b3dc7b04135d88783035079",
+            "collectionDurationMs": 1
+          },
+          {
+            "http": {
+              "count": 608,
+              "routes": [
+                {
+                  "count": 529,
+                  "maxMs": 27.4056,
+                  "route": "/api/slots",
+                  "method": "GET",
+                  "status": 200,
+                  "totalMs": 1514.6921
+                },
+                {
+                  "count": 2,
+                  "maxMs": 0.0,
+                  "route": "/api/me/notifications",
+                  "method": "GET",
+                  "status": 200,
+                  "totalMs": 42.0961
+                },
+                {
+                  "count": 60,
+                  "maxMs": 0.0,
+                  "route": "/api/reports/usage",
+                  "method": "GET",
+                  "status": 500,
+                  "totalMs": 181157.5299
+                },
+                {
+                  "count": 1,
+                  "maxMs": 16.2082,
+                  "route": "/api/reservations/{id}/cancel",
+                  "method": "POST",
+                  "status": 200,
+                  "totalMs": 16.2082
+                },
+                {
+                  "count": 2,
+                  "maxMs": 29.3555,
+                  "route": "/api/admin/slots",
+                  "method": "POST",
+                  "status": 200,
+                  "totalMs": 311.679
+                },
+                {
+                  "count": 10,
+                  "maxMs": 0.0,
+                  "route": "/api/reports/usage",
+                  "method": "GET",
+                  "status": 200,
+                  "totalMs": 76.165
+                },
+                {
+                  "count": 2,
+                  "maxMs": 32.1758,
+                  "route": "/api/reservations",
+                  "method": "POST",
+                  "status": 200,
+                  "totalMs": 63.4819
+                },
+                {
+                  "count": 2,
+                  "maxMs": 24.3645,
+                  "route": "/api/admin/resources",
+                  "method": "POST",
+                  "status": 200,
+                  "totalMs": 92.2512
+                }
+              ],
+              "status": "NO_REQUESTS",
+              "totalMs": 183274.1034,
+              "averageMs": null,
+              "errorRate": null,
+              "errors5xx": 60,
+              "intervalEnd": "2026-09-24T06:56:22.920254500Z",
+              "intervalCount": 0,
+              "intervalStart": "2026-09-24T06:56:21.906449100Z",
+              "intervalCoverage": "BETWEEN_SAMPLES",
+              "businessRejections": 0
+            },
+            "pool": {
+              "max": 4,
+              "idle": 4,
+              "total": 4,
+              "active": 0,
+              "status": "AVAILABLE",
+              "pending": 0,
+              "sampledAt": "2026-09-24T06:56:22.920254500Z"
+            },
+            "time": "2026-09-24T06:56:22.920254500Z",
+            "events": {
+              "status": "AVAILABLE",
+              "failure": 1.0,
+              "pending": 0,
+              "success": 3.0,
+              "oldestSeconds": 0.0
+            },
+            "status": "AVAILABLE",
+            "service": "tracepilot-business",
+            "evidenceId": "9d4f5274-ee91-466e-a0d2-2e0e5140e1bf",
+            "instanceId": "a2a7b4ae-5832-4f08-8fe7-064f440bfdb0",
+            "collectedAt": "2026-09-24T06:56:22.921256Z",
+            "environment": "demo",
+            "deploymentVersion": "sha256-18a70c8fd2baebc3ff5affc3921c5f7c91b91f884b3dc7b04135d88783035079",
+            "collectionDurationMs": 1
+          },
+          {
+            "http": {
+              "count": 608,
+              "routes": [
+                {
+                  "count": 529,
+                  "maxMs": 27.4056,
+                  "route": "/api/slots",
+                  "method": "GET",
+                  "status": 200,
+                  "totalMs": 1514.6921
+                },
+                {
+                  "count": 2,
+                  "maxMs": 0.0,
+                  "route": "/api/me/notifications",
+                  "method": "GET",
+                  "status": 200,
+                  "totalMs": 42.0961
+                },
+                {
+                  "count": 60,
+                  "maxMs": 0.0,
+                  "route": "/api/reports/usage",
+                  "method": "GET",
+                  "status": 500,
+                  "totalMs": 181157.5299
+                },
+                {
+                  "count": 1,
+                  "maxMs": 16.2082,
+                  "route": "/api/reservations/{id}/cancel",
+                  "method": "POST",
+                  "status": 200,
+                  "totalMs": 16.2082
+                },
+                {
+                  "count": 2,
+                  "maxMs": 29.3555,
+                  "route": "/api/admin/slots",
+                  "method": "POST",
+                  "status": 200,
+                  "totalMs": 311.679
+                },
+                {
+                  "count": 10,
+                  "maxMs": 0.0,
+                  "route": "/api/reports/usage",
+                  "method": "GET",
+                  "status": 200,
+                  "totalMs": 76.165
+                },
+                {
+                  "count": 2,
+                  "maxMs": 32.1758,
+                  "route": "/api/reservations",
+                  "method": "POST",
+                  "status": 200,
+                  "totalMs": 63.4819
+                },
+                {
+                  "count": 2,
+                  "maxMs": 24.3645,
+                  "route": "/api/admin/resources",
+                  "method": "POST",
+                  "status": 200,
+                  "totalMs": 92.2512
+                }
+              ],
+              "status": "NO_REQUESTS",
+              "totalMs": 183274.1034,
+              "averageMs": null,
+              "errorRate": null,
+              "errors5xx": 60,
+              "intervalEnd": "2026-09-24T06:56:21.906449100Z",
+              "intervalCount": 0,
+              "intervalStart": "2026-09-24T06:56:20.890962500Z",
+              "intervalCoverage": "BETWEEN_SAMPLES",
+              "businessRejections": 0
+            },
+            "pool": {
+              "max": 4,
+              "idle": 3,
+              "total": 4,
+              "active": 1,
+              "status": "AVAILABLE",
+              "pending": 0,
+              "sampledAt": "2026-09-24T06:56:21.906449100Z"
+            },
+            "time": "2026-09-24T06:56:21.906449100Z",
+            "events": {
+              "status": "AVAILABLE",
+              "failure": 1.0,
+              "pending": 0,
+              "success": 3.0,
+              "oldestSeconds": 0.0
+            },
+            "status": "AVAILABLE",
+            "service": "tracepilot-business",
+            "evidenceId": "dcc29e73-e258-493d-b273-24a382189e12",
+            "instanceId": "a2a7b4ae-5832-4f08-8fe7-064f440bfdb0",
+            "collectedAt": "2026-09-24T06:56:21.907101500Z",
+            "environment": "demo",
+            "deploymentVersion": "sha256-18a70c8fd2baebc3ff5affc3921c5f7c91b91f884b3dc7b04135d88783035079",
+            "collectionDurationMs": 0
+          },
+          {
+            "http": {
+              "count": 608,
+              "routes": [
+                {
+                  "count": 529,
+                  "maxMs": 27.4056,
+                  "route": "/api/slots",
+                  "method": "GET",
+                  "status": 200,
+                  "totalMs": 1514.6921
+                },
+                {
+                  "count": 2,
+                  "maxMs": 0.0,
+                  "route": "/api/me/notifications",
+                  "method": "GET",
+                  "status": 200,
+                  "totalMs": 42.0961
+                },
+                {
+                  "count": 60,
+                  "maxMs": 0.0,
+                  "route": "/api/reports/usage",
+                  "method": "GET",
+                  "status": 500,
+                  "totalMs": 181157.5299
+                },
+                {
+                  "count": 1,
+                  "maxMs": 16.2082,
+                  "route": "/api/reservations/{id}/cancel",
+                  "method": "POST",
+                  "status": 200,
+                  "totalMs": 16.2082
+                },
+                {
+                  "count": 2,
+                  "maxMs": 29.3555,
+                  "route": "/api/admin/slots",
+                  "method": "POST",
+                  "status": 200,
+                  "totalMs": 311.679
+                },
+                {
+                  "count": 10,
+                  "maxMs": 0.0,
+                  "route": "/api/reports/usage",
+                  "method": "GET",
+                  "status": 200,
+                  "totalMs": 76.165
+                },
+                {
+                  "count": 2,
+                  "maxMs": 32.1758,
+                  "route": "/api/reservations",
+                  "method": "POST",
+                  "status": 200,
+                  "totalMs": 63.4819
+                },
+                {
+                  "count": 2,
+                  "maxMs": 24.3645,
+                  "route": "/api/admin/resources",
+                  "method": "POST",
+                  "status": 200,
+                  "totalMs": 92.2512
+                }
+              ],
+              "status": "NO_REQUESTS",
+              "totalMs": 183274.1034,
+              "averageMs": null,
+              "errorRate": null,
+              "errors5xx": 60,
+              "intervalEnd": "2026-09-24T06:56:20.890962500Z",
+              "intervalCount": 0,
+              "intervalStart": "2026-09-24T06:56:19.877002300Z",
+              "intervalCoverage": "BETWEEN_SAMPLES",
+              "businessRejections": 0
+            },
+            "pool": {
+              "max": 4,
+              "idle": 4,
+              "total": 4,
+              "active": 0,
+              "status": "AVAILABLE",
+              "pending": 0,
+              "sampledAt": "2026-09-24T06:56:20.890962500Z"
+            },
+            "time": "2026-09-24T06:56:20.890962500Z",
+            "events": {
+              "status": "AVAILABLE",
+              "failure": 1.0,
+              "pending": 0,
+              "success": 3.0,
+              "oldestSeconds": 0.0
+            },
+            "status": "AVAILABLE",
+            "service": "tracepilot-business",
+            "evidenceId": "54a137ae-7a75-4245-b617-68699cffeb76",
+            "instanceId": "a2a7b4ae-5832-4f08-8fe7-064f440bfdb0",
+            "collectedAt": "2026-09-24T06:56:20.891962200Z",
+            "environment": "demo",
+            "deploymentVersion": "sha256-18a70c8fd2baebc3ff5affc3921c5f7c91b91f884b3dc7b04135d88783035079",
+            "collectionDurationMs": 0
+          }
+        ],
+        "start": "2026-09-24T06:56:20.010541Z",
+        "status": "AVAILABLE",
+        "channel": "all",
+        "hasMore": false,
+        "coverage": "SNAPSHOT_SCANNED",
+        "ordering": "REVERSE_APPEND_ORDER",
+        "nextCursor": "0",
+        "scannedBytes": 744544,
+        "snapshotBytes": 744544,
+        "remainingBytes": 0,
+        "malformedRecords": 0,
+        "oversizedRecords": 0
+      }
+    },
+    {
+      "id": "cde6a5f9-7d67-40c0-9484-38e9a314adbf",
+      "source": "logs",
+      "status": "NO_DATA",
+      "start": "2026-09-24T06:56:20.010541Z",
+      "end": "2026-09-24T06:56:50.021461Z",
+      "locator": {
+        "query": {
+          "args": {
+            "limit": "200"
+          },
+          "tool": "logs"
+        },
+        "service": "tracepilot-business",
+        "endpoint": "/ops/logs?start=2026-09-24T06%3A56%3A20.010541Z&end=2026-09-24T06%3A56%3A50.021461Z&limit=200&cursor=0",
+        "environment": "demo",
+        "queryFingerprint": "c0850aed4ad73387561396915ed888f4fb22211a8784c50372caaaf509c70858"
+      },
+      "data": {
+        "end": "2026-09-24T06:56:50.021461Z",
+        "gap": "NONE",
+        "data": [],
+        "start": "2026-09-24T06:56:20.010541Z",
+        "status": "NO_DATA",
+        "channel": "all",
+        "hasMore": false,
+        "coverage": "SNAPSHOT_SCANNED",
+        "ordering": "REVERSE_APPEND_ORDER",
+        "nextCursor": "0",
+        "scannedBytes": 864525,
+        "snapshotBytes": 864525,
+        "remainingBytes": 0,
+        "malformedRecords": 0,
+        "oversizedRecords": 0
+      }
+    },
+    {
+      "id": "0d3abcc8-e020-42db-8637-823aa18cf209",
+      "source": "runbook",
+      "status": "AVAILABLE",
+      "start": "2026-09-24T06:56:20.010541Z",
+      "end": "2026-09-24T06:56:50.021461Z",
+      "locator": {
+        "query": {
+          "args": {},
+          "tool": "runbook"
+        },
+        "source": "bundled-runbook",
+        "service": "tracepilot-business",
+        "version": "2613eef38a5c3812f7fd156b5f27916350d595ce17dfed4bd5deb5614526ca8f",
+        "document": "business-troubleshooting.md",
+        "environment": "demo",
+        "queryFingerprint": "bb1e4e7b850485696c5a3a71633d4cc6e32915c48f9c1136acf7b470042ef3f2"
+      },
+      "data": {
+        "text": "# 业务服务只读排查手册\n\n先确认时间窗口、服务、环境和部署版本。数据过期、缺失或查询失败时保留缺口，不把缺失当作零错误。\n\n请求异常：按 traceId 关联 request_started、request_completed 和同请求业务操作，比较 HTTP 状态、耗时和异常类型。业务容量拒绝与服务器异常分别统计。不要仅因一条超时就断定根因。\n\n数据库：比较连接池 active/max、pending、连接获取耗时、查询耗时和请求延迟。活跃连接到顶只能证明占用/饱和，需要更多生命周期证据才能判断泄漏。查询耗时上升时核对固定版本查询逻辑、索引选择及数据规模，避免把所有数据库异常归为同一原因。\n\n异步事件：比较未完成事件数量、最老年龄和消费成功/失败增量。核对业务提交日志与同 eventId 的消费日志，区分生产增长、消费失败和消费没有进展。来源请求版本与消费版本不同是正常可能情况，不要将当前代码默认当成事件创建时版本。\n\n恢复验证：采用相同请求类型、数据规模和并发重新测量；同时检查业务人数约束和通知是否重复。一次采样下降不能证明稳定恢复。报告应区分观测事实、解释和仍需验证的假设。\n"
+      }
+    },
+    {
+      "id": "d0db4533-1301-4f6f-b026-badfdc1a222b",
+      "source": "logs",
+      "status": "NO_DATA",
+      "start": "2026-09-24T06:56:20.010541Z",
+      "end": "2026-09-24T06:56:50.021461Z",
+      "locator": {
+        "query": {
+          "args": {
+            "level": "ERROR",
+            "limit": "200"
+          },
+          "tool": "logs"
+        },
+        "service": "tracepilot-business",
+        "endpoint": "/ops/logs?start=2026-09-24T06%3A56%3A20.010541Z&end=2026-09-24T06%3A56%3A50.021461Z&limit=200&cursor=0&level=ERROR",
+        "environment": "demo",
+        "queryFingerprint": "3ef13ffe80cfaf84cbfe9a54b28f5c96bdde503ecac046ffe7790d1624cdcec3"
+      },
+      "data": {
+        "end": "2026-09-24T06:56:50.021461Z",
+        "gap": "NONE",
+        "data": [],
+        "start": "2026-09-24T06:56:20.010541Z",
+        "status": "NO_DATA",
+        "channel": "all",
+        "hasMore": false,
+        "coverage": "SNAPSHOT_SCANNED",
+        "ordering": "REVERSE_APPEND_ORDER",
+        "nextCursor": "0",
+        "scannedBytes": 864525,
+        "snapshotBytes": 864525,
+        "remainingBytes": 0,
+        "malformedRecords": 0,
+        "oversizedRecords": 0
+      }
+    }
+  ],
+  "calls": [
+    [
+      {
+        "type": "tool_use",
+        "id": "01a0d233fd4290519c516895bace98d1",
+        "name": "query_runbook",
+        "input": {
+          "args": {}
+        }
+      },
+      {
+        "type": "tool_use",
+        "id": "01a0d23400b2c457ed3d651448fde555",
+        "name": "query_logs",
+        "input": {
+          "args": {
+            "level": "ERROR"
+          }
+        }
+      }
+    ],
+    [
+      {
+        "type": "tool_use",
+        "id": "01a0d2340b3684ac992ee09a582eee52",
+        "name": "query_logs",
+        "input": {
+          "args": {
+            "limit": 200
+          }
+        }
+      },
+      {
+        "type": "tool_use",
+        "id": "01a0d2340bce930b7201769fa0c39203",
+        "name": "query_metrics",
+        "input": {
+          "args": {
+            "limit": 200
+          }
+        }
+      }
+    ],
+    [
+      {
+        "type": "tool_use",
+        "id": "01a0d234221af325ac736dcabdea16d0",
+        "name": "read_evidence_page",
+        "input": {
+          "evidenceId": "5aaca226-137e-4195-a373-cce7883d5a1a",
+          "page": 0
+        }
+      }
+    ],
+    [
+      {
+        "type": "tool_use",
+        "id": "01a0d2342a6270df2c498a17851c2ae7",
+        "name": "read_evidence_page",
+        "input": {
+          "evidenceId": "5aaca226-137e-4195-a373-cce7883d5a1a",
+          "page": 0
+        }
+      },
+      {
+        "type": "tool_use",
+        "id": "01a0d2342b85d7420113c64ce5ce9c00",
+        "name": "read_evidence_page",
+        "input": {
+          "evidenceId": "0d3abcc8-e020-42db-8637-823aa18cf209",
+          "page": 0
+        }
+      }
+    ],
+    [
+      {
+        "type": "tool_use",
+        "id": "01a0d234331085586a67d4d4ac9b3fe9",
+        "name": "read_evidence_page",
+        "input": {
+          "evidenceId": "5aaca226-137e-4195-a373-cce7883d5a1a",
+          "page": 0
+        }
+      }
+    ]
+  ],
+  "provenance": "Actual v26 normal case: single page -> multipage -> same single page. Synthetic final response is program replay only."
+}

@@ -1,0 +1,47 @@
+spring:
+  application:
+    name: tracepilot-business
+  main:
+    banner-mode: 'off'
+  task:
+    scheduling:
+      pool:
+        size: 3
+  datasource:
+    url: ${DB_URL:jdbc:mysql://127.0.0.1:3307/tracepilot?connectionTimeZone=UTC&forceConnectionTimeZoneToSession=true}
+    username: ${DB_USER:tracepilot}
+    password: ${DB_PASSWORD:tracepilot-local}
+    hikari:
+      maximum-pool-size: ${DB_POOL_SIZE:24}
+      connection-timeout: ${DB_CONNECTION_TIMEOUT_MS:2000}
+      pool-name: business
+      transaction-isolation: TRANSACTION_READ_COMMITTED
+  jackson:
+    deserialization:
+      fail-on-unknown-properties: true
+server:
+  port: ${PORT:8080}
+  error:
+    include-message: never
+app:
+  environment: ${APP_ENV:local}
+  deployment-version: ${DEPLOYMENT_VERSION:unknown}
+  data-dir: ${OBSERVABILITY_DIR:.local/m2}
+  observer-token: ${OBSERVER_TOKEN:}
+  sample-enabled: ${SAMPLE_ENABLED:true}
+  demo-seed: ${DEMO_SEED:false}
+  events-enabled: ${EVENTS_ENABLED:true}
+  event-delay-ms: 25
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,prometheus
+  endpoint:
+    health:
+      show-details: never
+  metrics:
+    distribution:
+      percentiles-histogram:
+        tracepilot.http: true
+        tracepilot.sql: true

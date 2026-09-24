@@ -1,0 +1,73 @@
+{
+  "source": "actual DEV-S1 v18; non-thinking native arguments only",
+  "taskId": "b4f04b81-022b-4f65-b03c-8a5880ffd44b",
+  "rounds": [
+    {
+      "ordinal": 2,
+      "calls": [
+        {
+          "name": "query_sqlPlan",
+          "arguments": {
+            "args": {
+              "statementFingerprint": "e6035c4d7a7fd429e97e0cd68c0e89af9c6fd98b3819334f79825899ef68f8db"
+            }
+          }
+        },
+        {
+          "name": "query_code",
+          "arguments": {
+            "args": {
+              "query": "UsageReport report",
+              "version": "latest"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "ordinal": 3,
+      "calls": [
+        {
+          "name": "query_logs",
+          "arguments": {
+            "args": {
+              "limit": 200
+            },
+            "retainFactIds": [
+              "F131211d4ea327edf97ffef2a",
+              "F9802167d75398cf350e08fd4",
+              "F6d4bd6f7e81285435374e7ae",
+              "F7019da8ddef1e853512d22a4",
+              "F02e62e3befcbcbe4152ff14b",
+              "F55e970856a26869b75e92090",
+              "F9d431f5d0c4310b71b0bb1bd",
+              "F7f848bdb16ffa91181a00f6e",
+              "F78e4bd80c4043e37bf6b38ca",
+              "F63262c43d022402fcdbaae4f"
+            ]
+          }
+        },
+        {
+          "name": "query_metrics",
+          "arguments": {
+            "args": {
+              "limit": 200
+            },
+            "retainFactIds": [
+              "Fe35e14c791687d7e1da5afb7",
+              "F40a41cd4d831a5e2f5cdebe1",
+              "F75d1a251bb8b6776ba23bdbc",
+              "F84486fa0e3241b39c3e8db8f",
+              "F49bcfe80727aae91c063b1e8",
+              "F399f09d767def858af2a24a0",
+              "Fe7dc85e643215562b1b84b7b"
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "invalidRetainId": "Fe7dc85e643215562b1b84b7b",
+  "actualProvidedId": "Fe7dc85e643215705562b1b84",
+  "note": "Actual ID differs; no runtime correction or mapping is authorized."
+}

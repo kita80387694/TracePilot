@@ -1,0 +1,1343 @@
+{
+  "input": {
+    "service": "tracepilot-business",
+    "environment": "demo",
+    "start": "2026-09-12T13:48:15.111658+00:00",
+    "end": "2026-09-12T13:48:23.319763+00:00",
+    "symptom": "这批预约请求成功，但用户一直看不到对应的站内通知。请检查这段窗口的证据，给出可能原因和需要人工检查的位置。",
+    "interfacePath": "/api/reservations"
+  },
+  "evidence": [
+    {
+      "id": "42be18d3-aa77-41d9-8310-1f832ae93d1a",
+      "source": "overview",
+      "status": "AVAILABLE",
+      "start": "2026-09-12T13:48:23.611321700Z",
+      "end": "2026-09-12T13:48:23.611321700Z",
+      "locator": {
+        "service": "tracepilot-business",
+        "endpoint": "/ops/snapshot",
+        "environment": "demo",
+        "queryFingerprint": "8d26be8279e98562ffdaa5cbc6e88af6277f747e3af016df9a2d21adb574da2f"
+      },
+      "data": {
+        "http": {
+          "count": 121,
+          "routes": [
+            {
+              "count": 55,
+              "maxMs": 0.0,
+              "route": "/api/slots",
+              "method": "GET",
+              "status": 200,
+              "totalMs": 331.1166
+            },
+            {
+              "count": 2,
+              "maxMs": 13.316,
+              "route": "/api/admin/slots",
+              "method": "POST",
+              "status": 200,
+              "totalMs": 63.4814
+            },
+            {
+              "count": 3,
+              "maxMs": 0.0,
+              "route": "/api/slots",
+              "method": "GET",
+              "status": 401,
+              "totalMs": 186.0972
+            },
+            {
+              "count": 43,
+              "maxMs": 82.0216,
+              "route": "/api/auth/login",
+              "method": "POST",
+              "status": 200,
+              "totalMs": 3522.438301
+            },
+            {
+              "count": 16,
+              "maxMs": 13.7729,
+              "route": "/api/reservations",
+              "method": "POST",
+              "status": 200,
+              "totalMs": 210.7048
+            },
+            {
+              "count": 2,
+              "maxMs": 12.8289,
+              "route": "/api/admin/resources",
+              "method": "POST",
+              "status": 200,
+              "totalMs": 158.1133
+            }
+          ],
+          "status": "NO_REQUESTS",
+          "totalMs": 4471.951601000001,
+          "averageMs": null,
+          "errorRate": null,
+          "errors5xx": 0,
+          "intervalCount": 0,
+          "businessRejections": 0
+        },
+        "pool": {
+          "max": 8,
+          "idle": 8,
+          "total": 8,
+          "active": 0,
+          "status": "AVAILABLE",
+          "pending": 0
+        },
+        "time": "2026-09-12T13:48:23.611321700Z",
+        "events": {
+          "status": "AVAILABLE",
+          "failure": 0.0,
+          "pending": 8,
+          "success": 8.0,
+          "oldestSeconds": 8.472
+        },
+        "status": "AVAILABLE",
+        "service": "tracepilot-business",
+        "evidenceId": "af62291d-7bb6-4dfe-a460-93e5852ea0d9",
+        "instanceId": "33473fb8-fa0f-44d4-b976-7870ed50a9b0",
+        "collectedAt": "2026-09-12T13:48:23.611321700Z",
+        "environment": "demo",
+        "sampleAgeMs": 32,
+        "deploymentVersion": "sha256-a310042746f037f5a47e2de93d2303f000926a5871d63efdd7e375df55045785",
+        "collectionDurationMs": 0
+      }
+    },
+    {
+      "id": "bf95e784-0081-4266-9e26-b4fba4b05a0f",
+      "source": "logs",
+      "status": "PARTIAL",
+      "start": "2026-09-12T13:48:15.111658Z",
+      "end": "2026-09-12T13:48:23.319763Z",
+      "locator": {
+        "service": "tracepilot-business",
+        "endpoint": "/ops/logs?start=2026-09-12T13%3A48%3A15.111658Z&end=2026-09-12T13%3A48%3A23.319763Z&limit=50&cursor=0&level=INFO",
+        "environment": "demo",
+        "queryFingerprint": "6da5b3e0314f37154dca7ac04c483a230a4c30e11933d9381eea8e835ed6af0f"
+      },
+      "data": {
+        "end": "2026-09-12T13:48:23.319763Z",
+        "gap": "NONE",
+        "data": [
+          {
+            "time": "2026-09-12T13:48:15.308Z",
+            "level": "INFO",
+            "route": "/api/reservations",
+            "logger": "tracepilot.evidence",
+            "method": "POST",
+            "status": 200,
+            "message": "request_completed",
+            "service": "tracepilot-business",
+            "traceId": "d1b2b162cc274f81984fa52312910b62",
+            "requestId": "681c66ec-9eba-4a8a-ab90-19bd75b8abad",
+            "durationMs": 12.8481,
+            "evidenceId": "fb852795-f6ce-4c3a-bdc3-f49b88a4f7aa",
+            "instanceId": "33473fb8-fa0f-44d4-b976-7870ed50a9b0",
+            "collectedAt": "2026-09-12T13:48:15.308557600Z",
+            "environment": "demo",
+            "deploymentVersion": "sha256-a310042746f037f5a47e2de93d2303f000926a5871d63efdd7e375df55045785"
+          },
+          {
+            "time": "2026-09-12T13:48:15.307Z",
+            "level": "INFO",
+            "logger": "tracepilot.evidence",
+            "status": 200,
+            "message": "business_operation_completed",
+            "service": "tracepilot-business",
+            "traceId": "d1b2b162cc274f81984fa52312910b62",
+            "operation": "POST /api/reservations",
+            "requestId": "681c66ec-9eba-4a8a-ab90-19bd75b8abad",
+            "evidenceId": "573975b6-5668-4c84-b917-ce456bf1aa67",
+            "instanceId": "33473fb8-fa0f-44d4-b976-7870ed50a9b0",
+            "collectedAt": "2026-09-12T13:48:15.307556900Z",
+            "environment": "demo",
+            "deploymentVersion": "sha256-a310042746f037f5a47e2de93d2303f000926a5871d63efdd7e375df55045785"
+          },
+          {
+            "time": "2026-09-12T13:48:15.307Z",
+            "level": "INFO",
+            "logger": "tracepilot.evidence",
+            "eventId": 83581,
+            "message": "business_event_committed",
+            "outcome": "COMMITTED",
+            "service": "tracepilot-business",
+            "traceId": "d1b2b162cc274f81984fa52312910b62",
+            "operation": "RESERVED",
+            "requestId": "681c66ec-9eba-4a8a-ab90-19bd75b8abad",
+            "evidenceId": "e7c83255-ecd9-4d39-adde-bc5c82b25d13",
+            "instanceId": "33473fb8-fa0f-44d4-b976-7870ed50a9b0",
+            "collectedAt": "2026-09-12T13:48:15.307556900Z",
+            "environment": "demo",
+            "deploymentVersion": "sha256-a310042746f037f5a47e2de93d2303f000926a5871d63efdd7e375df55045785"
+          },
+          {
+            "time": "2026-09-12T13:48:15.296Z",
+            "level": "INFO",
+            "route": "/api/reservations",
+            "logger": "tracepilot.evidence",
+            "method": "POST",
+            "message": "request_started",
+            "service": "tracepilot-business",
+            "traceId": "d1b2b162cc274f81984fa52312910b62",
+            "requestId": "681c66ec-9eba-4a8a-ab90-19bd75b8abad",
+            "evidenceId": "4df8a6ee-437d-4de8-9ad6-d77599bf7b38",
+            "instanceId": "33473fb8-fa0f-44d4-b976-7870ed50a9b0",
+            "collectedAt": "2026-09-12T13:48:15.296388Z",
+            "environment": "demo",
+            "deploymentVersion": "sha256-a310042746f037f5a47e2de93d2303f000926a5871d63efdd7e375df55045785"
+          },
+          {
+            "time": "2026-09-12T13:48:15.293Z",
+            "level": "INFO",
+            "route": "/api/reservations",
+            "logger": "tracepilot.evidence",
+            "method": "POST",
+            "status": 200,
+            "message": "request_completed",
+            "service": "tracepilot-business",
+            "traceId": "95b98d3224ce421aa1c95a9ebba3fb5a",
+            "requestId": "e85b7030-cdb4-464d-9b95-6d8eae1a5a33",
+            "durationMs": 12.5737,
+            "evidenceId": "e9f4f63c-94ce-4538-b242-a370582dfd51",
+            "instanceId": "33473fb8-fa0f-44d4-b976-7870ed50a9b0",
+            "collectedAt": "2026-09-12T13:48:15.293381400Z",
+            "environment": "demo",
+            "deploymentVersion": "sha256-a310042746f037f5a47e2de93d2303f000926a5871d63efdd7e375df55045785"
+          },
+          {
+            "time": "2026-09-12T13:48:15.291Z",
+            "level": "INFO",
+            "logger": "tracepilot.evidence",
+            "status": 200,
+            "message": "business_operation_completed",
+            "service": "tracepilot-business",
+            "traceId": "95b98d3224ce421aa1c95a9ebba3fb5a",
+            "operation": "POST /api/reservations",
+            "requestId": "e85b7030-cdb4-464d-9b95-6d8eae1a5a33",
+            "evidenceId": "866d17bb-7308-4dd1-a260-d6d686f2372e",
+            "instanceId": "33473fb8-fa0f-44d4-b976-7870ed50a9b0",
+            "collectedAt": "2026-09-12T13:48:15.291350400Z",
+            "environment": "demo",
+            "deploymentVersion": "sha256-a310042746f037f5a47e2de93d2303f000926a5871d63efdd7e375df55045785"
+          },
+          {
+            "time": "2026-09-12T13:48:15.291Z",
+            "level": "INFO",
+            "logger": "tracepilot.evidence",
+            "eventId": 83580,
+            "message": "business_event_committed",
+            "outcome": "COMMITTED",
+            "service": "tracepilot-business",
+            "traceId": "95b98d3224ce421aa1c95a9ebba3fb5a",
+            "operation": "RESERVED",
+            "requestId": "e85b7030-cdb4-464d-9b95-6d8eae1a5a33",
+            "evidenceId": "330ab918-27bb-4e08-a8a5-615b8e5ae0ed",
+            "instanceId": "33473fb8-fa0f-44d4-b976-7870ed50a9b0",
+            "collectedAt": "2026-09-12T13:48:15.291350400Z",
+            "environment": "demo",
+            "deploymentVersion": "sha256-a310042746f037f5a47e2de93d2303f000926a5871d63efdd7e375df55045785"
+          },
+          {
+            "time": "2026-09-12T13:48:15.281Z",
+            "level": "INFO",
+            "route": "/api/reservations",
+            "logger": "tracepilot.evidence",
+            "method": "POST",
+            "message": "request_started",
+            "service": "tracepilot-business",
+            "traceId": "95b98d3224ce421aa1c95a9ebba3fb5a",
+            "requestId": "e85b7030-cdb4-464d-9b95-6d8eae1a5a33",
+            "evidenceId": "63b3f8b3-5f7d-459d-84bd-efbcd4af3d3e",
+            "instanceId": "33473fb8-fa0f-44d4-b976-7870ed50a9b0",
+            "collectedAt": "2026-09-12T13:48:15.281321900Z",
+            "environment": "demo",
+            "deploymentVersion": "sha256-a310042746f037f5a47e2de93d2303f000926a5871d63efdd7e375df55045785"
+          },
+          {
+            "time": "2026-09-12T13:48:15.277Z",
+            "level": "INFO",
+            "route": "/api/reservations",
+            "logger": "tracepilot.evidence",
+            "method": "POST",
+            "status": 200,
+            "message": "request_completed",
+            "service": "tracepilot-business",
+            "traceId": "8fb345834e6e4324843163c1e808ff6e",
+            "requestId": "12682133-b1a9-48d7-bfc4-df068cb3adb3",
+            "durationMs": 12.2435,
+            "evidenceId": "e186bbf6-7528-4ac4-9e90-ae0a4e9a88ee",
+            "instanceId": "33473fb8-fa0f-44d4-b976-7870ed50a9b0",
+            "collectedAt": "2026-09-12T13:48:15.277812500Z",
+            "environment": "demo",
+            "deploymentVersion": "sha256-a310042746f037f5a47e2de93d2303f000926a5871d63efdd7e375df55045785"
+          },
+          {
+            "time": "2026-09-12T13:48:15.276Z",
+            "level": "INFO",
+            "logger": "tracepilot.evidence",
+            "status": 200,
+            "message": "business_operation_completed",
+            "service": "tracepilot-business",
+            "traceId": "8fb345834e6e4324843163c1e808ff6e",
+            "operation": "POST /api/reservations",
+            "requestId": "12682133-b1a9-48d7-bfc4-df068cb3adb3",
+            "evidenceId": "f923bb84-0379-4f47-899e-cb1f8abbbbcd",
+            "instanceId": "33473fb8-fa0f-44d4-b976-7870ed50a9b0",
+            "collectedAt": "2026-09-12T13:48:15.276811400Z",
+            "environment": "demo",
+            "deploymentVersion": "sha256-a310042746f037f5a47e2de93d2303f000926a5871d63efdd7e375df55045785"
+          },
+          {
+            "time": "2026-09-12T13:48:15.276Z",
+            "level": "INFO",
+            "logger": "tracepilot.evidence",
+            "eventId": 83579,
+            "message": "business_event_committed",
+            "outcome": "COMMITTED",
+            "service": "tracepilot-business",
+            "traceId": "8fb345834e6e4324843163c1e808ff6e",
+            "operation": "RESERVED",
+            "requestId": "12682133-b1a9-48d7-bfc4-df068cb3adb3",
+            "evidenceId": "e082e6c0-8cd1-46eb-976e-e82d47e41364",
+            "instanceId": "33473fb8-fa0f-44d4-b976-7870ed50a9b0",
+            "collectedAt": "2026-09-12T13:48:15.276811400Z",
+            "environment": "demo",
+            "deploymentVersion": "sha256-a310042746f037f5a47e2de93d2303f000926a5871d63efdd7e375df55045785"
+          },
+          {
+            "time": "2026-09-12T13:48:15.265Z",
+            "level": "INFO",
+            "route": "/api/reservations",
+            "logger": "tracepilot.evidence",
+            "method": "POST",
+            "message": "request_started",
+            "service": "tracepilot-business",
+            "traceId": "8fb345834e6e4324843163c1e808ff6e",
+            "requestId": "12682133-b1a9-48d7-bfc4-df068cb3adb3",
+            "evidenceId": "f86c4665-e0c6-4c83-8499-acb97a1a2d32",
+            "instanceId": "33473fb8-fa0f-44d4-b976-7870ed50a9b0",
+            "collectedAt": "2026-09-12T13:48:15.265299900Z",
+            "environment": "demo",
+            "deploymentVersion": "sha256-a310042746f037f5a47e2de93d2303f000926a5871d63efdd7e375df55045785"
+          },
+          {
+            "time": "2026-09-12T13:48:15.263Z",
+            "level": "INFO",
+            "route": "/api/reservations",
+            "logger": "tracepilot.evidence",
+            "method": "POST",
+            "status": 200,
+            "message": "request_completed",
+            "service": "tracepilot-business",
+            "traceId": "ddcb8347285540b98db6882814b8a6ff",
+            "requestId": "9bcada69-7025-4f25-b280-1c2ebce452ad",
+            "durationMs": 13.5308,
+            "evidenceId": "36b60799-9dbf-4940-8ab5-cde722c172e8",
+            "instanceId": "33473fb8-fa0f-44d4-b976-7870ed50a9b0",
+            "collectedAt": "2026-09-12T13:48:15.263283200Z",
+            "environment": "demo",
+            "deploymentVersion": "sha256-a310042746f037f5a47e2de93d2303f000926a5871d63efdd7e375df55045785"
+          },
+          {
+            "time": "2026-09-12T13:48:15.261Z",
+            "level": "INFO",
+            "logger": "tracepilot.evidence",
+            "status": 200,
+            "message": "business_operation_completed",
+            "service": "tracepilot-business",
+            "traceId": "ddcb8347285540b98db6882814b8a6ff",
+            "operation": "POST /api/reservations",
+            "requestId": "9bcada69-7025-4f25-b280-1c2ebce452ad",
+            "evidenceId": "0b89d9cf-c9a7-4de5-bdea-34db25e654aa",
+            "instanceId": "33473fb8-fa0f-44d4-b976-7870ed50a9b0",
+            "collectedAt": "2026-09-12T13:48:15.261240100Z",
+            "environment": "demo",
+            "deploymentVersion": "sha256-a310042746f037f5a47e2de93d2303f000926a5871d63efdd7e375df55045785"
+          },
+          {
+            "time": "2026-09-12T13:48:15.261Z",
+            "level": "INFO",
+            "logger": "tracepilot.evidence",
+            "eventId": 83578,
+            "message": "business_event_committed",
+            "outcome": "COMMITTED",
+            "service": "tracepilot-business",
+            "traceId": "ddcb8347285540b98db6882814b8a6ff",
+            "operation": "RESERVED",
+            "requestId": "9bcada69-7025-4f25-b280-1c2ebce452ad",
+            "evidenceId": "91130595-d9df-452e-9a41-f2c2f809717b",
+            "instanceId": "33473fb8-fa0f-44d4-b976-7870ed50a9b0",
+            "collectedAt": "2026-09-12T13:48:15.261240100Z",
+            "environment": "demo",
+            "deploymentVersion": "sha256-a310042746f037f5a47e2de93d2303f000926a5871d63efdd7e375df55045785"
+          },
+          {
+            "time": "2026-09-12T13:48:15.250Z",
+            "level": "INFO",
+            "route": "/api/reservations",
+            "logger": "tracepilot.evidence",
+            "method": "POST",
+            "message": "request_started",
+            "service": "tracepilot-business",
+            "traceId": "ddcb8347285540b98db6882814b8a6ff",
+            "requestId": "9bcada69-7025-4f25-b280-1c2ebce452ad",
+            "evidenceId": "1a140bfb-4552-45c2-8bf8-0d9bebd427c2",
+            "instanceId": "33473fb8-fa0f-44d4-b976-7870ed50a9b0",
+            "collectedAt": "2026-09-12T13:48:15.250212800Z",
+            "environment": "demo",
+            "deploymentVersion": "sha256-a310042746f037f5a47e2de93d2303f000926a5871d63efdd7e375df55045785"
+          },
+          {
+            "time": "2026-09-12T13:48:15.230Z",
+            "level": "INFO",
+            "route": "/api/reservations",
+            "logger": "tracepilot.evidence",
+            "method": "POST",
+            "status": 200,
+            "message": "request_completed",
+            "service": "tracepilot-business",
+            "traceId": "730aeb56cbf640e3a4951af1cad78695",
+            "requestId": "4c7fee4c-9b5f-49ac-9e6c-870f3ed3441f",
+            "durationMs": 12.0681,
+            "evidenceId": "801e0165-00d3-42b1-b28c-01355d8d06b3",
+            "instanceId": "33473fb8-fa0f-44d4-b976-7870ed50a9b0",
+            "collectedAt": "2026-09-12T13:48:15.230979900Z",
+            "environment": "demo",
+            "deploymentVersion": "sha256-a310042746f037f5a47e2de93d2303f000926a5871d63efdd7e375df55045785"
+          },
+          {
+            "time": "2026-09-12T13:48:15.229Z",
+            "level": "INFO",
+            "logger": "tracepilot.evidence",
+            "status": 200,
+            "message": "business_operation_completed",
+            "service": "tracepilot-business",
+            "traceId": "730aeb56cbf640e3a4951af1cad78695",
+            "operation": "POST /api/reservations",
+            "requestId": "4c7fee4c-9b5f-49ac-9e6c-870f3ed3441f",
+            "evidenceId": "6ef3922d-f65f-4edf-a3ce-9021e2eacafd",
+            "instanceId": "33473fb8-fa0f-44d4-b976-7870ed50a9b0",
+            "collectedAt": "2026-09-12T13:48:15.229980700Z",
+            "environment": "demo",
+            "deploymentVersion": "sha256-a310042746f037f5a47e2de93d2303f000926a5871d63efdd7e375df55045785"
+          },
+          {
+            "time": "2026-09-12T13:48:15.228Z",
+            "level": "INFO",
+            "logger": "tracepilot.evidence",
+            "eventId": 83577,
+            "message": "business_event_committed",
+            "outcome": "COMMITTED",
+            "service": "tracepilot-business",
+            "traceId": "730aeb56cbf640e3a4951af1cad78695",
+            "operation": "RESERVED",
+            "requestId": "4c7fee4c-9b5f-49ac-9e6c-870f3ed3441f",
+            "evidenceId": "54d03d58-1ff5-442c-94ec-f73cf5f61cb1",
+            "instanceId": "33473fb8-fa0f-44d4-b976-7870ed50a9b0",
+            "collectedAt": "2026-09-12T13:48:15.228979300Z",
+            "environment": "demo",
+            "deploymentVersion": "sha256-a310042746f037f5a47e2de93d2303f000926a5871d63efdd7e375df55045785"
+          },
+          {
+            "time": "2026-09-12T13:48:15.218Z",
+            "level": "INFO",
+            "route": "/api/reservations",
+            "logger": "tracepilot.evidence",
+            "method": "POST",
+            "message": "request_started",
+            "service": "tracepilot-business",
+            "traceId": "730aeb56cbf640e3a4951af1cad78695",
+            "requestId": "4c7fee4c-9b5f-49ac-9e6c-870f3ed3441f",
+            "evidenceId": "2e8d17f9-9702-4004-8e3b-e938e0c5ea27",
+            "instanceId": "33473fb8-fa0f-44d4-b976-7870ed50a9b0",
+            "collectedAt": "2026-09-12T13:48:15.218447100Z",
+            "environment": "demo",
+            "deploymentVersion": "sha256-a310042746f037f5a47e2de93d2303f000926a5871d63efdd7e375df55045785"
+          },
+          {
+            "time": "2026-09-12T13:48:15.216Z",
+            "level": "INFO",
+            "route": "/api/reservations",
+            "logger": "tracepilot.evidence",
+            "method": "POST",
+            "status": 200,
+            "message": "request_completed",
+            "service": "tracepilot-business",
+            "traceId": "5d3a64fc58c3438d872a019e29a857c2",
+            "requestId": "73403e04-d3e3-4baf-8493-7eb8c64d5ec3",
+            "durationMs": 13.6531,
+            "evidenceId": "9b1f40f5-c773-4ae2-93dc-4d805019316d",
+            "instanceId": "33473fb8-fa0f-44d4-b976-7870ed50a9b0",
+            "collectedAt": "2026-09-12T13:48:15.216447400Z",
+            "environment": "demo",
+            "deploymentVersion": "sha256-a310042746f037f5a47e2de93d2303f000926a5871d63efdd7e375df55045785"
+          },
+          {
+            "time": "2026-09-12T13:48:15.215Z",
+            "level": "INFO",
+            "logger": "tracepilot.evidence",
+            "status": 200,
+            "message": "business_operation_completed",
+            "service": "tracepilot-business",
+            "traceId": "5d3a64fc58c3438d872a019e29a857c2",
+            "operation": "POST /api/reservations",
+            "requestId": "73403e04-d3e3-4baf-8493-7eb8c64d5ec3",
+            "evidenceId": "5cdb90b6-77ea-4664-9167-d0ae6f9e8141",
+            "instanceId": "33473fb8-fa0f-44d4-b976-7870ed50a9b0",
+            "collectedAt": "2026-09-12T13:48:15.215448Z",
+            "environment": "demo",
+            "deploymentVersion": "sha256-a310042746f037f5a47e2de93d2303f000926a5871d63efdd7e375df55045785"
+          },
+          {
+            "time": "2026-09-12T13:48:15.214Z",
+            "level": "INFO",
+            "logger": "tracepilot.evidence",
+            "eventId": 83576,
+            "message": "business_event_committed",
+            "outcome": "COMMITTED",
+            "service": "tracepilot-business",
+            "traceId": "5d3a64fc58c3438d872a019e29a857c2",
+            "operation": "RESERVED",
+            "requestId": "73403e04-d3e3-4baf-8493-7eb8c64d5ec3",
+            "evidenceId": "031b6d9d-5879-4334-8f73-e36a8028a08e",
+            "instanceId": "33473fb8-fa0f-44d4-b976-7870ed50a9b0",
+            "collectedAt": "2026-09-12T13:48:15.214441200Z",
+            "environment": "demo",
+            "deploymentVersion": "sha256-a310042746f037f5a47e2de93d2303f000926a5871d63efdd7e375df55045785"
+          },
+          {
+            "time": "2026-09-12T13:48:15.202Z",
+            "level": "INFO",
+            "route": "/api/reservations",
+            "logger": "tracepilot.evidence",
+            "method": "POST",
+            "message": "request_started",
+            "service": "tracepilot-business",
+            "traceId": "5d3a64fc58c3438d872a019e29a857c2",
+            "requestId": "73403e04-d3e3-4baf-8493-7eb8c64d5ec3",
+            "evidenceId": "7ad4c1bc-0cc0-4d72-b595-f435e8ec7470",
+            "instanceId": "33473fb8-fa0f-44d4-b976-7870ed50a9b0",
+            "collectedAt": "2026-09-12T13:48:15.202869900Z",
+            "environment": "demo",
+            "deploymentVersion": "sha256-a310042746f037f5a47e2de93d2303f000926a5871d63efdd7e375df55045785"
+          },
+          {
+            "time": "2026-09-12T13:48:15.183Z",
+            "level": "INFO",
+            "route": "/api/reservations",
+            "logger": "tracepilot.evidence",
+            "method": "POST",
+            "status": 200,
+            "message": "request_completed",
+            "service": "tracepilot-business",
+            "traceId": "e3fd25ad11ce4578a559452698ced769",
+            "requestId": "d1457029-0c63-4599-8783-37c35a1432a4",
+            "durationMs": 12.0428,
+            "evidenceId": "e647e92a-91e2-4408-8819-60d0c8305a9b",
+            "instanceId": "33473fb8-fa0f-44d4-b976-7870ed50a9b0",
+            "collectedAt": "2026-09-12T13:48:15.183905700Z",
+            "environment": "demo",
+            "deploymentVersion": "sha256-a310042746f037f5a47e2de93d2303f000926a5871d63efdd7e375df55045785"
+          },
+          {
+            "time": "2026-09-12T13:48:15.182Z",
+            "level": "INFO",
+            "logger": "tracepilot.evidence",
+            "status": 200,
+            "message": "business_operation_completed",
+            "service": "tracepilot-business",
+            "traceId": "e3fd25ad11ce4578a559452698ced769",
+            "operation": "POST /api/reservations",
+            "requestId": "d1457029-0c63-4599-8783-37c35a1432a4",
+            "evidenceId": "aece0829-76ea-445f-8cf1-813d58b04648",
+            "instanceId": "33473fb8-fa0f-44d4-b976-7870ed50a9b0",
+            "collectedAt": "2026-09-12T13:48:15.182898200Z",
+            "environment": "demo",
+            "deploymentVersion": "sha256-a310042746f037f5a47e2de93d2303f000926a5871d63efdd7e375df55045785"
+          },
+          {
+            "time": "2026-09-12T13:48:15.181Z",
+            "level": "INFO",
+            "logger": "tracepilot.evidence",
+            "eventId": 83575,
+            "message": "business_event_committed",
+            "outcome": "COMMITTED",
+            "service": "tracepilot-business",
+            "traceId": "e3fd25ad11ce4578a559452698ced769",
+            "operation": "RESERVED",
+            "requestId": "d1457029-0c63-4599-8783-37c35a1432a4",
+            "evidenceId": "314bef5f-af58-43d7-8625-dbad2e447ed5",
+            "instanceId": "33473fb8-fa0f-44d4-b976-7870ed50a9b0",
+            "collectedAt": "2026-09-12T13:48:15.181392200Z",
+            "environment": "demo",
+            "deploymentVersion": "sha256-a310042746f037f5a47e2de93d2303f000926a5871d63efdd7e375df55045785"
+          },
+          {
+            "time": "2026-09-12T13:48:15.172Z",
+            "level": "INFO",
+            "route": "/api/reservations",
+            "logger": "tracepilot.evidence",
+            "method": "POST",
+            "message": "request_started",
+            "service": "tracepilot-business",
+            "traceId": "e3fd25ad11ce4578a559452698ced769",
+            "requestId": "d1457029-0c63-4599-8783-37c35a1432a4",
+            "evidenceId": "981b8f75-e701-44ac-8d74-125d93105044",
+            "instanceId": "33473fb8-fa0f-44d4-b976-7870ed50a9b0",
+            "collectedAt": "2026-09-12T13:48:15.172325500Z",
+            "environment": "demo",
+            "deploymentVersion": "sha256-a310042746f037f5a47e2de93d2303f000926a5871d63efdd7e375df55045785"
+          },
+          {
+            "time": "2026-09-12T13:48:15.146Z",
+            "level": "INFO",
+            "route": "/api/reservations",
+            "logger": "tracepilot.evidence",
+            "method": "POST",
+            "status": 200,
+            "message": "request_completed",
+            "service": "tracepilot-business",
+            "traceId": "865db7bf116740feab1afce968ccb84b",
+            "requestId": "3ec554a2-f016-4ac5-929e-2bc57dff16ae",
+            "durationMs": 13.7729,
+            "evidenceId": "95172b41-17a2-4982-b550-0a4c71bae897",
+            "instanceId": "33473fb8-fa0f-44d4-b976-7870ed50a9b0",
+            "collectedAt": "2026-09-12T13:48:15.146887Z",
+            "environment": "demo",
+            "deploymentVersion": "sha256-a310042746f037f5a47e2de93d2303f000926a5871d63efdd7e375df55045785"
+          },
+          {
+            "time": "2026-09-12T13:48:15.144Z",
+            "level": "INFO",
+            "logger": "tracepilot.evidence",
+            "status": 200,
+            "message": "business_operation_completed",
+            "service": "tracepilot-business",
+            "traceId": "865db7bf116740feab1afce968ccb84b",
+            "operation": "POST /api/reservations",
+            "requestId": "3ec554a2-f016-4ac5-929e-2bc57dff16ae",
+            "evidenceId": "610230bf-4eff-458d-9369-f9d4b7ded67b",
+            "instanceId": "33473fb8-fa0f-44d4-b976-7870ed50a9b0",
+            "collectedAt": "2026-09-12T13:48:15.144886700Z",
+            "environment": "demo",
+            "deploymentVersion": "sha256-a310042746f037f5a47e2de93d2303f000926a5871d63efdd7e375df55045785"
+          },
+          {
+            "time": "2026-09-12T13:48:15.143Z",
+            "level": "INFO",
+            "logger": "tracepilot.evidence",
+            "eventId": 83574,
+            "message": "business_event_committed",
+            "outcome": "COMMITTED",
+            "service": "tracepilot-business",
+            "traceId": "865db7bf116740feab1afce968ccb84b",
+            "operation": "RESERVED",
+            "requestId": "3ec554a2-f016-4ac5-929e-2bc57dff16ae",
+            "evidenceId": "5df7ba74-039a-4c3e-9260-cb871b3568b0",
+            "instanceId": "33473fb8-fa0f-44d4-b976-7870ed50a9b0",
+            "collectedAt": "2026-09-12T13:48:15.143886700Z",
+            "environment": "demo",
+            "deploymentVersion": "sha256-a310042746f037f5a47e2de93d2303f000926a5871d63efdd7e375df55045785"
+          },
+          {
+            "time": "2026-09-12T13:48:15.132Z",
+            "level": "INFO",
+            "route": "/api/reservations",
+            "logger": "tracepilot.evidence",
+            "method": "POST",
+            "message": "request_started",
+            "service": "tracepilot-business",
+            "traceId": "865db7bf116740feab1afce968ccb84b",
+            "requestId": "3ec554a2-f016-4ac5-929e-2bc57dff16ae",
+            "evidenceId": "7b688bbe-f0c1-4ae8-81de-fc1de257a2b7",
+            "instanceId": "33473fb8-fa0f-44d4-b976-7870ed50a9b0",
+            "collectedAt": "2026-09-12T13:48:15.132926900Z",
+            "environment": "demo",
+            "deploymentVersion": "sha256-a310042746f037f5a47e2de93d2303f000926a5871d63efdd7e375df55045785"
+          }
+        ],
+        "start": "2026-09-12T13:48:15.111658Z",
+        "status": "PARTIAL",
+        "hasMore": true,
+        "coverage": "INCOMPLETE_CONTINUE_WITH_SAME_WINDOW_AND_NEXT_CURSOR",
+        "ordering": "REVERSE_APPEND_ORDER",
+        "nextCursor": "v1.501757250.510145761.a45ae6a7a97e72cafd034930.0670a47b9ca3111797f9ae04",
+        "scannedBytes": 8388511,
+        "snapshotBytes": 510145761,
+        "remainingBytes": 501757250,
+        "malformedRecords": 0,
+        "oversizedRecords": 0
+      }
+    },
+    {
+      "id": "d3ea082e-6e6d-47c4-9c7c-65059088a1a1",
+      "source": "logs",
+      "status": "PARTIAL",
+      "start": "2026-09-12T13:48:15.111658Z",
+      "end": "2026-09-12T13:48:23.319763Z",
+      "locator": {
+        "service": "tracepilot-business",
+        "endpoint": "/ops/logs?start=2026-09-12T13%3A48%3A15.111658Z&end=2026-09-12T13%3A48%3A23.319763Z&limit=50&cursor=v1.501757250.510145761.a45ae6a7a97e72cafd034930.0670a47b9ca3111797f9ae04&level=INFO",
+        "environment": "demo",
+        "queryFingerprint": "436a6d20794ca101d6db3034773d562a930a97af76dd57381088d4355ae57cf8"
+      },
+      "data": {
+        "end": "2026-09-12T13:48:23.319763Z",
+        "gap": "NONE",
+        "data": [],
+        "start": "2026-09-12T13:48:15.111658Z",
+        "status": "PARTIAL",
+        "hasMore": true,
+        "coverage": "INCOMPLETE_CONTINUE_WITH_SAME_WINDOW_AND_NEXT_CURSOR",
+        "ordering": "REVERSE_APPEND_ORDER",
+        "nextCursor": "v1.493368988.510145761.a45ae6a7a97e72cafd034930.0670a47b9ca3111797f9ae04",
+        "scannedBytes": 8388262,
+        "snapshotBytes": 510145761,
+        "remainingBytes": 493368988,
+        "malformedRecords": 0,
+        "oversizedRecords": 0
+      }
+    },
+    {
+      "id": "9bfca6ad-ddda-498b-94d6-796b01c32929",
+      "source": "logs",
+      "status": "PARTIAL",
+      "start": "2026-09-12T13:48:15.111658Z",
+      "end": "2026-09-12T13:48:23.319763Z",
+      "locator": {
+        "service": "tracepilot-business",
+        "endpoint": "/ops/logs?start=2026-09-12T13%3A48%3A15.111658Z&end=2026-09-12T13%3A48%3A23.319763Z&limit=200&cursor=v1.501757250.510145761.a45ae6a7a97e72cafd034930.0670a47b9ca3111797f9ae04&level=INFO",
+        "environment": "demo",
+        "queryFingerprint": "27e77b12a607d269e6305df2114b73c935ffde93f17a4b6ad8dd8b61373b96e8"
+      },
+      "data": {
+        "end": "2026-09-12T13:48:23.319763Z",
+        "gap": "NONE",
+        "data": [],
+        "start": "2026-09-12T13:48:15.111658Z",
+        "status": "PARTIAL",
+        "hasMore": true,
+        "coverage": "INCOMPLETE_CONTINUE_WITH_SAME_WINDOW_AND_NEXT_CURSOR",
+        "ordering": "REVERSE_APPEND_ORDER",
+        "nextCursor": "v1.493368988.510145761.a45ae6a7a97e72cafd034930.0670a47b9ca3111797f9ae04",
+        "scannedBytes": 8388262,
+        "snapshotBytes": 510145761,
+        "remainingBytes": 493368988,
+        "malformedRecords": 0,
+        "oversizedRecords": 0
+      }
+    }
+  ],
+  "report": {
+    "gaps": [
+      "日志窗口仅覆盖13:48:15.111Z至13:48:23.319Z，且为PARTIAL，剩余约493MB未扫描，无法确认该窗口内所有预约请求及通知处理日志",
+      "overview快照显示events.pending=8、oldestSeconds=8.472，但无历史时间点对比，无法判断pending是否持续增长或为瞬时状态",
+      "未查询到通知发送/投递相关日志（如notification_sent、outbox_dispatched等），无法确认通知处理机制是否执行"
+    ],
+    "facts": [
+      {
+        "text": "overview快照显示events.pending=8，oldestSeconds=8.472",
+        "value": 8,
+        "pointer": "/events/pending",
+        "evidenceId": "42be18d3-aa77-41d9-8310-1f832ae93d1a"
+      },
+      {
+        "text": "日志显示多条POST /api/reservations请求成功，业务事件COMMITTED（如eventId 83581）",
+        "value": "COMMITTED",
+        "pointer": "/data/2/outcome",
+        "evidenceId": "bf95e784-0081-4266-9e26-b4fba4b05a0f"
+      },
+      {
+        "text": "日志窗口PARTIAL，hasMore=true，剩余约493MB未扫描",
+        "value": 501757250,
+        "pointer": "/remainingBytes",
+        "evidenceId": "bf95e784-0081-4266-9e26-b4fba4b05a0f"
+      }
+    ],
+    "actions": [
+      "继续使用相同窗口和nextCursor分页扫描日志，查找通知发送/投递相关日志",
+      "获取多个时间点的overview快照，对比events.pending变化趋势，确认pending是否持续存在"
+    ],
+    "summary": "预约请求成功提交且业务事件已提交，但用户未看到站内通知。当前证据仅覆盖13:48:15.111Z至13:48:23.319Z的日志片段（PARTIAL，剩余约493MB未扫描），overview快照显示events.pending=8、oldestSeconds=8.472，但无历史对比，无法确认pending是否持续增长。未发现通知发送/投递相关日志，无法确认通知处理机制是否执行。",
+    "conflicts": [],
+    "execution": {
+      "budget": {
+        "deadline": "2026-09-12T13:51:23.543+00:00",
+        "max_tools": 12,
+        "max_models": 8,
+        "started_at": "2026-09-12T13:48:23.543+00:00",
+        "tool_calls": 4,
+        "model_calls": 7,
+        "timeout_seconds": 180
+      },
+      "finishedAt": "2026-09-12T13:48:59.025767400Z",
+      "modelCalls": [
+        {
+          "usage": {
+            "model": "deepseek-ai/DeepSeek-V4-Flash",
+            "protocol": {
+              "stream": false,
+              "protocol": "anthropic-messages",
+              "thinking": "disabled",
+              "textBlocks": 1,
+              "temperature": 0.0,
+              "finishReason": "end_turn",
+              "ignoredBlocks": 0,
+              "parseCategory": "VALID_JSON",
+              "adapterVersion": "deepseek-candidate-support-v8.3",
+              "requestedModel": "deepseek-ai/DeepSeek-V4-Flash",
+              "maxOutputTokens": 3000,
+              "captureStopOnError": false,
+              "providerResponseId": "msg_tqcMQjb3y7ZD8rs1h4FKXMZu",
+              "responseCharacters": 1224
+            },
+            "inputTokens": 4167,
+            "outputTokens": 512,
+            "promptSha256": "88b58e0f602040efedfee6143c53903eba0e38d6c3515580418bda2241a08067",
+            "promptVersion": "candidate-support-2026-09-12-v8.3"
+          },
+          "status": "SUCCEEDED"
+        },
+        {
+          "usage": {
+            "model": "deepseek-ai/DeepSeek-V4-Flash",
+            "protocol": {
+              "stream": false,
+              "protocol": "anthropic-messages",
+              "thinking": "disabled",
+              "textBlocks": 1,
+              "temperature": 0.0,
+              "finishReason": "end_turn",
+              "ignoredBlocks": 0,
+              "parseCategory": "VALID_JSON",
+              "adapterVersion": "deepseek-candidate-support-v8.3",
+              "requestedModel": "deepseek-ai/DeepSeek-V4-Flash",
+              "maxOutputTokens": 3000,
+              "captureStopOnError": false,
+              "providerResponseId": "msg_X33tnXgn5fpFYixZ7CY6GmAz",
+              "responseCharacters": 77
+            },
+            "inputTokens": 4431,
+            "outputTokens": 24,
+            "promptSha256": "8ebcf98ebcd9aed39939beb25e6bf22df3ba4726f2a54095b8414f3815f72e70",
+            "promptVersion": "candidate-support-2026-09-12-v8.3"
+          },
+          "status": "SUCCEEDED"
+        },
+        {
+          "usage": {
+            "model": "deepseek-ai/DeepSeek-V4-Flash",
+            "protocol": {
+              "stream": false,
+              "protocol": "anthropic-messages",
+              "thinking": "disabled",
+              "textBlocks": 1,
+              "temperature": 0.0,
+              "finishReason": "end_turn",
+              "ignoredBlocks": 0,
+              "parseCategory": "VALID_JSON",
+              "adapterVersion": "deepseek-candidate-support-v8.3",
+              "requestedModel": "deepseek-ai/DeepSeek-V4-Flash",
+              "maxOutputTokens": 3000,
+              "captureStopOnError": false,
+              "providerResponseId": "msg_CFWZ5oAEofJkWC7Ns2BM4gl4",
+              "responseCharacters": 148
+            },
+            "inputTokens": 11168,
+            "outputTokens": 63,
+            "promptSha256": "8ebcf98ebcd9aed39939beb25e6bf22df3ba4726f2a54095b8414f3815f72e70",
+            "promptVersion": "candidate-support-2026-09-12-v8.3"
+          },
+          "status": "SUCCEEDED"
+        },
+        {
+          "usage": {
+            "model": "deepseek-ai/DeepSeek-V4-Flash",
+            "protocol": {
+              "stream": false,
+              "protocol": "anthropic-messages",
+              "thinking": "disabled",
+              "textBlocks": 1,
+              "temperature": 0.0,
+              "finishReason": "end_turn",
+              "ignoredBlocks": 0,
+              "parseCategory": "VALID_JSON",
+              "adapterVersion": "deepseek-candidate-support-v8.3",
+              "requestedModel": "deepseek-ai/DeepSeek-V4-Flash",
+              "maxOutputTokens": 3000,
+              "captureStopOnError": false,
+              "providerResponseId": "msg_XVSZNpcUaHfoFyx0vw6l1Usw",
+              "responseCharacters": 149
+            },
+            "inputTokens": 12285,
+            "outputTokens": 63,
+            "promptSha256": "8ebcf98ebcd9aed39939beb25e6bf22df3ba4726f2a54095b8414f3815f72e70",
+            "promptVersion": "candidate-support-2026-09-12-v8.3"
+          },
+          "status": "SUCCEEDED"
+        },
+        {
+          "usage": {
+            "model": "deepseek-ai/DeepSeek-V4-Flash",
+            "protocol": {
+              "stream": false,
+              "protocol": "anthropic-messages",
+              "thinking": "disabled",
+              "textBlocks": 1,
+              "temperature": 0.0,
+              "finishReason": "end_turn",
+              "ignoredBlocks": 0,
+              "parseCategory": "VALID_JSON",
+              "adapterVersion": "deepseek-candidate-support-v8.3",
+              "requestedModel": "deepseek-ai/DeepSeek-V4-Flash",
+              "maxOutputTokens": 3000,
+              "captureStopOnError": false,
+              "providerResponseId": "msg_5G2NLJYeSAuoYm8vrx3ZO37l",
+              "responseCharacters": 279
+            },
+            "inputTokens": 13645,
+            "outputTokens": 130,
+            "promptSha256": "b6511bd8293a57c5dbd9c07ab84c57497b55263a8798eb6f15c7b2f11be6959d",
+            "promptVersion": "candidate-support-2026-09-12-v8.3"
+          },
+          "status": "SUCCEEDED"
+        },
+        {
+          "usage": {
+            "model": "deepseek-ai/DeepSeek-V4-Flash",
+            "protocol": {
+              "stream": false,
+              "protocol": "anthropic-messages",
+              "thinking": "disabled",
+              "textBlocks": 1,
+              "temperature": 0.0,
+              "finishReason": "end_turn",
+              "ignoredBlocks": 0,
+              "parseCategory": "INVALID_JSON_SYNTAX",
+              "adapterVersion": "deepseek-candidate-support-v8.3",
+              "requestedModel": "deepseek-ai/DeepSeek-V4-Flash",
+              "maxOutputTokens": 3000,
+              "captureStopOnError": false,
+              "providerResponseId": "msg_ZzrWaxpw8K3DCSZTBA809kfb",
+              "responseCharacters": 1660
+            },
+            "inputTokens": 13773,
+            "outputTokens": 738,
+            "promptSha256": "59a3e6d1e00a2e2e94391d87f49274c0a2cfda2b6110f8d38cec3a4139311f3e",
+            "promptVersion": "candidate-support-2026-09-12-v8.3"
+          },
+          "status": "SUCCEEDED"
+        },
+        {
+          "usage": {
+            "model": "deepseek-ai/DeepSeek-V4-Flash",
+            "protocol": {
+              "stream": false,
+              "protocol": "anthropic-messages",
+              "thinking": "disabled",
+              "textBlocks": 1,
+              "temperature": 0.0,
+              "finishReason": "end_turn",
+              "ignoredBlocks": 0,
+              "parseCategory": "VALID_JSON",
+              "adapterVersion": "deepseek-candidate-support-v8.3",
+              "requestedModel": "deepseek-ai/DeepSeek-V4-Flash",
+              "maxOutputTokens": 3000,
+              "captureStopOnError": false,
+              "providerResponseId": "msg_LHVRXbKgV4DWVEVGoDlnoWPM",
+              "responseCharacters": 1687
+            },
+            "inputTokens": 14114,
+            "outputTokens": 748,
+            "promptSha256": "59a3e6d1e00a2e2e94391d87f49274c0a2cfda2b6110f8d38cec3a4139311f3e",
+            "promptVersion": "candidate-support-2026-09-12-v8.3"
+          },
+          "status": "SUCCEEDED"
+        }
+      ],
+      "usageSource": "Provider metadata; absent token usage is unknown",
+      "promptVersion": "candidate-support-2026-09-12-v8.3",
+      "repairsExecuted": false,
+      "unreportedModelCalls": 0
+    },
+    "candidates": [
+      {
+        "cause": "通知处理未执行或延迟，导致pending事件未被消费",
+        "scope": "EVENT_HYPOTHESIS",
+        "support": "日志确认业务事件成功提交，overview快照显示pending事件存在且最老事件已等待8.472秒，与用户未收到通知的现象一致。",
+        "toVerify": [
+          "继续分页扫描日志窗口，查找通知发送/投递相关日志（如notification_sent、outbox_dispatched）",
+          "获取多个时间点的overview快照，确认pending是否持续增长或最终被消费"
+        ],
+        "inference": true,
+        "mechanism": "业务事件已提交（COMMITTED），但overview显示events.pending=8且oldestSeconds=8.472，说明有事件处于未完成状态；日志中未见通知发送/投递相关记录，可能通知处理组件未消费或消费延迟。",
+        "confidence": "LIKELY",
+        "evidenceIds": [
+          "42be18d3-aa77-41d9-8310-1f832ae93d1a",
+          "bf95e784-0081-4266-9e26-b4fba4b05a0f"
+        ],
+        "contradictions": "未观察到通知处理失败或异常日志；pending可能为瞬时状态，无历史对比。"
+      }
+    ],
+    "resultType": "CAUSE_CANDIDATES",
+    "metricFacts": [
+      {
+        "kind": "CUMULATIVE",
+        "unit": "attempts",
+        "value": 0.0,
+        "pointer": "/events/failure",
+        "timeBasis": "process start to sample; target-window delta NOT computed",
+        "evidenceId": "42be18d3-aa77-41d9-8310-1f832ae93d1a",
+        "sampleTime": "2026-09-12T13:48:23.611321700Z",
+        "targetWindow": {
+          "end": "2026-09-12T13:48:23.319763Z",
+          "start": "2026-09-12T13:48:15.111658Z"
+        },
+        "semanticsVersion": "MetricSampler-fixed-v1",
+        "deploymentVersion": "sha256-a310042746f037f5a47e2de93d2303f000926a5871d63efdd7e375df55045785",
+        "valueAvailability": "OBSERVED"
+      },
+      {
+        "kind": "INSTANTANEOUS",
+        "unit": "seconds",
+        "value": 8.472,
+        "pointer": "/events/oldestSeconds",
+        "timeBasis": "sample instant or configured limit; no whole-window claim",
+        "evidenceId": "42be18d3-aa77-41d9-8310-1f832ae93d1a",
+        "sampleTime": "2026-09-12T13:48:23.611321700Z",
+        "targetWindow": {
+          "end": "2026-09-12T13:48:23.319763Z",
+          "start": "2026-09-12T13:48:15.111658Z"
+        },
+        "semanticsVersion": "MetricSampler-fixed-v1",
+        "deploymentVersion": "sha256-a310042746f037f5a47e2de93d2303f000926a5871d63efdd7e375df55045785",
+        "valueAvailability": "OBSERVED"
+      },
+      {
+        "kind": "INSTANTANEOUS",
+        "unit": "events",
+        "value": 8,
+        "pointer": "/events/pending",
+        "timeBasis": "sample instant or configured limit; no whole-window claim",
+        "evidenceId": "42be18d3-aa77-41d9-8310-1f832ae93d1a",
+        "sampleTime": "2026-09-12T13:48:23.611321700Z",
+        "targetWindow": {
+          "end": "2026-09-12T13:48:23.319763Z",
+          "start": "2026-09-12T13:48:15.111658Z"
+        },
+        "semanticsVersion": "MetricSampler-fixed-v1",
+        "deploymentVersion": "sha256-a310042746f037f5a47e2de93d2303f000926a5871d63efdd7e375df55045785",
+        "valueAvailability": "OBSERVED"
+      },
+      {
+        "kind": "CUMULATIVE",
+        "unit": "attempts",
+        "value": 8.0,
+        "pointer": "/events/success",
+        "timeBasis": "process start to sample; target-window delta NOT computed",
+        "evidenceId": "42be18d3-aa77-41d9-8310-1f832ae93d1a",
+        "sampleTime": "2026-09-12T13:48:23.611321700Z",
+        "targetWindow": {
+          "end": "2026-09-12T13:48:23.319763Z",
+          "start": "2026-09-12T13:48:15.111658Z"
+        },
+        "semanticsVersion": "MetricSampler-fixed-v1",
+        "deploymentVersion": "sha256-a310042746f037f5a47e2de93d2303f000926a5871d63efdd7e375df55045785",
+        "valueAvailability": "OBSERVED"
+      },
+      {
+        "kind": "SAMPLE_INTERVAL_MEAN",
+        "unit": "milliseconds",
+        "value": null,
+        "pointer": "/http/averageMs",
+        "timeBasis": "previous sample (or initial process baseline) to sample; exact start/duration not recorded; NOT the target window",
+        "evidenceId": "42be18d3-aa77-41d9-8310-1f832ae93d1a",
+        "sampleTime": "2026-09-12T13:48:23.611321700Z",
+        "targetWindow": {
+          "end": "2026-09-12T13:48:23.319763Z",
+          "start": "2026-09-12T13:48:15.111658Z"
+        },
+        "semanticsVersion": "MetricSampler-fixed-v1",
+        "deploymentVersion": "sha256-a310042746f037f5a47e2de93d2303f000926a5871d63efdd7e375df55045785",
+        "valueAvailability": "NO_VALUE_NOT_ZERO"
+      },
+      {
+        "kind": "CUMULATIVE",
+        "unit": "requests",
+        "value": 0,
+        "pointer": "/http/businessRejections",
+        "timeBasis": "process start to sample; target-window delta NOT computed",
+        "evidenceId": "42be18d3-aa77-41d9-8310-1f832ae93d1a",
+        "sampleTime": "2026-09-12T13:48:23.611321700Z",
+        "targetWindow": {
+          "end": "2026-09-12T13:48:23.319763Z",
+          "start": "2026-09-12T13:48:15.111658Z"
+        },
+        "semanticsVersion": "MetricSampler-fixed-v1",
+        "deploymentVersion": "sha256-a310042746f037f5a47e2de93d2303f000926a5871d63efdd7e375df55045785",
+        "valueAvailability": "OBSERVED"
+      },
+      {
+        "kind": "CUMULATIVE",
+        "unit": "requests",
+        "value": 121,
+        "pointer": "/http/count",
+        "timeBasis": "process start to sample; target-window delta NOT computed",
+        "evidenceId": "42be18d3-aa77-41d9-8310-1f832ae93d1a",
+        "sampleTime": "2026-09-12T13:48:23.611321700Z",
+        "targetWindow": {
+          "end": "2026-09-12T13:48:23.319763Z",
+          "start": "2026-09-12T13:48:15.111658Z"
+        },
+        "semanticsVersion": "MetricSampler-fixed-v1",
+        "deploymentVersion": "sha256-a310042746f037f5a47e2de93d2303f000926a5871d63efdd7e375df55045785",
+        "valueAvailability": "OBSERVED"
+      },
+      {
+        "kind": "SAMPLE_INTERVAL_FRACTION",
+        "unit": "fraction_not_per_second",
+        "value": null,
+        "pointer": "/http/errorRate",
+        "timeBasis": "previous sample (or initial process baseline) to sample; exact start/duration not recorded; NOT the target window",
+        "evidenceId": "42be18d3-aa77-41d9-8310-1f832ae93d1a",
+        "sampleTime": "2026-09-12T13:48:23.611321700Z",
+        "targetWindow": {
+          "end": "2026-09-12T13:48:23.319763Z",
+          "start": "2026-09-12T13:48:15.111658Z"
+        },
+        "semanticsVersion": "MetricSampler-fixed-v1",
+        "deploymentVersion": "sha256-a310042746f037f5a47e2de93d2303f000926a5871d63efdd7e375df55045785",
+        "valueAvailability": "NO_VALUE_NOT_ZERO"
+      },
+      {
+        "kind": "CUMULATIVE",
+        "unit": "requests",
+        "value": 0,
+        "pointer": "/http/errors5xx",
+        "timeBasis": "process start to sample; target-window delta NOT computed",
+        "evidenceId": "42be18d3-aa77-41d9-8310-1f832ae93d1a",
+        "sampleTime": "2026-09-12T13:48:23.611321700Z",
+        "targetWindow": {
+          "end": "2026-09-12T13:48:23.319763Z",
+          "start": "2026-09-12T13:48:15.111658Z"
+        },
+        "semanticsVersion": "MetricSampler-fixed-v1",
+        "deploymentVersion": "sha256-a310042746f037f5a47e2de93d2303f000926a5871d63efdd7e375df55045785",
+        "valueAvailability": "OBSERVED"
+      },
+      {
+        "kind": "SAMPLE_INTERVAL_DELTA",
+        "unit": "requests",
+        "value": 0,
+        "pointer": "/http/intervalCount",
+        "timeBasis": "previous sample (or initial process baseline) to sample; exact start/duration not recorded; NOT the target window",
+        "evidenceId": "42be18d3-aa77-41d9-8310-1f832ae93d1a",
+        "sampleTime": "2026-09-12T13:48:23.611321700Z",
+        "targetWindow": {
+          "end": "2026-09-12T13:48:23.319763Z",
+          "start": "2026-09-12T13:48:15.111658Z"
+        },
+        "semanticsVersion": "MetricSampler-fixed-v1",
+        "deploymentVersion": "sha256-a310042746f037f5a47e2de93d2303f000926a5871d63efdd7e375df55045785",
+        "valueAvailability": "OBSERVED"
+      },
+      {
+        "kind": "SAMPLE_INTERVAL_STATUS",
+        "unit": "state",
+        "value": "NO_REQUESTS",
+        "pointer": "/http/status",
+        "timeBasis": "previous sample (or initial process baseline) to sample; exact start/duration not recorded; NOT the target window",
+        "evidenceId": "42be18d3-aa77-41d9-8310-1f832ae93d1a",
+        "sampleTime": "2026-09-12T13:48:23.611321700Z",
+        "targetWindow": {
+          "end": "2026-09-12T13:48:23.319763Z",
+          "start": "2026-09-12T13:48:15.111658Z"
+        },
+        "semanticsVersion": "MetricSampler-fixed-v1",
+        "deploymentVersion": "sha256-a310042746f037f5a47e2de93d2303f000926a5871d63efdd7e375df55045785",
+        "valueAvailability": "OBSERVED"
+      },
+      {
+        "kind": "CUMULATIVE",
+        "unit": "milliseconds",
+        "value": 4471.951601000001,
+        "pointer": "/http/totalMs",
+        "timeBasis": "process start to sample; target-window delta NOT computed",
+        "evidenceId": "42be18d3-aa77-41d9-8310-1f832ae93d1a",
+        "sampleTime": "2026-09-12T13:48:23.611321700Z",
+        "targetWindow": {
+          "end": "2026-09-12T13:48:23.319763Z",
+          "start": "2026-09-12T13:48:15.111658Z"
+        },
+        "semanticsVersion": "MetricSampler-fixed-v1",
+        "deploymentVersion": "sha256-a310042746f037f5a47e2de93d2303f000926a5871d63efdd7e375df55045785",
+        "valueAvailability": "OBSERVED"
+      },
+      {
+        "kind": "INSTANTANEOUS",
+        "unit": "connections",
+        "value": 0,
+        "pointer": "/pool/active",
+        "timeBasis": "sample instant or configured limit; no whole-window claim",
+        "evidenceId": "42be18d3-aa77-41d9-8310-1f832ae93d1a",
+        "sampleTime": "2026-09-12T13:48:23.611321700Z",
+        "targetWindow": {
+          "end": "2026-09-12T13:48:23.319763Z",
+          "start": "2026-09-12T13:48:15.111658Z"
+        },
+        "semanticsVersion": "MetricSampler-fixed-v1",
+        "deploymentVersion": "sha256-a310042746f037f5a47e2de93d2303f000926a5871d63efdd7e375df55045785",
+        "valueAvailability": "OBSERVED"
+      },
+      {
+        "kind": "INSTANTANEOUS",
+        "unit": "connections",
+        "value": 8,
+        "pointer": "/pool/idle",
+        "timeBasis": "sample instant or configured limit; no whole-window claim",
+        "evidenceId": "42be18d3-aa77-41d9-8310-1f832ae93d1a",
+        "sampleTime": "2026-09-12T13:48:23.611321700Z",
+        "targetWindow": {
+          "end": "2026-09-12T13:48:23.319763Z",
+          "start": "2026-09-12T13:48:15.111658Z"
+        },
+        "semanticsVersion": "MetricSampler-fixed-v1",
+        "deploymentVersion": "sha256-a310042746f037f5a47e2de93d2303f000926a5871d63efdd7e375df55045785",
+        "valueAvailability": "OBSERVED"
+      },
+      {
+        "kind": "CONFIGURED_LIMIT",
+        "unit": "connections",
+        "value": 8,
+        "pointer": "/pool/max",
+        "timeBasis": "sample instant or configured limit; no whole-window claim",
+        "evidenceId": "42be18d3-aa77-41d9-8310-1f832ae93d1a",
+        "sampleTime": "2026-09-12T13:48:23.611321700Z",
+        "targetWindow": {
+          "end": "2026-09-12T13:48:23.319763Z",
+          "start": "2026-09-12T13:48:15.111658Z"
+        },
+        "semanticsVersion": "MetricSampler-fixed-v1",
+        "deploymentVersion": "sha256-a310042746f037f5a47e2de93d2303f000926a5871d63efdd7e375df55045785",
+        "valueAvailability": "OBSERVED"
+      },
+      {
+        "kind": "INSTANTANEOUS",
+        "unit": "waiting_threads",
+        "value": 0,
+        "pointer": "/pool/pending",
+        "timeBasis": "sample instant or configured limit; no whole-window claim",
+        "evidenceId": "42be18d3-aa77-41d9-8310-1f832ae93d1a",
+        "sampleTime": "2026-09-12T13:48:23.611321700Z",
+        "targetWindow": {
+          "end": "2026-09-12T13:48:23.319763Z",
+          "start": "2026-09-12T13:48:15.111658Z"
+        },
+        "semanticsVersion": "MetricSampler-fixed-v1",
+        "deploymentVersion": "sha256-a310042746f037f5a47e2de93d2303f000926a5871d63efdd7e375df55045785",
+        "valueAvailability": "OBSERVED"
+      },
+      {
+        "kind": "INSTANTANEOUS",
+        "unit": "connections",
+        "value": 8,
+        "pointer": "/pool/total",
+        "timeBasis": "sample instant or configured limit; no whole-window claim",
+        "evidenceId": "42be18d3-aa77-41d9-8310-1f832ae93d1a",
+        "sampleTime": "2026-09-12T13:48:23.611321700Z",
+        "targetWindow": {
+          "end": "2026-09-12T13:48:23.319763Z",
+          "start": "2026-09-12T13:48:15.111658Z"
+        },
+        "semanticsVersion": "MetricSampler-fixed-v1",
+        "deploymentVersion": "sha256-a310042746f037f5a47e2de93d2303f000926a5871d63efdd7e375df55045785",
+        "valueAvailability": "OBSERVED"
+      }
+    ],
+    "evidenceRegistry": [
+      {
+        "end": "2026-09-12T13:48:23.611321700Z",
+        "start": "2026-09-12T13:48:23.611321700Z",
+        "state": "SUCCESS_DATA",
+        "source": "overview",
+        "locator": {
+          "service": "tracepilot-business",
+          "endpoint": "/ops/snapshot",
+          "environment": "demo",
+          "queryFingerprint": "8d26be8279e98562ffdaa5cbc6e88af6277f747e3af016df9a2d21adb574da2f"
+        },
+        "service": "tracepilot-business",
+        "versions": [],
+        "evidenceId": "42be18d3-aa77-41d9-8310-1f832ae93d1a",
+        "environment": "demo",
+        "eventEligible": false,
+        "snapshotVersion": "sha256-a310042746f037f5a47e2de93d2303f000926a5871d63efdd7e375df55045785",
+        "storedAccessible": true
+      },
+      {
+        "end": "2026-09-12T13:48:23.319763Z",
+        "start": "2026-09-12T13:48:15.111658Z",
+        "state": "TRUNCATED",
+        "source": "logs",
+        "locator": {
+          "service": "tracepilot-business",
+          "endpoint": "/ops/logs?start=2026-09-12T13%3A48%3A15.111658Z&end=2026-09-12T13%3A48%3A23.319763Z&limit=50&cursor=0&level=INFO",
+          "environment": "demo",
+          "queryFingerprint": "6da5b3e0314f37154dca7ac04c483a230a4c30e11933d9381eea8e835ed6af0f"
+        },
+        "service": "tracepilot-business",
+        "versions": [
+          "sha256-a310042746f037f5a47e2de93d2303f000926a5871d63efdd7e375df55045785"
+        ],
+        "evidenceId": "bf95e784-0081-4266-9e26-b4fba4b05a0f",
+        "environment": "demo",
+        "eventEligible": true,
+        "snapshotVersion": "",
+        "storedAccessible": true
+      },
+      {
+        "end": "2026-09-12T13:48:23.319763Z",
+        "start": "2026-09-12T13:48:15.111658Z",
+        "state": "TRUNCATED",
+        "source": "logs",
+        "locator": {
+          "service": "tracepilot-business",
+          "endpoint": "/ops/logs?start=2026-09-12T13%3A48%3A15.111658Z&end=2026-09-12T13%3A48%3A23.319763Z&limit=50&cursor=v1.501757250.510145761.a45ae6a7a97e72cafd034930.0670a47b9ca3111797f9ae04&level=INFO",
+          "environment": "demo",
+          "queryFingerprint": "436a6d20794ca101d6db3034773d562a930a97af76dd57381088d4355ae57cf8"
+        },
+        "service": "tracepilot-business",
+        "versions": [],
+        "evidenceId": "d3ea082e-6e6d-47c4-9c7c-65059088a1a1",
+        "environment": "demo",
+        "eventEligible": false,
+        "snapshotVersion": "",
+        "storedAccessible": true
+      },
+      {
+        "end": "2026-09-12T13:48:23.319763Z",
+        "start": "2026-09-12T13:48:15.111658Z",
+        "state": "TRUNCATED",
+        "source": "logs",
+        "locator": {
+          "service": "tracepilot-business",
+          "endpoint": "/ops/logs?start=2026-09-12T13%3A48%3A15.111658Z&end=2026-09-12T13%3A48%3A23.319763Z&limit=200&cursor=v1.501757250.510145761.a45ae6a7a97e72cafd034930.0670a47b9ca3111797f9ae04&level=INFO",
+          "environment": "demo",
+          "queryFingerprint": "27e77b12a607d269e6305df2114b73c935ffde93f17a4b6ad8dd8b61373b96e8"
+        },
+        "service": "tracepilot-business",
+        "versions": [],
+        "evidenceId": "9bfca6ad-ddda-498b-94d6-796b01c32929",
+        "environment": "demo",
+        "eventEligible": false,
+        "snapshotVersion": "",
+        "storedAccessible": true
+      }
+    ]
+  }
+}

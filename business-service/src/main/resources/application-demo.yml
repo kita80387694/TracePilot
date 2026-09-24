@@ -1,0 +1,3 @@
+app:
+  environment: demo
+  demo-seed: true

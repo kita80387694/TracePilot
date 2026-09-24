@@ -1,0 +1,10 @@
+.git
+.local
+.tools
+**/target
+**/node_modules
+**/__pycache__
+**/*.env
+**/*.log
+evaluation
+delivery

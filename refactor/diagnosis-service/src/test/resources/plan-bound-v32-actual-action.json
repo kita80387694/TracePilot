@@ -1,0 +1,50 @@
+{
+  "action": {
+    "checks": [
+      "CHECK_ALTERNATIVES",
+      "CHECK_PERSISTENCE",
+      "COLLECT_LOGS",
+      "COLLECT_METRICS"
+    ],
+    "hypotheses": [
+      {
+        "contradictionFactIds": [],
+        "mechanism": "At sample 17:26:42 the connection pool is fully saturated (total=4, active=4, idle=0) with 1 pending request, and the HTTP interval shows average 2017ms with errorRate 1.0. This saturation coincides with CannotGetJdbcConnectionException / CannotCreateTransactionException errors (authentication_store_unavailable, event_poll_failed). The pool exhaustion prevents new JDBC connections, causing the /api/reports/usage queries to slow (2017ms avg) and fail with 5xx. By the later sample 17:27:04 the pool has recovered (idle=4, active=0, pending=0) and errorRate returns to 0, consistent with a transient pool exhaustion episode.",
+        "outcomeFactIds": [
+          "F1a68fb2914239f0c54a667e7",
+          "F3d97ee361272b6e3515fa396",
+          "F415fbb7c0c7b981c970b78f1",
+          "F93712d4fb3df37388a3e4758",
+          "F0794d4f2cf2b03d03b56866b"
+        ],
+        "premiseFactIds": [
+          "F5407f87d91f98acc3a7e80dd",
+          "F95086ab610a1d7da08d0a5c7",
+          "F81bb9bec9adbf194397aa549",
+          "F76421995a17a14b0ad10d076",
+          "F2a83e32b69d13429642ec8f4"
+        ],
+        "relation": "MAY_EXPLAIN"
+      },
+      {
+        "contradictionFactIds": [],
+        "mechanism": "The 8 requests in the 17:26:41-42 interval all errored (errorRate 1.0) with average 2017ms, matching the 5xx/503 responses on /api/reports/usage (routes show 500 and 503 statuses with maxMs ~2018-3031). The authentication_store_unavailable and event_poll_failed errors share the same root: the JDBC connection pool is exhausted, so both request-path authentication lookups and the event publisher's transaction claim fail to acquire connections.",
+        "outcomeFactIds": [
+          "Ff195e6c83d907c7cf1a383ec",
+          "Fff3a4d52847fcbe8abec0cd6",
+          "F1ea13ecfafbea40a6026fd07"
+        ],
+        "premiseFactIds": [
+          "F76421995a17a14b0ad10d076",
+          "F2a83e32b69d13429642ec8f4",
+          "Fb6c37fdd088b1077e74462a0"
+        ],
+        "relation": "MAY_SHARE_CAUSE"
+      }
+    ],
+    "type": "report"
+  },
+  "meaning": "ACTUAL_SEMANTICALLY_FAILED_RESPONSE; DO_NOT_USE_AS_CAUSAL_GOLD",
+  "oldCompactReportUtf8Bytes": 5244970,
+  "oldFactUses": 5060
+}

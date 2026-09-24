@@ -1,0 +1,38 @@
+server:
+  address: ${DIAG_BIND:127.0.0.1}
+  port: ${DIAG_PORT:8083}
+spring:
+  application:
+    name: tracepilot-diagnosis
+  datasource:
+    url: ${DIAG_DB_URL:jdbc:mysql://127.0.0.1:3307/tracepilot_diagnosis?connectionTimeZone=UTC&forceConnectionTimeZoneToSession=true}
+    username: ${DIAG_DB_USER:tracepilot_diag}
+    password: ${DIAG_DB_PASSWORD:}
+    hikari:
+      maximum-pool-size: 6
+      transaction-isolation: TRANSACTION_READ_COMMITTED
+      connection-timeout: 3000
+  jackson:
+    serialization:
+      write-dates-as-timestamps: false
+diag:
+  capture-dir: ${DIAG_CAPTURE_DIR:}
+  worker-enabled: ${DIAG_WORKER_ENABLED:false}
+  web-auth-secret: ${WEB_AUTH_SECRET:}
+  max-tools: ${DIAG_MAX_TOOLS:12}
+  max-models: ${DIAG_MAX_MODELS:8}
+  timeout-seconds: ${DIAG_TIMEOUT_SECONDS:180}
+  api-keys: ${DIAG_API_KEYS:}
+  observer-token: ${OBSERVER_TOKEN:}
+  business-url: ${DIAG_BUSINESS_URL:http://127.0.0.1:8082}
+  evidence-root: ${DIAG_EVIDENCE_ROOT:.local/m2-acceptance/observability}
+  action-protocol: ${DIAG_ACTION_PROTOCOL:text-json}
+  model-key: ${DIAG_MODEL_KEY:${ANTHROPIC_API_KEY:}}
+  model-url: ${DIAG_MODEL_URL:${ANTHROPIC_BASE_URL:https://api.anthropic.com}}
+  model-name: ${DIAG_MODEL_NAME:${ANTHROPIC_MODEL:}}
+logging:
+  level:
+    org.springframework.ai: OFF
+    org.springframework.web.client: OFF
+    org.springframework.web.reactive.function.client: OFF
+    com.tracepilot.diagnosis: INFO

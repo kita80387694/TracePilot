@@ -1,0 +1,36 @@
+<configuration>
+  <springProperty scope="context" name="service" source="spring.application.name" defaultValue="tracepilot-business"/>
+  <springProperty scope="context" name="environment" source="app.environment" defaultValue="local"/>
+  <springProperty scope="context" name="deploymentVersion" source="app.deployment-version" defaultValue="unknown"/>
+  <springProperty scope="context" name="dataDir" source="app.data-dir" defaultValue=".local/m2"/>
+  <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+    <encoder class="com.tracepilot.observability.SafeJsonEncoder"/>
+  </appender>
+  <appender name="EVIDENCE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+    <file>${dataDir}/observability/evidence.jsonl</file>
+    <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+      <fileNamePattern>${dataDir}/observability/evidence.%d{yyyy-MM-dd,UTC}.jsonl</fileNamePattern>
+      <maxHistory>7</maxHistory><totalSizeCap>256MB</totalSizeCap><cleanHistoryOnStart>true</cleanHistoryOnStart>
+    </rollingPolicy>
+    <encoder class="com.tracepilot.observability.SafeJsonEncoder"/>
+  </appender>
+  <appender name="RUNTIME" class="ch.qos.logback.core.rolling.RollingFileAppender">
+    <file>${dataDir}/private/runtime.jsonl</file>
+    <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+      <fileNamePattern>${dataDir}/private/runtime.%d{yyyy-MM-dd,UTC}.jsonl</fileNamePattern>
+      <maxHistory>7</maxHistory><totalSizeCap>128MB</totalSizeCap>
+    </rollingPolicy>
+    <encoder class="com.tracepilot.observability.SafeJsonEncoder"/>
+  </appender>
+  <appender name="EVENTS" class="ch.qos.logback.core.rolling.RollingFileAppender">
+    <file>${dataDir}/observability/events/evidence.jsonl</file>
+    <filter class="com.tracepilot.observability.EventChannelFilter"/>
+    <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+      <fileNamePattern>${dataDir}/observability/events/evidence.%d{yyyy-MM-dd,UTC}.jsonl</fileNamePattern>
+      <maxHistory>7</maxHistory><totalSizeCap>128MB</totalSizeCap>
+    </rollingPolicy>
+    <encoder class="com.tracepilot.observability.SafeJsonEncoder"/>
+  </appender>
+  <logger name="tracepilot.evidence" level="INFO" additivity="false"><appender-ref ref="EVIDENCE"/><appender-ref ref="EVENTS"/><appender-ref ref="CONSOLE"/></logger>
+  <root level="INFO"><appender-ref ref="CONSOLE"/><appender-ref ref="RUNTIME"/></root>
+</configuration>

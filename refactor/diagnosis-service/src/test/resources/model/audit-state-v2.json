@@ -1,0 +1,418 @@
+{
+  "origin": "SANITIZED_ACTUAL_REFACTOR_V2_RESPONSES_AND_TOOL_DATA_NO_HIDDEN_ANSWERS",
+  "originalTaskId": "96d9f9af-9206-4172-8bbe-94a25b6d9ba3",
+  "originalStatus": "PARTIAL",
+  "request": {
+    "end": "2026-09-16T12:27:36.187480Z",
+    "start": "2026-09-16T12:26:41.480088Z",
+    "service": "tracepilot-business",
+    "symptom": "这次预约成功后，原用户查询对应站内通知起初为空，稍后才看到通知。请解释这段窗口内能证实的直接原因，区分未确定的更深层原因及其他解释。",
+    "traceId": "2a9d293883cd46acb385a0eed695936d",
+    "environment": "demo",
+    "interfacePath": "/api/reservations"
+  },
+  "evidence": [
+    {
+      "id": "99e3c123-b949-49e0-bb4b-9dc3fa341798",
+      "source": "overview",
+      "status": "AVAILABLE",
+      "start": "2026-09-16T12:32:35.924582100Z",
+      "end": "2026-09-16T12:32:35.924582100Z",
+      "locator": {
+        "query": {
+          "args": {},
+          "tool": "overview"
+        },
+        "service": "tracepilot-business",
+        "endpoint": "/ops/snapshot",
+        "environment": "demo",
+        "queryFingerprint": "b2938aedc7888fc858f6eda3f8203099c94563d42cac1ab1e003fa6bffe36e3d"
+      },
+      "data": {
+        "http": {
+          "count": 19,
+          "routes": [
+            {
+              "count": 4,
+              "maxMs": 0.0,
+              "route": "/api/me/notifications",
+              "method": "GET",
+              "status": 200,
+              "totalMs": 24.0715
+            },
+            {
+              "count": 2,
+              "maxMs": 0.0,
+              "route": "/api/admin/slots",
+              "method": "POST",
+              "status": 200,
+              "totalMs": 54.771
+            },
+            {
+              "count": 9,
+              "maxMs": 71.3996,
+              "route": "/api/auth/login",
+              "method": "POST",
+              "status": 200,
+              "totalMs": 868.583
+            },
+            {
+              "count": 2,
+              "maxMs": 0.0,
+              "route": "/api/reservations",
+              "method": "POST",
+              "status": 200,
+              "totalMs": 46.3139
+            },
+            {
+              "count": 2,
+              "maxMs": 0.0,
+              "route": "/api/admin/resources",
+              "method": "POST",
+              "status": 200,
+              "totalMs": 94.0979
+            }
+          ],
+          "status": "NO_REQUESTS",
+          "totalMs": 1087.8373,
+          "averageMs": null,
+          "errorRate": null,
+          "errors5xx": 0,
+          "intervalCount": 0,
+          "businessRejections": 0
+        },
+        "pool": {
+          "max": 8,
+          "idle": 8,
+          "total": 8,
+          "active": 0,
+          "status": "AVAILABLE",
+          "pending": 0
+        },
+        "time": "2026-09-16T12:32:35.924582100Z",
+        "events": {
+          "status": "AVAILABLE",
+          "failure": 2.0,
+          "pending": 0,
+          "success": 2.0,
+          "oldestSeconds": 0.0
+        },
+        "status": "AVAILABLE",
+        "service": "tracepilot-business",
+        "evidenceId": "b1d7bc48-59af-4c54-a098-9309341c0e1f",
+        "instanceId": "f8da6296-2a00-4463-8a71-0fa38c2c0bdc",
+        "collectedAt": "2026-09-16T12:32:35.924582100Z",
+        "environment": "demo",
+        "sampleAgeMs": 903,
+        "deploymentVersion": "sha256-06612d191b55b8b6782e1ba009fa27b03282a1234a422a0e6e0fbd402d81108f",
+        "collectionDurationMs": 0
+      }
+    },
+    {
+      "id": "20ac9da6-f84d-459a-8aab-e24d74e75343",
+      "source": "logs",
+      "status": "AVAILABLE",
+      "start": "2026-09-16T12:26:41.480088Z",
+      "end": "2026-09-16T12:27:36.187480Z",
+      "locator": {
+        "query": {
+          "args": {
+            "level": "INFO",
+            "limit": "200",
+            "channel": "events"
+          },
+          "tool": "logs"
+        },
+        "service": "tracepilot-business",
+        "endpoint": "/ops/logs?start=2026-09-16T12%3A26%3A41.480088Z&end=2026-09-16T12%3A27%3A36.187480Z&limit=200&cursor=0&level=INFO&channel=events",
+        "environment": "demo",
+        "queryFingerprint": "5d4284ba7ae7cdef644ed2c078f8c1df770c139ca63c9cbc3b84d5affa599384"
+      },
+      "data": {
+        "end": "2026-09-16T12:27:36.187480Z",
+        "gap": "NONE",
+        "data": [
+          {
+            "time": "2026-09-16T12:27:36.184Z",
+            "level": "INFO",
+            "logger": "tracepilot.evidence",
+            "actorId": 2,
+            "eventId": 310,
+            "message": "notification_query_result",
+            "outcome": "CALLER_SCOPED_FILTERED_RESULT",
+            "service": "tracepilot-business",
+            "traceId": "a64ccc2a851a45b38258b2383ee1a849",
+            "requestId": "7c16d2cc-afec-48e7-83ce-459592e9930c",
+            "evidenceId": "61052a59-a838-4834-807b-023689fbfeb9",
+            "instanceId": "f8da6296-2a00-4463-8a71-0fa38c2c0bdc",
+            "collectedAt": "2026-09-16T12:27:36.184970600Z",
+            "environment": "demo",
+            "queryEventId": 310,
+            "notificationId": 314,
+            "deploymentVersion": "sha256-06612d191b55b8b6782e1ba009fa27b03282a1234a422a0e6e0fbd402d81108f",
+            "notificationCount": 1
+          },
+          {
+            "time": "2026-09-16T12:27:35.622Z",
+            "level": "INFO",
+            "logger": "tracepilot.evidence",
+            "eventId": 310,
+            "message": "event_delivery_completed",
+            "outcome": "SUCCESS",
+            "service": "tracepilot-business",
+            "stateAt": "2026-09-16T12:27:35.622773900Z",
+            "traceId": "2a9d293883cd46acb385a0eed695936d",
+            "attemptId": "4a8d7048-606b-460c-bf29-798d51b1da24",
+            "requestId": "5f1bf623-bcda-48e1-b3e5-f78503bb3dfd",
+            "evidenceId": "30f8efd6-597f-420d-8c4e-f16dd5d90dd7",
+            "instanceId": "f8da6296-2a00-4463-8a71-0fa38c2c0bdc",
+            "collectedAt": "2026-09-16T12:27:35.622773900Z",
+            "environment": "demo",
+            "sourceTraceId": "2a9d293883cd46acb385a0eed695936d",
+            "sourceVersion": "sha256-06612d191b55b8b6782e1ba009fa27b03282a1234a422a0e6e0fbd402d81108f",
+            "notificationId": 314,
+            "sourceRequestId": "5f1bf623-bcda-48e1-b3e5-f78503bb3dfd",
+            "deploymentVersion": "sha256-06612d191b55b8b6782e1ba009fa27b03282a1234a422a0e6e0fbd402d81108f"
+          },
+          {
+            "rows": 1,
+            "time": "2026-09-16T12:27:35.621Z",
+            "level": "INFO",
+            "logger": "tracepilot.evidence",
+            "eventId": 310,
+            "message": "event_acknowledged",
+            "service": "tracepilot-business",
+            "stateAt": "2026-09-16T12:27:35.621774400Z",
+            "traceId": "2a9d293883cd46acb385a0eed695936d",
+            "attemptId": "4a8d7048-606b-460c-bf29-798d51b1da24",
+            "requestId": "5f1bf623-bcda-48e1-b3e5-f78503bb3dfd",
+            "evidenceId": "775e0363-e9e9-420d-99db-5145d0e820df",
+            "instanceId": "f8da6296-2a00-4463-8a71-0fa38c2c0bdc",
+            "collectedAt": "2026-09-16T12:27:35.621774400Z",
+            "environment": "demo",
+            "notificationId": 314,
+            "deploymentVersion": "sha256-06612d191b55b8b6782e1ba009fa27b03282a1234a422a0e6e0fbd402d81108f"
+          },
+          {
+            "time": "2026-09-16T12:27:35.617Z",
+            "level": "INFO",
+            "logger": "tracepilot.evidence",
+            "eventId": 310,
+            "message": "notification_write_committed",
+            "outcome": "COMMITTED",
+            "service": "tracepilot-business",
+            "traceId": "2a9d293883cd46acb385a0eed695936d",
+            "attemptId": "4a8d7048-606b-460c-bf29-798d51b1da24",
+            "requestId": "5f1bf623-bcda-48e1-b3e5-f78503bb3dfd",
+            "evidenceId": "c5abb679-1a69-4ee7-a885-7685dcd1823c",
+            "instanceId": "f8da6296-2a00-4463-8a71-0fa38c2c0bdc",
+            "collectedAt": "2026-09-16T12:27:35.617676300Z",
+            "environment": "demo",
+            "notificationId": 314,
+            "deploymentVersion": "sha256-06612d191b55b8b6782e1ba009fa27b03282a1234a422a0e6e0fbd402d81108f"
+          },
+          {
+            "time": "2026-09-16T12:27:35.613Z",
+            "level": "INFO",
+            "logger": "tracepilot.evidence",
+            "eventId": 310,
+            "message": "notification_write_started",
+            "service": "tracepilot-business",
+            "traceId": "2a9d293883cd46acb385a0eed695936d",
+            "attemptId": "4a8d7048-606b-460c-bf29-798d51b1da24",
+            "requestId": "5f1bf623-bcda-48e1-b3e5-f78503bb3dfd",
+            "evidenceId": "66f1cf64-5846-45a8-85f4-2e811dba17ff",
+            "instanceId": "f8da6296-2a00-4463-8a71-0fa38c2c0bdc",
+            "collectedAt": "2026-09-16T12:27:35.613448900Z",
+            "environment": "demo",
+            "deploymentVersion": "sha256-06612d191b55b8b6782e1ba009fa27b03282a1234a422a0e6e0fbd402d81108f"
+          },
+          {
+            "time": "2026-09-16T12:27:35.613Z",
+            "level": "INFO",
+            "logger": "tracepilot.evidence",
+            "status": "PROCESSING",
+            "actorId": 2,
+            "eventId": 310,
+            "message": "event_claimed",
+            "service": "tracepilot-business",
+            "stateAt": "2026-09-16T12:27:35.613448900Z",
+            "traceId": "2a9d293883cd46acb385a0eed695936d",
+            "attempts": 1,
+            "attemptId": "4a8d7048-606b-460c-bf29-798d51b1da24",
+            "requestId": "5f1bf623-bcda-48e1-b3e5-f78503bb3dfd",
+            "evidenceId": "9d0781a1-aa4d-4451-a39c-894e9ef06fba",
+            "instanceId": "f8da6296-2a00-4463-8a71-0fa38c2c0bdc",
+            "collectedAt": "2026-09-16T12:27:35.613448900Z",
+            "environment": "demo",
+            "deploymentVersion": "sha256-06612d191b55b8b6782e1ba009fa27b03282a1234a422a0e6e0fbd402d81108f"
+          },
+          {
+            "time": "2026-09-16T12:27:33.585Z",
+            "level": "INFO",
+            "logger": "tracepilot.evidence",
+            "nextAt": "2026-09-16T12:27:35.584534Z",
+            "status": "PENDING",
+            "eventId": 310,
+            "message": "event_delivery_failed",
+            "outcome": "RETRY_OR_FAILED",
+            "service": "tracepilot-business",
+            "stateAt": "2026-09-16T12:27:33.585820700Z",
+            "traceId": "2a9d293883cd46acb385a0eed695936d",
+            "attempts": 1,
+            "attemptId": "1f2f9be3-2b5d-4ca7-b4bd-f5e63e2642d7",
+            "errorType": "CannotAcquireLockException",
+            "requestId": "5f1bf623-bcda-48e1-b3e5-f78503bb3dfd",
+            "evidenceId": "1bb58e77-2708-479c-afff-ba1c555e4e37",
+            "instanceId": "f8da6296-2a00-4463-8a71-0fa38c2c0bdc",
+            "collectedAt": "2026-09-16T12:27:33.585820700Z",
+            "environment": "demo",
+            "deploymentVersion": "sha256-06612d191b55b8b6782e1ba009fa27b03282a1234a422a0e6e0fbd402d81108f"
+          },
+          {
+            "time": "2026-09-16T12:26:45.084Z",
+            "level": "INFO",
+            "logger": "tracepilot.evidence",
+            "actorId": 2,
+            "eventId": 310,
+            "message": "notification_query_result",
+            "outcome": "CALLER_SCOPED_FILTERED_RESULT",
+            "service": "tracepilot-business",
+            "traceId": "e131aba304b04a37a1f2512c6b069f03",
+            "requestId": "5f43e29d-3301-42e9-9847-458d57ccd871",
+            "evidenceId": "cc8c2222-0dbd-4003-a61e-637f626e078d",
+            "instanceId": "f8da6296-2a00-4463-8a71-0fa38c2c0bdc",
+            "collectedAt": "2026-09-16T12:26:45.084116500Z",
+            "environment": "demo",
+            "queryEventId": 310,
+            "notificationId": "NONE",
+            "deploymentVersion": "sha256-06612d191b55b8b6782e1ba009fa27b03282a1234a422a0e6e0fbd402d81108f",
+            "notificationCount": 0
+          },
+          {
+            "time": "2026-09-16T12:26:43.078Z",
+            "level": "INFO",
+            "logger": "tracepilot.evidence",
+            "eventId": 310,
+            "message": "notification_write_started",
+            "service": "tracepilot-business",
+            "traceId": "2a9d293883cd46acb385a0eed695936d",
+            "attemptId": "1f2f9be3-2b5d-4ca7-b4bd-f5e63e2642d7",
+            "requestId": "5f1bf623-bcda-48e1-b3e5-f78503bb3dfd",
+            "evidenceId": "44c190a7-75e7-4098-8bf7-5ae33f9cce19",
+            "instanceId": "f8da6296-2a00-4463-8a71-0fa38c2c0bdc",
+            "collectedAt": "2026-09-16T12:26:43.079286400Z",
+            "environment": "demo",
+            "deploymentVersion": "sha256-06612d191b55b8b6782e1ba009fa27b03282a1234a422a0e6e0fbd402d81108f"
+          },
+          {
+            "time": "2026-09-16T12:26:43.078Z",
+            "level": "INFO",
+            "logger": "tracepilot.evidence",
+            "status": "PROCESSING",
+            "actorId": 2,
+            "eventId": 310,
+            "message": "event_claimed",
+            "service": "tracepilot-business",
+            "stateAt": "2026-09-16T12:26:43.078287600Z",
+            "traceId": "2a9d293883cd46acb385a0eed695936d",
+            "attempts": 0,
+            "attemptId": "1f2f9be3-2b5d-4ca7-b4bd-f5e63e2642d7",
+            "requestId": "5f1bf623-bcda-48e1-b3e5-f78503bb3dfd",
+            "evidenceId": "4a9783ac-6348-4b1c-943c-79050afb553e",
+            "instanceId": "f8da6296-2a00-4463-8a71-0fa38c2c0bdc",
+            "collectedAt": "2026-09-16T12:26:43.078287600Z",
+            "environment": "demo",
+            "deploymentVersion": "sha256-06612d191b55b8b6782e1ba009fa27b03282a1234a422a0e6e0fbd402d81108f"
+          },
+          {
+            "time": "2026-09-16T12:26:41.519Z",
+            "level": "INFO",
+            "logger": "tracepilot.evidence",
+            "eventId": 310,
+            "message": "business_event_committed",
+            "outcome": "COMMITTED",
+            "service": "tracepilot-business",
+            "traceId": "2a9d293883cd46acb385a0eed695936d",
+            "operation": "RESERVED",
+            "requestId": "5f1bf623-bcda-48e1-b3e5-f78503bb3dfd",
+            "evidenceId": "2c3509e0-2fe9-4df6-b290-315b50b5043f",
+            "instanceId": "f8da6296-2a00-4463-8a71-0fa38c2c0bdc",
+            "collectedAt": "2026-09-16T12:26:41.520841Z",
+            "environment": "demo",
+            "deploymentVersion": "sha256-06612d191b55b8b6782e1ba009fa27b03282a1234a422a0e6e0fbd402d81108f"
+          }
+        ],
+        "start": "2026-09-16T12:26:41.480088Z",
+        "status": "AVAILABLE",
+        "channel": "events",
+        "hasMore": false,
+        "coverage": "SNAPSHOT_SCANNED",
+        "ordering": "REVERSE_APPEND_ORDER",
+        "nextCursor": "0",
+        "sourceScope": "Event lifecycle and caller-scoped notification queries only; general HTTP logs require channel=all",
+        "scannedBytes": 33119,
+        "snapshotBytes": 33119,
+        "remainingBytes": 0,
+        "malformedRecords": 0,
+        "oversizedRecords": 0,
+        "sourceCoverageStart": "2026-09-12T19:07:34.523313700Z"
+      }
+    }
+  ],
+  "actions": [
+    {
+      "type": "tool",
+      "tool": "logs",
+      "args": {
+        "channel": "events",
+        "level": "INFO",
+        "limit": 200
+      }
+    },
+    {
+      "type": "report",
+      "hypotheses": [
+        {
+          "relation": "MAY_EXPLAIN",
+          "premiseFactIds": [
+            "F9ff9349af1d7a4c3e4c2564b",
+            "F6a9a65f442c3f7088916edb3",
+            "F9863935a3bb1d1760d28b57b",
+            "Fd2d9d27300be4578bddc9eac",
+            "F2d750dabab3c3ffdf3f9d573"
+          ],
+          "outcomeFactIds": [
+            "Fd6debb9e17372ef4e87374c2",
+            "F5485d42bc6877c6a1f5f232f"
+          ],
+          "contradictionFactIds": [],
+          "mechanism": "First delivery attempt failed with CannotAcquireLockException at {{fact:F9863935a3bb1d1760d28b57b}}, leaving notification uncommitted; the caller query at {{fact:Fd2d9d27300be4578bddc9eac}} returned 0 because the write had not committed. Retry at {{fact:F9ff9349af1d7a4c3e4c2564b}} committed notification 314, after which the later query returned 1.",
+          "comparisons": []
+        },
+        {
+          "relation": "MAY_EXPLAIN",
+          "premiseFactIds": [
+            "F9ff9349af1d7a4c3e4c2564b",
+            "F6a9a65f442c3f7088916edb3",
+            "F9863935a3bb1d1760d28b57b",
+            "Fd2d9d27300be4578bddc9eac",
+            "F2d750dabab3c3ffdf3f9d573"
+          ],
+          "outcomeFactIds": [
+            "Fd6debb9e17372ef4e87374c2",
+            "F5485d42bc6877c6a1f5f232f"
+          ],
+          "contradictionFactIds": [],
+          "mechanism": "The notification write was not committed before the first query because the first attempt failed on lock acquisition; the retry succeeded and committed the write, so the second query observed it. The lock failure is the direct blocker; why the lock was unavailable is not evidenced.",
+          "comparisons": []
+        }
+      ],
+      "checks": [
+        "CHECK_ALTERNATIVES",
+        "INSPECT_CODE",
+        "COLLECT_LOGS"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,326 @@
+{
+  "input": {
+    "service": "tracepilot-business",
+    "environment": "demo",
+    "start": "2026-09-12T11:43:49.754304+00:00",
+    "end": "2026-09-12T11:43:52.794819+00:00",
+    "symptom": "这一分钟的时段查询状态能否确认？请核查证据来源，缺少证据时明确说明。",
+    "interfacePath": "/api/slots"
+  },
+  "evidence": [
+    {
+      "id": "7685b81b-e3e3-41ef-87f0-4fe37d16bcde",
+      "source": "overview",
+      "status": "AVAILABLE",
+      "start": "2026-09-12T11:43:52.840592700Z",
+      "end": "2026-09-12T11:43:52.840592700Z",
+      "locator": {
+        "service": "tracepilot-business",
+        "endpoint": "/ops/snapshot",
+        "environment": "demo"
+      },
+      "data": {
+        "http": {
+          "count": 59,
+          "routes": [
+            {
+              "count": 40,
+              "maxMs": 3.3982,
+              "route": "/api/slots",
+              "method": "GET",
+              "status": 200,
+              "totalMs": 276.9577
+            },
+            {
+              "count": 3,
+              "maxMs": 0.0,
+              "route": "/api/slots",
+              "method": "GET",
+              "status": 401,
+              "totalMs": 186.0972
+            },
+            {
+              "count": 16,
+              "maxMs": 66.5689,
+              "route": "/api/auth/login",
+              "method": "POST",
+              "status": 200,
+              "totalMs": 1601.591301
+            }
+          ],
+          "status": "NO_REQUESTS",
+          "totalMs": 2064.646201,
+          "averageMs": null,
+          "errorRate": null,
+          "errors5xx": 0,
+          "intervalCount": 0,
+          "businessRejections": 0
+        },
+        "pool": {
+          "max": 8,
+          "idle": 8,
+          "total": 8,
+          "active": 0,
+          "status": "AVAILABLE",
+          "pending": 0
+        },
+        "time": "2026-09-12T11:43:52.840592700Z",
+        "events": {
+          "status": "AVAILABLE",
+          "failure": 0.0,
+          "pending": 0,
+          "success": 0.0,
+          "oldestSeconds": 0.0
+        },
+        "status": "AVAILABLE",
+        "service": "tracepilot-business",
+        "evidenceId": "b08f9f6f-fa0d-4b00-82f4-0e686892dd5d",
+        "instanceId": "33473fb8-fa0f-44d4-b976-7870ed50a9b0",
+        "collectedAt": "2026-09-12T11:43:52.840592700Z",
+        "environment": "demo",
+        "sampleAgeMs": 293,
+        "deploymentVersion": "sha256-a310042746f037f5a47e2de93d2303f000926a5871d63efdd7e375df55045785",
+        "collectionDurationMs": 0
+      }
+    },
+    {
+      "id": "a31434b9-e733-48b0-b6d1-ffa9e2ce8043",
+      "source": "logs",
+      "status": "UNAVAILABLE",
+      "start": "2026-09-12T11:43:49.754304Z",
+      "end": "2026-09-12T11:43:52.794819Z",
+      "locator": {
+        "service": "tracepilot-business",
+        "endpoint": "/ops/logs?start=2026-09-12T11%3A43%3A49.754304Z&end=2026-09-12T11%3A43%3A52.794819Z&limit=50&cursor=0&level=INFO",
+        "environment": "demo"
+      },
+      "data": {
+        "httpStatus": 503
+      }
+    },
+    {
+      "id": "4fb4c011-5412-47ac-8767-32338bcac5e5",
+      "source": "logs",
+      "status": "UNAVAILABLE",
+      "start": "2026-09-12T11:43:49.754304Z",
+      "end": "2026-09-12T11:43:52.794819Z",
+      "locator": {
+        "service": "tracepilot-business",
+        "endpoint": "/ops/logs?start=2026-09-12T11%3A43%3A49.754304Z&end=2026-09-12T11%3A43%3A52.794819Z&limit=50&cursor=0&level=INFO",
+        "environment": "demo"
+      },
+      "data": {
+        "httpStatus": 503
+      }
+    },
+    {
+      "id": "71bc263b-9ca5-489e-816c-3902f4fda2f2",
+      "source": "logs",
+      "status": "UNAVAILABLE",
+      "start": "2026-09-12T11:43:49.754304Z",
+      "end": "2026-09-12T11:43:52.794819Z",
+      "locator": {
+        "service": "tracepilot-business",
+        "endpoint": "/ops/logs?start=2026-09-12T11%3A43%3A49.754304Z&end=2026-09-12T11%3A43%3A52.794819Z&limit=50&cursor=0&level=INFO",
+        "environment": "demo"
+      },
+      "data": {
+        "httpStatus": 503
+      }
+    },
+    {
+      "id": "3e5e283c-a7b5-4351-b2f8-d792956b4c5a",
+      "source": "logs",
+      "status": "UNAVAILABLE",
+      "start": "2026-09-12T11:43:49.754304Z",
+      "end": "2026-09-12T11:43:52.794819Z",
+      "locator": {
+        "service": "tracepilot-business",
+        "endpoint": "/ops/logs?start=2026-09-12T11%3A43%3A49.754304Z&end=2026-09-12T11%3A43%3A52.794819Z&limit=50&cursor=0&level=INFO",
+        "environment": "demo"
+      },
+      "data": {
+        "httpStatus": 503
+      }
+    },
+    {
+      "id": "c3960e44-795b-4ea9-b483-2fbf32b5ccb5",
+      "source": "logs",
+      "status": "UNAVAILABLE",
+      "start": "2026-09-12T11:43:49.754304Z",
+      "end": "2026-09-12T11:43:52.794819Z",
+      "locator": {
+        "service": "tracepilot-business",
+        "endpoint": "/ops/logs?start=2026-09-12T11%3A43%3A49.754304Z&end=2026-09-12T11%3A43%3A52.794819Z&limit=50&cursor=0&level=INFO",
+        "environment": "demo"
+      },
+      "data": {
+        "httpStatus": 503
+      }
+    },
+    {
+      "id": "67c46da6-1c5f-46e7-85fc-14c95651feb6",
+      "source": "logs",
+      "status": "UNAVAILABLE",
+      "start": "2026-09-12T11:43:49.754304Z",
+      "end": "2026-09-12T11:43:52.794819Z",
+      "locator": {
+        "service": "tracepilot-business",
+        "endpoint": "/ops/logs?start=2026-09-12T11%3A43%3A49.754304Z&end=2026-09-12T11%3A43%3A52.794819Z&limit=50&cursor=0&level=INFO",
+        "environment": "demo"
+      },
+      "data": {
+        "httpStatus": 503
+      }
+    },
+    {
+      "id": "d8ef84db-f289-4d7a-9783-88ccb37a6c8f",
+      "source": "metrics",
+      "status": "UNAVAILABLE",
+      "start": "2026-09-12T11:43:49.754304Z",
+      "end": "2026-09-12T11:43:52.794819Z",
+      "locator": {
+        "service": "tracepilot-business",
+        "endpoint": "/ops/samples?start=2026-09-12T11%3A43%3A49.754304Z&end=2026-09-12T11%3A43%3A52.794819Z&limit=20&cursor=0",
+        "environment": "demo"
+      },
+      "data": {
+        "httpStatus": 503
+      }
+    },
+    {
+      "id": "ae0bd5c4-cf3b-4421-9511-3bf8b3457f71",
+      "source": "metrics",
+      "status": "UNAVAILABLE",
+      "start": "2026-09-12T11:43:49.754304Z",
+      "end": "2026-09-12T11:43:52.794819Z",
+      "locator": {
+        "service": "tracepilot-business",
+        "endpoint": "/ops/samples?start=2026-09-12T11%3A43%3A49.754304Z&end=2026-09-12T11%3A43%3A52.794819Z&limit=20&cursor=0",
+        "environment": "demo"
+      },
+      "data": {
+        "httpStatus": 503
+      }
+    }
+  ],
+  "drafts": [
+    {
+      "gaps": [
+        "日志接口在窗口内返回503，无任何日志证据",
+        "指标接口返回503，无窗口内样本数据",
+        "缺少traceId，无法获取请求链路证据"
+      ],
+      "facts": [
+        {
+          "text": "快照显示http.status为NO_REQUESTS且intervalCount为0",
+          "value": "NO_REQUESTS",
+          "pointer": "/http/status",
+          "evidenceId": "7685b81b-e3e3-41ef-87f0-4fe37d16bcde"
+        },
+        {
+          "text": "同一快照routes数组含59次请求计数，其中/api/slots GET 200共40次、401共3次",
+          "value": 59,
+          "pointer": "/http/count",
+          "evidenceId": "7685b81b-e3e3-41ef-87f0-4fe37d16bcde"
+        },
+        {
+          "text": "事件计数success与failure均为0，oldestSeconds为0",
+          "value": 0.0,
+          "pointer": "/events/success",
+          "evidenceId": "7685b81b-e3e3-41ef-87f0-4fe37d16bcde"
+        }
+      ],
+      "actions": [
+        "建议在日志与指标接口恢复后，重新查询该窗口的日志与样本数据以确认请求时间戳",
+        "建议核对http.status字段的统计口径与routes计数的关系"
+      ],
+      "summary": "服务快照显示可用，但无法确认该分钟窗口内的请求与事件状态：日志与指标接口均返回503，缺少时间戳证据；快照内部存在矛盾（http.status为NO_REQUESTS但routes含59次计数）。",
+      "conflicts": [
+        {
+          "text": "http.status为NO_REQUESTS且intervalCount为0，但routes数组含59次计数，两者矛盾",
+          "evidenceIds": [
+            "7685b81b-e3e3-41ef-87f0-4fe37d16bcde"
+          ]
+        }
+      ],
+      "candidates": [
+        {
+          "cause": "快照采集时刻与窗口内实际请求状态不一致，http.status字段可能反映的是另一统计口径，导致NO_REQUESTS与routes计数矛盾",
+          "inference": true,
+          "confidence": "LIKELY",
+          "evidenceIds": [
+            "7685b81b-e3e3-41ef-87f0-4fe37d16bcde"
+          ]
+        },
+        {
+          "cause": "日志与指标接口503导致无法获取窗口内时间戳证据，无法确认请求与事件是否真实发生",
+          "inference": true,
+          "confidence": "SUPPORTED",
+          "evidenceIds": [
+            "a31434b9-e733-48b0-b6d1-ffa9e2ce8043",
+            "d8ef84db-f289-4d7a-9783-88ccb37a6c8f"
+          ]
+        }
+      ]
+    },
+    {
+      "gaps": [
+        "日志查询在窗口内返回503，无任何日志证据，无法验证请求时间戳或认证失败详情",
+        "缺少traceId，无法通过trace接口获取请求链路证据",
+        "快照仅覆盖采集时刻，无法证明整个分钟窗口的状态"
+      ],
+      "facts": [
+        {
+          "text": "快照中http.status为NO_REQUESTS，intervalCount为0",
+          "value": "NO_REQUESTS",
+          "pointer": "/http/status",
+          "evidenceId": "7685b81b-e3e3-41ef-87f0-4fe37d16bcde"
+        },
+        {
+          "text": "快照中routes数组显示/api/slots GET 200计数40，401计数3，/api/auth/login POST 200计数16",
+          "value": 40,
+          "pointer": "/http/routes/0/count",
+          "evidenceId": "7685b81b-e3e3-41ef-87f0-4fe37d16bcde"
+        },
+        {
+          "text": "日志查询在窗口内返回503，无日志证据",
+          "value": 503,
+          "pointer": "/data/httpStatus",
+          "evidenceId": "a31434b9-e733-48b0-b6d1-ffa9e2ce8043"
+        }
+      ],
+      "actions": [
+        "待日志服务恢复后，重新查询窗口内日志以确认请求时间戳和401详情",
+        "获取traceId后调用trace接口补充请求链路证据"
+      ],
+      "summary": "当前快照显示服务状态AVAILABLE，但HTTP状态为NO_REQUESTS且intervalCount为0，与routes数组中的59次请求计数矛盾；日志和指标查询均返回503，无法确认该分钟窗口内的实际请求和事件处理情况。",
+      "conflicts": [
+        {
+          "text": "http.status为NO_REQUESTS且intervalCount为0，但routes数组包含59次请求计数，两者矛盾",
+          "evidenceIds": [
+            "7685b81b-e3e3-41ef-87f0-4fe37d16bcde"
+          ]
+        }
+      ],
+      "candidates": [
+        {
+          "cause": "快照采集时刻与窗口内请求时间不一致，routes计数为进程启动以来的累计值，不能代表当前窗口",
+          "inference": true,
+          "confidence": "LIKELY",
+          "evidenceIds": [
+            "7685b81b-e3e3-41ef-87f0-4fe37d16bcde"
+          ]
+        },
+        {
+          "cause": "日志服务不可用（503）导致无法获取窗口内请求时间戳和认证失败详情",
+          "inference": true,
+          "confidence": "SUPPORTED",
+          "evidenceIds": [
+            "a31434b9-e733-48b0-b6d1-ffa9e2ce8043"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "source": "evaluation\\results\\protocol-v7-live\\results.json",
+  "syntheticInputRealModelResponse": true,
+  "record": {
+    "case": 2,
+    "synthetic": true,
+    "started": "2026-09-21T14:54:36.346411800Z",
+    "inputTokens": 2453,
+    "outputTokens": 78,
+    "model": "deepseek-ai/DeepSeek-V4-Flash",
+    "texts": [
+      {
+        "redacted": true,
+        "text": "null",
+        "truncated": false,
+        "complete": true,
+        "redactedCharacters": 4,
+        "limitCharacters": 250000
+      }
+    ],
+    "toolCalls": [
+      {
+        "arguments": {
+          "redacted": true,
+          "text": "{\"action\":{\"args\":{\"cursor\":null,\"limit\":20},\"retainFactIds\":[],\"tool\":\"logs\",\"type\":\"tool\"}}",
+          "truncated": false,
+          "complete": true,
+          "redactedCharacters": 93,
+          "limitCharacters": 250000
+        },
+        "name": "submit_diagnostic_action"
+      }
+    ],
+    "finishReasons": [
+      "tool_use",
+      "tool_use"
+    ],
+    "action": {
+      "args": {
+        "cursor": null,
+        "limit": 20
+      },
+      "retainFactIds": [],
+      "tool": "logs",
+      "type": "tool"
+    },
+    "errors": [],
+    "status": "FAIL",
+    "transport": [
+      {
+        "stage": "PREPARED",
+        "sizes": {
+          "unit": "UTF8_BYTES",
+          "actualBytes": 7432,
+          "limitBytes": 400000,
+          "tokenEstimate": "NOT_COMPUTED"
+        }
+      },
+      {
+        "stage": "SEND_ATTEMPTED"
+      },
+      {
+        "stage": "HTTP_RESPONSE",
+        "status": 200
+      }
+    ],
+    "ended": "2026-09-21T14:54:37.787022400Z",
+    "fees": "UNKNOWN"
+  }
+}

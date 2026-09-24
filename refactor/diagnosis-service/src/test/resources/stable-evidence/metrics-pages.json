@@ -1,0 +1,440 @@
+{
+  "uniqueRecords": 8,
+  "complete": true,
+  "end": "2026-09-17T07:24:59.8413826Z",
+  "pages": [
+    {
+      "response": {
+        "status": "PARTIAL",
+        "data": [
+          {
+            "time": "2026-09-17T07:24:59.025988100Z",
+            "service": "tracepilot-business",
+            "environment": "demo",
+            "deploymentVersion": "sha256-af1ba2634569b4bb91776cd2b361b73fab771e63bcc2520a0a63f0e5544f9cd3",
+            "instanceId": "b2e7dc15-7728-40a7-8888-98eecc2571e8",
+            "evidenceId": "a960ccb2-c1d3-40c1-8323-36907105b493",
+            "http": {
+              "count": 0,
+              "errors5xx": 0,
+              "businessRejections": 0,
+              "totalMs": 0.0,
+              "routes": [],
+              "intervalCount": 0,
+              "intervalStart": "2026-09-17T07:24:58.015597Z",
+              "intervalEnd": "2026-09-17T07:24:59.025988100Z",
+              "intervalCoverage": "BETWEEN_SAMPLES",
+              "errorRate": null,
+              "averageMs": null,
+              "status": "NO_REQUESTS"
+            },
+            "pool": {
+              "max": 4,
+              "total": 4,
+              "idle": 4,
+              "pending": 0,
+              "active": 0,
+              "status": "AVAILABLE",
+              "sampledAt": "2026-09-17T07:24:59.025988100Z"
+            },
+            "events": {
+              "status": "AVAILABLE",
+              "pending": 1,
+              "oldestSeconds": 169.0949,
+              "success": 0.0,
+              "failure": 0.0
+            },
+            "status": "AVAILABLE",
+            "collectedAt": "2026-09-17T07:24:59.026994500Z",
+            "collectionDurationMs": 1
+          },
+          {
+            "time": "2026-09-17T07:24:58.015597Z",
+            "service": "tracepilot-business",
+            "environment": "demo",
+            "deploymentVersion": "sha256-af1ba2634569b4bb91776cd2b361b73fab771e63bcc2520a0a63f0e5544f9cd3",
+            "instanceId": "b2e7dc15-7728-40a7-8888-98eecc2571e8",
+            "evidenceId": "59aafc15-c922-4ee9-b08f-187e346b91d6",
+            "http": {
+              "count": 0,
+              "errors5xx": 0,
+              "businessRejections": 0,
+              "totalMs": 0.0,
+              "routes": [],
+              "intervalCount": 0,
+              "intervalStart": "2026-09-17T07:24:57.012792200Z",
+              "intervalEnd": "2026-09-17T07:24:58.015597Z",
+              "intervalCoverage": "BETWEEN_SAMPLES",
+              "errorRate": null,
+              "averageMs": null,
+              "status": "NO_REQUESTS"
+            },
+            "pool": {
+              "max": 4,
+              "total": 4,
+              "idle": 4,
+              "pending": 0,
+              "active": 0,
+              "status": "AVAILABLE",
+              "sampledAt": "2026-09-17T07:24:58.015597Z"
+            },
+            "events": {
+              "status": "AVAILABLE",
+              "pending": 1,
+              "oldestSeconds": 168.0847,
+              "success": 0.0,
+              "failure": 0.0
+            },
+            "status": "AVAILABLE",
+            "collectedAt": "2026-09-17T07:24:58.017596400Z",
+            "collectionDurationMs": 1
+          }
+        ],
+        "hasMore": true,
+        "nextCursor": "v1.59189.60973.4e99148c09e1b15c1c255883.97a286b18779261553cfafa6",
+        "start": "2026-09-17T07:24:51.841382600Z",
+        "end": "2026-09-17T07:24:59.841382600Z",
+        "ordering": "REVERSE_APPEND_ORDER",
+        "scannedBytes": 1784,
+        "snapshotBytes": 60973,
+        "remainingBytes": 59189,
+        "malformedRecords": 0,
+        "oversizedRecords": 0,
+        "coverage": "INCOMPLETE_CONTINUE_WITH_SAME_WINDOW_AND_NEXT_CURSOR",
+        "gap": "NONE",
+        "channel": "all"
+      },
+      "request": "http://127.0.0.1:8192/ops/samples?start=2026-09-17T07:24:51.8413826Z&end=2026-09-17T07:24:59.8413826Z&limit=2&cursor=0"
+    },
+    {
+      "response": {
+        "status": "PARTIAL",
+        "data": [
+          {
+            "time": "2026-09-17T07:24:57.012792200Z",
+            "service": "tracepilot-business",
+            "environment": "demo",
+            "deploymentVersion": "sha256-af1ba2634569b4bb91776cd2b361b73fab771e63bcc2520a0a63f0e5544f9cd3",
+            "instanceId": "b2e7dc15-7728-40a7-8888-98eecc2571e8",
+            "evidenceId": "e49e8deb-39d7-457f-b83f-fbbc258e0d1b",
+            "http": {
+              "count": 0,
+              "errors5xx": 0,
+              "businessRejections": 0,
+              "totalMs": 0.0,
+              "routes": [],
+              "intervalCount": 0,
+              "intervalStart": "2026-09-17T07:24:55.999491100Z",
+              "intervalEnd": "2026-09-17T07:24:57.012792200Z",
+              "intervalCoverage": "BETWEEN_SAMPLES",
+              "errorRate": null,
+              "averageMs": null,
+              "status": "NO_REQUESTS"
+            },
+            "pool": {
+              "max": 4,
+              "total": 4,
+              "idle": 4,
+              "pending": 0,
+              "active": 0,
+              "status": "AVAILABLE",
+              "sampledAt": "2026-09-17T07:24:57.012792200Z"
+            },
+            "events": {
+              "status": "AVAILABLE",
+              "pending": 1,
+              "oldestSeconds": 167.0816,
+              "success": 0.0,
+              "failure": 0.0
+            },
+            "status": "AVAILABLE",
+            "collectedAt": "2026-09-17T07:24:57.013792200Z",
+            "collectionDurationMs": 1
+          },
+          {
+            "time": "2026-09-17T07:24:55.999491100Z",
+            "service": "tracepilot-business",
+            "environment": "demo",
+            "deploymentVersion": "sha256-af1ba2634569b4bb91776cd2b361b73fab771e63bcc2520a0a63f0e5544f9cd3",
+            "instanceId": "b2e7dc15-7728-40a7-8888-98eecc2571e8",
+            "evidenceId": "42de25ee-9cba-42a0-b10f-9df4ea9fa3d3",
+            "http": {
+              "count": 0,
+              "errors5xx": 0,
+              "businessRejections": 0,
+              "totalMs": 0.0,
+              "routes": [],
+              "intervalCount": 0,
+              "intervalStart": "2026-09-17T07:24:54.982610900Z",
+              "intervalEnd": "2026-09-17T07:24:55.999491100Z",
+              "intervalCoverage": "BETWEEN_SAMPLES",
+              "errorRate": null,
+              "averageMs": null,
+              "status": "NO_REQUESTS"
+            },
+            "pool": {
+              "max": 4,
+              "total": 4,
+              "idle": 4,
+              "pending": 0,
+              "active": 0,
+              "status": "AVAILABLE",
+              "sampledAt": "2026-09-17T07:24:55.999491100Z"
+            },
+            "events": {
+              "status": "AVAILABLE",
+              "pending": 1,
+              "oldestSeconds": 166.0684,
+              "success": 0.0,
+              "failure": 0.0
+            },
+            "status": "AVAILABLE",
+            "collectedAt": "2026-09-17T07:24:56.000492800Z",
+            "collectionDurationMs": 1
+          }
+        ],
+        "hasMore": true,
+        "nextCursor": "v1.57393.60973.4e99148c09e1b15c1c255883.97a286b18779261553cfafa6",
+        "start": "2026-09-17T07:24:51.841382600Z",
+        "end": "2026-09-17T07:24:59.841382600Z",
+        "ordering": "REVERSE_APPEND_ORDER",
+        "scannedBytes": 1796,
+        "snapshotBytes": 60973,
+        "remainingBytes": 57393,
+        "malformedRecords": 0,
+        "oversizedRecords": 0,
+        "coverage": "INCOMPLETE_CONTINUE_WITH_SAME_WINDOW_AND_NEXT_CURSOR",
+        "gap": "NONE",
+        "channel": "all"
+      },
+      "request": "http://127.0.0.1:8192/ops/samples?start=2026-09-17T07:24:51.8413826Z&end=2026-09-17T07:24:59.8413826Z&limit=2&cursor=v1.59189.60973.4e99148c09e1b15c1c255883.97a286b18779261553cfafa6"
+    },
+    {
+      "response": {
+        "status": "PARTIAL",
+        "data": [
+          {
+            "time": "2026-09-17T07:24:54.982610900Z",
+            "service": "tracepilot-business",
+            "environment": "demo",
+            "deploymentVersion": "sha256-af1ba2634569b4bb91776cd2b361b73fab771e63bcc2520a0a63f0e5544f9cd3",
+            "instanceId": "b2e7dc15-7728-40a7-8888-98eecc2571e8",
+            "evidenceId": "d93ba696-58da-4143-8c09-1b8a6acaca64",
+            "http": {
+              "count": 0,
+              "errors5xx": 0,
+              "businessRejections": 0,
+              "totalMs": 0.0,
+              "routes": [],
+              "intervalCount": 0,
+              "intervalStart": "2026-09-17T07:24:53.968394900Z",
+              "intervalEnd": "2026-09-17T07:24:54.982610900Z",
+              "intervalCoverage": "BETWEEN_SAMPLES",
+              "errorRate": null,
+              "averageMs": null,
+              "status": "NO_REQUESTS"
+            },
+            "pool": {
+              "max": 4,
+              "total": 4,
+              "idle": 4,
+              "pending": 0,
+              "active": 0,
+              "status": "AVAILABLE",
+              "sampledAt": "2026-09-17T07:24:54.982610900Z"
+            },
+            "events": {
+              "status": "AVAILABLE",
+              "pending": 1,
+              "oldestSeconds": 165.0515,
+              "success": 0.0,
+              "failure": 0.0
+            },
+            "status": "AVAILABLE",
+            "collectedAt": "2026-09-17T07:24:54.983609900Z",
+            "collectionDurationMs": 0
+          },
+          {
+            "time": "2026-09-17T07:24:53.968394900Z",
+            "service": "tracepilot-business",
+            "environment": "demo",
+            "deploymentVersion": "sha256-af1ba2634569b4bb91776cd2b361b73fab771e63bcc2520a0a63f0e5544f9cd3",
+            "instanceId": "b2e7dc15-7728-40a7-8888-98eecc2571e8",
+            "evidenceId": "04001f06-a53b-490d-9fbe-495aa8e2ddbb",
+            "http": {
+              "count": 0,
+              "errors5xx": 0,
+              "businessRejections": 0,
+              "totalMs": 0.0,
+              "routes": [],
+              "intervalCount": 0,
+              "intervalStart": "2026-09-17T07:24:52.952625200Z",
+              "intervalEnd": "2026-09-17T07:24:53.968394900Z",
+              "intervalCoverage": "BETWEEN_SAMPLES",
+              "errorRate": null,
+              "averageMs": null,
+              "status": "NO_REQUESTS"
+            },
+            "pool": {
+              "max": 4,
+              "total": 4,
+              "idle": 4,
+              "pending": 0,
+              "active": 0,
+              "status": "AVAILABLE",
+              "sampledAt": "2026-09-17T07:24:53.968394900Z"
+            },
+            "events": {
+              "status": "AVAILABLE",
+              "pending": 1,
+              "oldestSeconds": 164.0374,
+              "success": 0.0,
+              "failure": 0.0
+            },
+            "status": "AVAILABLE",
+            "collectedAt": "2026-09-17T07:24:53.969404400Z",
+            "collectionDurationMs": 1
+          }
+        ],
+        "hasMore": true,
+        "nextCursor": "v1.55597.60973.4e99148c09e1b15c1c255883.97a286b18779261553cfafa6",
+        "start": "2026-09-17T07:24:51.841382600Z",
+        "end": "2026-09-17T07:24:59.841382600Z",
+        "ordering": "REVERSE_APPEND_ORDER",
+        "scannedBytes": 1796,
+        "snapshotBytes": 60973,
+        "remainingBytes": 55597,
+        "malformedRecords": 0,
+        "oversizedRecords": 0,
+        "coverage": "INCOMPLETE_CONTINUE_WITH_SAME_WINDOW_AND_NEXT_CURSOR",
+        "gap": "NONE",
+        "channel": "all"
+      },
+      "request": "http://127.0.0.1:8192/ops/samples?start=2026-09-17T07:24:51.8413826Z&end=2026-09-17T07:24:59.8413826Z&limit=2&cursor=v1.57393.60973.4e99148c09e1b15c1c255883.97a286b18779261553cfafa6"
+    },
+    {
+      "response": {
+        "status": "PARTIAL",
+        "data": [
+          {
+            "time": "2026-09-17T07:24:52.952625200Z",
+            "service": "tracepilot-business",
+            "environment": "demo",
+            "deploymentVersion": "sha256-af1ba2634569b4bb91776cd2b361b73fab771e63bcc2520a0a63f0e5544f9cd3",
+            "instanceId": "b2e7dc15-7728-40a7-8888-98eecc2571e8",
+            "evidenceId": "1d049adf-09e3-4d8e-8849-463898584f85",
+            "http": {
+              "count": 0,
+              "errors5xx": 0,
+              "businessRejections": 0,
+              "totalMs": 0.0,
+              "routes": [],
+              "intervalCount": 0,
+              "intervalStart": "2026-09-17T07:24:51.942134100Z",
+              "intervalEnd": "2026-09-17T07:24:52.952625200Z",
+              "intervalCoverage": "BETWEEN_SAMPLES",
+              "errorRate": null,
+              "averageMs": null,
+              "status": "NO_REQUESTS"
+            },
+            "pool": {
+              "max": 4,
+              "total": 4,
+              "idle": 4,
+              "pending": 0,
+              "active": 0,
+              "status": "AVAILABLE",
+              "sampledAt": "2026-09-17T07:24:52.952625200Z"
+            },
+            "events": {
+              "status": "AVAILABLE",
+              "pending": 1,
+              "oldestSeconds": 163.0215,
+              "success": 0.0,
+              "failure": 0.0
+            },
+            "status": "AVAILABLE",
+            "collectedAt": "2026-09-17T07:24:52.953627100Z",
+            "collectionDurationMs": 1
+          },
+          {
+            "time": "2026-09-17T07:24:51.942134100Z",
+            "service": "tracepilot-business",
+            "environment": "demo",
+            "deploymentVersion": "sha256-af1ba2634569b4bb91776cd2b361b73fab771e63bcc2520a0a63f0e5544f9cd3",
+            "instanceId": "b2e7dc15-7728-40a7-8888-98eecc2571e8",
+            "evidenceId": "15594f4a-331b-4aa1-a728-cf6f5b219c4d",
+            "http": {
+              "count": 0,
+              "errors5xx": 0,
+              "businessRejections": 0,
+              "totalMs": 0.0,
+              "routes": [],
+              "intervalCount": 0,
+              "intervalStart": "2026-09-17T07:24:50.926171500Z",
+              "intervalEnd": "2026-09-17T07:24:51.942134100Z",
+              "intervalCoverage": "BETWEEN_SAMPLES",
+              "errorRate": null,
+              "averageMs": null,
+              "status": "NO_REQUESTS"
+            },
+            "pool": {
+              "max": 4,
+              "total": 4,
+              "idle": 4,
+              "pending": 0,
+              "active": 0,
+              "status": "AVAILABLE",
+              "sampledAt": "2026-09-17T07:24:51.942134100Z"
+            },
+            "events": {
+              "status": "AVAILABLE",
+              "pending": 1,
+              "oldestSeconds": 162.0115,
+              "success": 0.0,
+              "failure": 0.0
+            },
+            "status": "AVAILABLE",
+            "collectedAt": "2026-09-17T07:24:51.943138600Z",
+            "collectionDurationMs": 1
+          }
+        ],
+        "hasMore": true,
+        "nextCursor": "v1.53801.60973.4e99148c09e1b15c1c255883.97a286b18779261553cfafa6",
+        "start": "2026-09-17T07:24:51.841382600Z",
+        "end": "2026-09-17T07:24:59.841382600Z",
+        "ordering": "REVERSE_APPEND_ORDER",
+        "scannedBytes": 1796,
+        "snapshotBytes": 60973,
+        "remainingBytes": 53801,
+        "malformedRecords": 0,
+        "oversizedRecords": 0,
+        "coverage": "INCOMPLETE_CONTINUE_WITH_SAME_WINDOW_AND_NEXT_CURSOR",
+        "gap": "NONE",
+        "channel": "all"
+      },
+      "request": "http://127.0.0.1:8192/ops/samples?start=2026-09-17T07:24:51.8413826Z&end=2026-09-17T07:24:59.8413826Z&limit=2&cursor=v1.55597.60973.4e99148c09e1b15c1c255883.97a286b18779261553cfafa6"
+    },
+    {
+      "response": {
+        "status": "NO_DATA",
+        "data": [],
+        "hasMore": false,
+        "nextCursor": "0",
+        "start": "2026-09-17T07:24:51.841382600Z",
+        "end": "2026-09-17T07:24:59.841382600Z",
+        "ordering": "REVERSE_APPEND_ORDER",
+        "scannedBytes": 53801,
+        "snapshotBytes": 60973,
+        "remainingBytes": 0,
+        "malformedRecords": 0,
+        "oversizedRecords": 0,
+        "coverage": "SNAPSHOT_SCANNED",
+        "gap": "NONE",
+        "channel": "all"
+      },
+      "request": "http://127.0.0.1:8192/ops/samples?start=2026-09-17T07:24:51.8413826Z&end=2026-09-17T07:24:59.8413826Z&limit=2&cursor=v1.53801.60973.4e99148c09e1b15c1c255883.97a286b18779261553cfafa6"
+    }
+  ],
+  "start": "2026-09-17T07:24:51.8413826Z"
+}

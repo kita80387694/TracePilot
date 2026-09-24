@@ -1,0 +1,27 @@
+{
+  "provenance": "Minimal redacted projection of cancelled-task regression; identifying/request/state fields omitted",
+  "tasks": [
+    {
+      "status": "CANCELLED",
+      "tool_calls": 0,
+      "model_calls": 0,
+      "steps": [],
+      "evidence": [],
+      "report_json": {
+        "facts": [],
+        "candidates": []
+      }
+    },
+    {
+      "status": "CANCELLED",
+      "tool_calls": 0,
+      "model_calls": 0,
+      "steps": [],
+      "evidence": [],
+      "report_json": {
+        "facts": [],
+        "candidates": []
+      }
+    }
+  ]
+}

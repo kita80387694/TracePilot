@@ -1,0 +1,136 @@
+{
+  "kind": "MINIMAL_SANITIZED_TOOL_ACTION_FIXTURES_NO_BUSINESS_BODIES",
+  "records": [
+    {
+      "case": "H09",
+      "ordinal": 2,
+      "sourceSha256": "63ef3e08e355640e222833c18344272f6e119cba6e1644a1fecb47fc63d3550f",
+      "action": {
+        "type": "tool",
+        "tool": "logs",
+        "args": {
+          "cursor": null,
+          "limit": 100,
+          "level": "INFO",
+          "channel": "events"
+        }
+      }
+    },
+    {
+      "case": "H20",
+      "ordinal": 2,
+      "sourceSha256": "ec79798cbee8f0ae8796431c35379f5abe766d12953d8bb4940e0a857bc66d0b",
+      "action": {
+        "type": "tool",
+        "tool": "metrics",
+        "args": {
+          "cursor": null,
+          "limit": 50
+        }
+      }
+    },
+    {
+      "case": "H20",
+      "ordinal": 3,
+      "sourceSha256": "3709811c5113dc78ddfb3c47f4e69a2177a151f64915704baaa934bd96d9d0e0",
+      "action": {
+        "type": "tool",
+        "tool": "logs",
+        "args": {
+          "cursor": null,
+          "limit": 50,
+          "level": "INFO",
+          "channel": "all"
+        }
+      }
+    },
+    {
+      "case": "H13",
+      "ordinal": 3,
+      "sourceSha256": "1b0ffbe38d1d60897c6a1c5a701787267f2586a64d4af340cac351566dc9b624",
+      "action": {
+        "type": "tool",
+        "tool": "metrics",
+        "args": {
+          "cursor": null,
+          "limit": 50
+        }
+      }
+    },
+    {
+      "case": "H04",
+      "ordinal": 3,
+      "sourceSha256": "79bffa34d1186e40c05bb49112905452b305748134b76bcbf83ee0a207c30fcc",
+      "action": {
+        "type": "tool",
+        "tool": "logs",
+        "args": {
+          "cursor": null,
+          "limit": 100,
+          "level": "ERROR",
+          "channel": "events"
+        }
+      }
+    },
+    {
+      "case": "H05",
+      "ordinal": 3,
+      "sourceSha256": "8f508c66088d371ae5a09e411f3347b63dc84c13cabf8f5dbda668e65b28c11b",
+      "action": {
+        "type": "tool",
+        "tool": "logs",
+        "args": {
+          "cursor": null,
+          "limit": 100,
+          "level": "INFO",
+          "channel": "all"
+        }
+      }
+    },
+    {
+      "case": "H09",
+      "ordinal": 3,
+      "sourceSha256": "cbea68215ccb1db536d136ef2a26839d236bcf0eb46304a5b9f4c9f96d4667ac",
+      "action": {
+        "type": "tool",
+        "tool": "logs",
+        "args": {
+          "cursor": null,
+          "limit": 50,
+          "level": "INFO",
+          "channel": "events"
+        }
+      }
+    },
+    {
+      "case": "H12",
+      "ordinal": 3,
+      "sourceSha256": "ae969b9f1df7a43e61120dc148b89c6d26f8d9bb6b03c995612b4b2f36495e8d",
+      "action": {
+        "type": "tool",
+        "tool": "logs",
+        "args": {
+          "cursor": null,
+          "limit": 50,
+          "level": "INFO",
+          "channel": "events"
+        }
+      }
+    },
+    {
+      "case": "H12",
+      "ordinal": 2,
+      "sourceSha256": "9e703a7badf36f02a4770a9fc861177c9d63b83e8cbff0f4a93d1c0e9bee43b2",
+      "action": {
+        "type": "tool",
+        "tool": "logs",
+        "args": {
+          "cursor": null,
+          "limit": 100,
+          "level": "INFO",
+          "channel": "events"
+        }
+      }
+    }
+  ]
+}

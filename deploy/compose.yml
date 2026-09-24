@@ -1,0 +1,59 @@
+name: tracepilot-source
+services:
+  mysql:
+    image: mysql:8.0.33
+    environment:
+      MYSQL_ROOT_PASSWORD: ${DB_PASSWORD:?generate deploy/local.env first}
+      MYSQL_DATABASE: tracepilot
+      MYSQL_USER: tracepilot
+      MYSQL_PASSWORD: ${DB_PASSWORD:?generate deploy/local.env first}
+    ports: ['127.0.0.1:3348:3306']
+    volumes:
+      - database:/var/lib/mysql
+      - ./init-diagnosis.sql:/docker-entrypoint-initdb.d/01.sql:ro
+    healthcheck:
+      test: ['CMD-SHELL', 'mysqladmin ping -h 127.0.0.1 --silent']
+      interval: 5s
+      timeout: 3s
+      retries: 30
+  business:
+    build:
+      context: ..
+      dockerfile: deploy/Dockerfile
+    depends_on:
+      mysql: {condition: service_healthy}
+    ports: ['127.0.0.1:8382:8080']
+    environment:
+      DB_URL: jdbc:mysql://mysql:3306/tracepilot?connectionTimeZone=UTC&forceConnectionTimeZoneToSession=true
+      DB_USER: tracepilot
+      DB_PASSWORD: ${DB_PASSWORD:?required}
+      SPRING_PROFILES_ACTIVE: demo
+      DEMO_SEED: 'true'
+      OBSERVER_TOKEN: ${OBSERVER_TOKEN:?required}
+      OBSERVABILITY_DIR: /tmp/observability
+      DEPLOYMENT_VERSION: source-build
+    volumes: ['observability:/tmp/observability']
+  diagnosis:
+    build:
+      context: ..
+      dockerfile: deploy/diagnosis-source.Dockerfile
+    depends_on:
+      mysql: {condition: service_healthy}
+    ports: ['127.0.0.1:8383:8083']
+    environment:
+      DIAG_BIND: 0.0.0.0
+      DIAG_DB_URL: jdbc:mysql://mysql:3306/diagnosis?connectionTimeZone=UTC&forceConnectionTimeZoneToSession=true
+      DIAG_DB_USER: tracepilot
+      DIAG_DB_PASSWORD: ${DB_PASSWORD:?required}
+      DIAG_API_KEYS: local:${DIAG_API_TOKEN:?required}
+      WEB_AUTH_SECRET: ${WEB_AUTH_SECRET:?required}
+      DIAG_BUSINESS_URL: http://business:8080
+      OBSERVER_TOKEN: ${OBSERVER_TOKEN:?required}
+      DIAG_EVIDENCE_ROOT: /evidence
+      DIAG_WORKER_ENABLED: 'false'
+      DIAG_MODEL_KEY: ''
+      DIAG_MODEL_NAME: ''
+    volumes: ['observability:/evidence:ro']
+volumes:
+  database:
+  observability:

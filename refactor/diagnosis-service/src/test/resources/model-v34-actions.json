@@ -1,0 +1,107 @@
+{
+  "meaning": "Actual failed development responses; structural replay only, not causal gold answers",
+  "actions": {
+    "PRO": {
+      "checks": [
+        "COLLECT_METRICS",
+        "COLLECT_LOGS",
+        "CORRELATE_REQUEST",
+        "VERIFY_MECHANISM"
+      ],
+      "hypotheses": [
+        {
+          "contradictionFactIds": [],
+          "relation": "MAY_EXPLAIN",
+          "premiseFactIds": [
+            "F95086ab610a1d7da08d0a5c7",
+            "F81bb9bec9adbf194397aa549",
+            "Fe6e7d6eda41ed951675243c9",
+            "F2a83e32b69d13429642ec8f4",
+            "F76421995a17a14b0ad10d076",
+            "F1a68fb2914239f0c54a667e7",
+            "Fe36b9b364f09c445100240bb",
+            "F3d97ee361272b6e3515fa396"
+          ],
+          "outcomeFactIds": [
+            "F2a83e32b69d13429642ec8f4",
+            "F76421995a17a14b0ad10d076",
+            "F1a68fb2914239f0c54a667e7",
+            "Fe36b9b364f09c445100240bb",
+            "F3d97ee361272b6e3515fa396"
+          ],
+          "mechanism": "At {{fact:F95086ab610a1d7da08d0a5c7}} the connection pool was fully exhausted (active=4/4, idle=0) with {{fact:F81bb9bec9adbf194397aa549}} pending waiter. This caused {{fact:F1a68fb2914239f0c54a667e7}} (CannotGetJdbcConnectionException) for authentication queries on incoming requests, and {{fact:F3d97ee361272b6e3515fa396}} (CannotCreateTransactionException) for the event publisher background thread. The pool saturation drove {{fact:F2a83e32b69d13429642ec8f4}} (100% error rate) and {{fact:F76421995a17a14b0ad10d076}} (~2017ms average latency, reflecting timeouts/retries). By {{fact:F5684818c29ee11194a5f00c1}} the pool recovered (idle=4, active=0, pending=0) with {{fact:F38aa04459c7420b51e1e1e41}} (0% error rate) and {{fact:Feccfe8bf3da3fa3595b12625}} (~2ms). The root cause is connection pool exhaustion; what saturated the pool is not fully determined from current evidence but the event publisher's transaction failure at {{fact:F3d97ee361272b6e3515fa396}} suggests it may have been holding connections during the incident window."
+        }
+      ],
+      "type": "report"
+    },
+    "GLM": {
+      "hypotheses": [
+        {
+          "relation": "MAY_EXPLAIN",
+          "premiseFactIds": [
+            "F95086ab610a1d7da08d0a5c7",
+            "Fe6e7d6eda41ed951675243c9",
+            "F81bb9bec9adbf194397aa549",
+            "F5407f87d91f98acc3a7e80dd",
+            "F76421995a17a14b0ad10d076",
+            "F2a83e32b69d13429642ec8f4"
+          ],
+          "outcomeFactIds": [
+            "F1a68fb2914239f0c54a667e7",
+            "F93712d4fb3df37388a3e4758",
+            "Fe36b9b364f09c445100240bb",
+            "F0794d4f2cf2b03d03b56866b",
+            "F3d97ee361272b6e3515fa396",
+            "F415fbb7c0c7b981c970b78f1"
+          ],
+          "contradictionFactIds": [
+            "F5684818c29ee11194a5f00c1",
+            "F1aee772d820ed6041a16aa6d",
+            "Fb535fd7242cc79c1b3c907af",
+            "F855dcdec80ee9dfd0c9d7588",
+            "Feccfe8bf3da3fa3595b12625",
+            "F38aa04459c7420b51e1e1e41"
+          ],
+          "mechanism": "At sample 22 ({{fact:F876c28dc943afbbe9561a720}}), the JDBC connection pool was fully saturated: {{fact:F95086ab610a1d7da08d0a5c7}} active, {{fact:Fe6e7d6eda41ed951675243c9}} idle, {{fact:F81bb9bec9adbf194397aa549}} pending, out of {{fact:F5407f87d91f98acc3a7e80dd}} total. During this same interval, HTTP error rate was {{fact:F2a83e32b69d13429642ec8f4}} (100%) with average latency {{fact:F76421995a17a14b0ad10d076}} (~2017ms). The saturated pool prevented the authentication filter (SecurityConfig$1.doFilterInternal) from obtaining a JDBC connection, producing {{fact:F1a68fb2914239f0c54a667e7}} (CannotGetJdbcConnectionException) logged as {{fact:F93712d4fb3df37388a3e4758}}. The same pool exhaustion prevented EventPublisher from opening a transaction, producing {{fact:F3d97ee361272b6e3515fa396}} (CannotCreateTransactionException) logged as {{fact:F415fbb7c0c7b981c970b78f1}}. By the final sample ({{fact:Fd4c6f759843a301e97512e8e}}), the pool had recovered to {{fact:F5684818c29ee11194a5f00c1}} idle / {{fact:Fb535fd7242cc79c1b3c907af}} active / {{fact:F855dcdec80ee9dfd0c9d7588}} pending, and HTTP error rate returned to {{fact:F38aa04459c7420b51e1e1e41}} with latency {{fact:Feccfe8bf3da3fa3595b12625}}, confirming the degradation was transient and pool-saturation-driven.",
+          "comparisons": [
+            {
+              "baselineFactId": "F5684818c29ee11194a5f00c1",
+              "incidentFactId": "Fe6e7d6eda41ed951675243c9"
+            },
+            {
+              "baselineFactId": "F38aa04459c7420b51e1e1e41",
+              "incidentFactId": "F2a83e32b69d13429642ec8f4"
+            },
+            {
+              "baselineFactId": "Feccfe8bf3da3fa3595b12625",
+              "incidentFactId": "F76421995a17a14b0ad10d076"
+            }
+          ]
+        },
+        {
+          "relation": "MAY_SHARE_CAUSE",
+          "premiseFactIds": [
+            "F1a68fb2914239f0c54a667e7",
+            "F93712d4fb3df37388a3e4758",
+            "F3d97ee361272b6e3515fa396",
+            "F415fbb7c0c7b981c970b78f1"
+          ],
+          "outcomeFactIds": [
+            "Fe36b9b364f09c445100240bb",
+            "F0794d4f2cf2b03d03b56866b"
+          ],
+          "contradictionFactIds": [],
+          "mechanism": "The two distinct error types — {{fact:F1a68fb2914239f0c54a667e7}} (CannotGetJdbcConnectionException, from SecurityConfig) and {{fact:F3d97ee361272b6e3515fa396}} (CannotCreateTransactionException, from EventPublisher) — share the same underlying cause: JDBC connection pool exhaustion. Both error categories appear with sqlState=null and sqlErrorCode=0, consistent with connection-acquisition failure rather than a database-side SQL error. The repeated {{fact:F93712d4fb3df37388a3e4758}} and {{fact:F415fbb7c0c7b981c970b78f1}} messages across multiple log entries ({{fact:F0794d4f2cf2b03d03b56866b}} mirrors {{fact:F93712d4fb3df37388a3e4758}}) indicate the pool saturation affected both the request-authentication path and the background event-publisher path simultaneously.",
+          "comparisons": []
+        }
+      ],
+      "checks": [
+        "INSPECT_CODE",
+        "COLLECT_METRICS",
+        "CHECK_PERSISTENCE",
+        "VERIFY_MECHANISM"
+      ],
+      "type": "report"
+    }
+  }
+}

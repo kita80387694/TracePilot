@@ -1,0 +1,7 @@
+ALTER TABLE diagnosis_task
+ ADD COLUMN max_tools INT NOT NULL DEFAULT 12,
+ ADD COLUMN max_models INT NOT NULL DEFAULT 8,
+ ADD COLUMN timeout_seconds INT NOT NULL DEFAULT 180,
+ ADD CHECK (max_tools BETWEEN 1 AND 12),
+ ADD CHECK (max_models BETWEEN 1 AND 8),
+ ADD CHECK (timeout_seconds BETWEEN 1 AND 180);

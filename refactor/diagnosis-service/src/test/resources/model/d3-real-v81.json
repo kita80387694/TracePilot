@@ -1,0 +1,511 @@
+{
+  "input": {
+    "service": "tracepilot-business",
+    "environment": "demo",
+    "start": "2026-09-12T13:07:55.737322+00:00",
+    "end": "2026-09-12T13:07:58.794845+00:00",
+    "symptom": "这一分钟的时段查询状态能否确认？请核查证据来源，缺少证据时明确说明。",
+    "interfacePath": "/api/slots"
+  },
+  "report": {
+    "gaps": [
+      "缺少查询窗口（2026-09-12T13:07:55.737322Z至13:07:58.794845Z）内的日志数据，日志接口返回503",
+      "缺少查询窗口内的指标采样数据，/ops/samples接口返回503",
+      "overview快照为进程累计计数（http.status=NO_REQUESTS，intervalCount=0），不包含窗口内请求明细，无法据此确认该分钟时段的查询状态"
+    ],
+    "facts": [],
+    "actions": [
+      "重试/ops/logs接口获取窗口内日志，确认是否有该时段的请求记录",
+      "重试/ops/samples接口获取窗口内指标采样数据",
+      "若接口持续不可用，请用户从外部收集该时段的应用日志或网关访问日志以补充证据"
+    ],
+    "summary": "已检查的证据来源包括：overview快照（成功获取，但为进程启动以来的累计计数，http.status为NO_REQUESTS且intervalCount=0，无法反映查询窗口内的请求状态）、日志接口（两次尝试均返回503不可用）、指标采样接口（两次尝试均返回503不可用）。由于窗口内日志和指标数据均未获取成功，且快照为累计值而非窗口内数据，当前无法确认该分钟时段内/api/slots的查询状态。",
+    "conflicts": [],
+    "execution": {
+      "budget": {
+        "deadline": "2026-09-12T13:10:59.045+00:00",
+        "max_tools": 12,
+        "max_models": 8,
+        "started_at": "2026-09-12T13:07:59.045+00:00",
+        "tool_calls": 5,
+        "model_calls": 5,
+        "timeout_seconds": 180
+      },
+      "finishedAt": "2026-09-12T13:08:13.266673600Z",
+      "modelCalls": [
+        {
+          "usage": {
+            "model": "deepseek-ai/DeepSeek-V4-Flash",
+            "protocol": {
+              "stream": false,
+              "protocol": "anthropic-messages",
+              "thinking": "disabled",
+              "textBlocks": 1,
+              "temperature": 0.0,
+              "finishReason": "end_turn",
+              "ignoredBlocks": 0,
+              "parseCategory": "VALID_JSON",
+              "adapterVersion": "deepseek-evidence-v8.1",
+              "requestedModel": "deepseek-ai/DeepSeek-V4-Flash",
+              "maxOutputTokens": 3000,
+              "captureStopOnError": false,
+              "providerResponseId": "msg_Vvsq8HLmBtXDC68NyL8zBQb6",
+              "responseCharacters": 216
+            },
+            "inputTokens": 3469,
+            "outputTokens": 93,
+            "promptSha256": "5268bd9a80078b560bb8a7f547ed4aa2d29a59e0df83ea2e3abfdd1d968e82f9",
+            "promptVersion": "evidence-scope-2026-09-12-v8.1"
+          },
+          "status": "SUCCEEDED"
+        },
+        {
+          "usage": {
+            "model": "deepseek-ai/DeepSeek-V4-Flash",
+            "protocol": {
+              "stream": false,
+              "protocol": "anthropic-messages",
+              "thinking": "disabled",
+              "textBlocks": 1,
+              "temperature": 0.0,
+              "finishReason": "end_turn",
+              "ignoredBlocks": 0,
+              "parseCategory": "VALID_JSON",
+              "adapterVersion": "deepseek-evidence-v8.1",
+              "requestedModel": "deepseek-ai/DeepSeek-V4-Flash",
+              "maxOutputTokens": 3000,
+              "captureStopOnError": false,
+              "providerResponseId": "msg_Fn7OamoCz2ZYk3nBM3isI6oP",
+              "responseCharacters": 77
+            },
+            "inputTokens": 3755,
+            "outputTokens": 24,
+            "promptSha256": "80155d84db5bc9f5054bfa8e56f3e37a295ee47b0bd4aad07c176471d73a1b38",
+            "promptVersion": "evidence-scope-2026-09-12-v8.1"
+          },
+          "status": "SUCCEEDED"
+        },
+        {
+          "usage": {
+            "model": "deepseek-ai/DeepSeek-V4-Flash",
+            "protocol": {
+              "stream": false,
+              "protocol": "anthropic-messages",
+              "thinking": "disabled",
+              "textBlocks": 1,
+              "temperature": 0.0,
+              "finishReason": "end_turn",
+              "ignoredBlocks": 0,
+              "parseCategory": "VALID_JSON",
+              "adapterVersion": "deepseek-evidence-v8.1",
+              "requestedModel": "deepseek-ai/DeepSeek-V4-Flash",
+              "maxOutputTokens": 3000,
+              "captureStopOnError": false,
+              "providerResponseId": "msg_lAvdxFPeMgQcZ4bgidaYJ1T9",
+              "responseCharacters": 42
+            },
+            "inputTokens": 4394,
+            "outputTokens": 13,
+            "promptSha256": "80155d84db5bc9f5054bfa8e56f3e37a295ee47b0bd4aad07c176471d73a1b38",
+            "promptVersion": "evidence-scope-2026-09-12-v8.1"
+          },
+          "status": "SUCCEEDED"
+        },
+        {
+          "usage": {
+            "model": "deepseek-ai/DeepSeek-V4-Flash",
+            "protocol": {
+              "stream": false,
+              "protocol": "anthropic-messages",
+              "thinking": "disabled",
+              "textBlocks": 1,
+              "temperature": 0.0,
+              "finishReason": "end_turn",
+              "ignoredBlocks": 0,
+              "parseCategory": "VALID_JSON",
+              "adapterVersion": "deepseek-evidence-v8.1",
+              "requestedModel": "deepseek-ai/DeepSeek-V4-Flash",
+              "maxOutputTokens": 3000,
+              "captureStopOnError": false,
+              "providerResponseId": "msg_ISigBMlFSjfXbGVsS6Mf0yLB",
+              "responseCharacters": 66
+            },
+            "inputTokens": 5544,
+            "outputTokens": 19,
+            "promptSha256": "80155d84db5bc9f5054bfa8e56f3e37a295ee47b0bd4aad07c176471d73a1b38",
+            "promptVersion": "evidence-scope-2026-09-12-v8.1"
+          },
+          "status": "SUCCEEDED"
+        },
+        {
+          "usage": {
+            "model": "deepseek-ai/DeepSeek-V4-Flash",
+            "protocol": {
+              "stream": false,
+              "protocol": "anthropic-messages",
+              "thinking": "disabled",
+              "textBlocks": 1,
+              "temperature": 0.0,
+              "finishReason": "end_turn",
+              "ignoredBlocks": 0,
+              "parseCategory": "VALID_JSON",
+              "adapterVersion": "deepseek-evidence-v8.1",
+              "requestedModel": "deepseek-ai/DeepSeek-V4-Flash",
+              "maxOutputTokens": 3000,
+              "captureStopOnError": false,
+              "providerResponseId": "msg_qSDWDZDhLz4Xilhc09YKTfi0",
+              "responseCharacters": 562
+            },
+            "inputTokens": 4799,
+            "outputTokens": 275,
+            "promptSha256": "5d4b98f3712b5f9ff05fd9cd7576c8943a41bc5065b3c42e455c1b54e8fa34a0",
+            "promptVersion": "evidence-scope-2026-09-12-v8.1"
+          },
+          "status": "SUCCEEDED"
+        }
+      ],
+      "usageSource": "Provider metadata; absent token usage is unknown",
+      "promptVersion": "evidence-scope-2026-09-12-v8.1",
+      "repairsExecuted": false,
+      "unreportedModelCalls": 0
+    },
+    "candidates": [],
+    "resultType": "INSUFFICIENT_EVIDENCE_SOURCE_FAILURE",
+    "checkedSources": [
+      {
+        "end": "2026-09-12T13:07:58.715841200Z",
+        "start": "2026-09-12T13:07:58.715841200Z",
+        "state": "SUCCESS_DATA",
+        "source": "overview",
+        "locator": {
+          "service": "tracepilot-business",
+          "endpoint": "/ops/snapshot",
+          "environment": "demo",
+          "queryFingerprint": "d7921066ce52df4ced6de61963d3125b3e102716e0b585294c1871ba6ba040a9"
+        },
+        "service": "tracepilot-business",
+        "versions": [],
+        "evidenceId": "3b1cccbf-a279-46d2-bf53-eec3127222e7",
+        "environment": "demo",
+        "eventEligible": false,
+        "snapshotVersion": "sha256-a310042746f037f5a47e2de93d2303f000926a5871d63efdd7e375df55045785",
+        "storedAccessible": true
+      },
+      {
+        "end": "2026-09-12T13:07:58.794845Z",
+        "start": "2026-09-12T13:07:55.737322Z",
+        "state": "SOURCE_UNAVAILABLE",
+        "source": "logs",
+        "locator": {
+          "service": "tracepilot-business",
+          "endpoint": "/ops/logs?start=2026-09-12T13%3A07%3A55.737322Z&end=2026-09-12T13%3A07%3A58.794845Z&limit=50&cursor=0&level=INFO",
+          "environment": "demo",
+          "queryFingerprint": "5913ba4e870517f61a8fd9a4de1119c4829616d1b3018b0ccb17e04c740e2f86"
+        },
+        "service": "tracepilot-business",
+        "versions": [],
+        "evidenceId": "479bbb8d-25ba-4642-b354-9544be8b2dd0",
+        "environment": "demo",
+        "eventEligible": false,
+        "snapshotVersion": "",
+        "storedAccessible": false
+      },
+      {
+        "end": "2026-09-12T13:07:58.794845Z",
+        "start": "2026-09-12T13:07:55.737322Z",
+        "state": "SOURCE_UNAVAILABLE",
+        "source": "logs",
+        "locator": {
+          "service": "tracepilot-business",
+          "endpoint": "/ops/logs?start=2026-09-12T13%3A07%3A55.737322Z&end=2026-09-12T13%3A07%3A58.794845Z&limit=50&cursor=0&level=INFO",
+          "environment": "demo",
+          "queryFingerprint": "5913ba4e870517f61a8fd9a4de1119c4829616d1b3018b0ccb17e04c740e2f86"
+        },
+        "service": "tracepilot-business",
+        "versions": [],
+        "evidenceId": "3ecf49d3-5204-4564-886a-ac4493a0a696",
+        "environment": "demo",
+        "eventEligible": false,
+        "snapshotVersion": "",
+        "storedAccessible": false
+      },
+      {
+        "end": "2026-09-12T13:07:58.794845Z",
+        "start": "2026-09-12T13:07:55.737322Z",
+        "state": "SOURCE_UNAVAILABLE",
+        "source": "metrics",
+        "locator": {
+          "service": "tracepilot-business",
+          "endpoint": "/ops/samples?start=2026-09-12T13%3A07%3A55.737322Z&end=2026-09-12T13%3A07%3A58.794845Z&limit=100&cursor=0",
+          "environment": "demo",
+          "queryFingerprint": "9b2c77d1b0409c467f2a7eff56c50c9884bd792a6c506154b2d0c2c1f8e14d42"
+        },
+        "service": "tracepilot-business",
+        "versions": [],
+        "evidenceId": "6e141f3a-6555-4dbb-9264-302802671408",
+        "environment": "demo",
+        "eventEligible": false,
+        "snapshotVersion": "",
+        "storedAccessible": false
+      },
+      {
+        "end": "2026-09-12T13:07:58.794845Z",
+        "start": "2026-09-12T13:07:55.737322Z",
+        "state": "SOURCE_UNAVAILABLE",
+        "source": "metrics",
+        "locator": {
+          "service": "tracepilot-business",
+          "endpoint": "/ops/samples?start=2026-09-12T13%3A07%3A55.737322Z&end=2026-09-12T13%3A07%3A58.794845Z&limit=100&cursor=0",
+          "environment": "demo",
+          "queryFingerprint": "9b2c77d1b0409c467f2a7eff56c50c9884bd792a6c506154b2d0c2c1f8e14d42"
+        },
+        "service": "tracepilot-business",
+        "versions": [],
+        "evidenceId": "cf896c76-4ec7-4d79-8480-80d27667fd04",
+        "environment": "demo",
+        "eventEligible": false,
+        "snapshotVersion": "",
+        "storedAccessible": false
+      }
+    ],
+    "evidenceRegistry": [
+      {
+        "end": "2026-09-12T13:07:58.715841200Z",
+        "start": "2026-09-12T13:07:58.715841200Z",
+        "state": "SUCCESS_DATA",
+        "source": "overview",
+        "locator": {
+          "service": "tracepilot-business",
+          "endpoint": "/ops/snapshot",
+          "environment": "demo",
+          "queryFingerprint": "d7921066ce52df4ced6de61963d3125b3e102716e0b585294c1871ba6ba040a9"
+        },
+        "service": "tracepilot-business",
+        "versions": [],
+        "evidenceId": "3b1cccbf-a279-46d2-bf53-eec3127222e7",
+        "environment": "demo",
+        "eventEligible": false,
+        "snapshotVersion": "sha256-a310042746f037f5a47e2de93d2303f000926a5871d63efdd7e375df55045785",
+        "storedAccessible": true
+      },
+      {
+        "end": "2026-09-12T13:07:58.794845Z",
+        "start": "2026-09-12T13:07:55.737322Z",
+        "state": "SOURCE_UNAVAILABLE",
+        "source": "logs",
+        "locator": {
+          "service": "tracepilot-business",
+          "endpoint": "/ops/logs?start=2026-09-12T13%3A07%3A55.737322Z&end=2026-09-12T13%3A07%3A58.794845Z&limit=50&cursor=0&level=INFO",
+          "environment": "demo",
+          "queryFingerprint": "5913ba4e870517f61a8fd9a4de1119c4829616d1b3018b0ccb17e04c740e2f86"
+        },
+        "service": "tracepilot-business",
+        "versions": [],
+        "evidenceId": "479bbb8d-25ba-4642-b354-9544be8b2dd0",
+        "environment": "demo",
+        "eventEligible": false,
+        "snapshotVersion": "",
+        "storedAccessible": false
+      },
+      {
+        "end": "2026-09-12T13:07:58.794845Z",
+        "start": "2026-09-12T13:07:55.737322Z",
+        "state": "SOURCE_UNAVAILABLE",
+        "source": "logs",
+        "locator": {
+          "service": "tracepilot-business",
+          "endpoint": "/ops/logs?start=2026-09-12T13%3A07%3A55.737322Z&end=2026-09-12T13%3A07%3A58.794845Z&limit=50&cursor=0&level=INFO",
+          "environment": "demo",
+          "queryFingerprint": "5913ba4e870517f61a8fd9a4de1119c4829616d1b3018b0ccb17e04c740e2f86"
+        },
+        "service": "tracepilot-business",
+        "versions": [],
+        "evidenceId": "3ecf49d3-5204-4564-886a-ac4493a0a696",
+        "environment": "demo",
+        "eventEligible": false,
+        "snapshotVersion": "",
+        "storedAccessible": false
+      },
+      {
+        "end": "2026-09-12T13:07:58.794845Z",
+        "start": "2026-09-12T13:07:55.737322Z",
+        "state": "SOURCE_UNAVAILABLE",
+        "source": "metrics",
+        "locator": {
+          "service": "tracepilot-business",
+          "endpoint": "/ops/samples?start=2026-09-12T13%3A07%3A55.737322Z&end=2026-09-12T13%3A07%3A58.794845Z&limit=100&cursor=0",
+          "environment": "demo",
+          "queryFingerprint": "9b2c77d1b0409c467f2a7eff56c50c9884bd792a6c506154b2d0c2c1f8e14d42"
+        },
+        "service": "tracepilot-business",
+        "versions": [],
+        "evidenceId": "6e141f3a-6555-4dbb-9264-302802671408",
+        "environment": "demo",
+        "eventEligible": false,
+        "snapshotVersion": "",
+        "storedAccessible": false
+      },
+      {
+        "end": "2026-09-12T13:07:58.794845Z",
+        "start": "2026-09-12T13:07:55.737322Z",
+        "state": "SOURCE_UNAVAILABLE",
+        "source": "metrics",
+        "locator": {
+          "service": "tracepilot-business",
+          "endpoint": "/ops/samples?start=2026-09-12T13%3A07%3A55.737322Z&end=2026-09-12T13%3A07%3A58.794845Z&limit=100&cursor=0",
+          "environment": "demo",
+          "queryFingerprint": "9b2c77d1b0409c467f2a7eff56c50c9884bd792a6c506154b2d0c2c1f8e14d42"
+        },
+        "service": "tracepilot-business",
+        "versions": [],
+        "evidenceId": "cf896c76-4ec7-4d79-8480-80d27667fd04",
+        "environment": "demo",
+        "eventEligible": false,
+        "snapshotVersion": "",
+        "storedAccessible": false
+      }
+    ]
+  },
+  "evidence": [
+    {
+      "id": "3b1cccbf-a279-46d2-bf53-eec3127222e7",
+      "source": "overview",
+      "status": "AVAILABLE",
+      "start": "2026-09-12T13:07:58.715841200Z",
+      "end": "2026-09-12T13:07:58.715841200Z",
+      "locator": {
+        "service": "tracepilot-business",
+        "endpoint": "/ops/snapshot",
+        "environment": "demo",
+        "queryFingerprint": "d7921066ce52df4ced6de61963d3125b3e102716e0b585294c1871ba6ba040a9"
+      },
+      "data": {
+        "http": {
+          "count": 73,
+          "routes": [
+            {
+              "count": 49,
+              "maxMs": 6.3337,
+              "route": "/api/slots",
+              "method": "GET",
+              "status": 200,
+              "totalMs": 309.0731
+            },
+            {
+              "count": 3,
+              "maxMs": 0.0,
+              "route": "/api/slots",
+              "method": "GET",
+              "status": 401,
+              "totalMs": 186.0972
+            },
+            {
+              "count": 21,
+              "maxMs": 75.6991,
+              "route": "/api/auth/login",
+              "method": "POST",
+              "status": 200,
+              "totalMs": 1945.932901
+            }
+          ],
+          "status": "NO_REQUESTS",
+          "totalMs": 2441.103201,
+          "averageMs": null,
+          "errorRate": null,
+          "errors5xx": 0,
+          "intervalCount": 0,
+          "businessRejections": 0
+        },
+        "pool": {
+          "max": 8,
+          "idle": 8,
+          "total": 8,
+          "active": 0,
+          "status": "AVAILABLE",
+          "pending": 0
+        },
+        "time": "2026-09-12T13:07:58.715841200Z",
+        "events": {
+          "status": "AVAILABLE",
+          "failure": 0.0,
+          "pending": 0,
+          "success": 0.0,
+          "oldestSeconds": 0.0
+        },
+        "status": "AVAILABLE",
+        "service": "tracepilot-business",
+        "evidenceId": "f3346b20-8ba2-4505-89cb-eeab00f7312e",
+        "instanceId": "33473fb8-fa0f-44d4-b976-7870ed50a9b0",
+        "collectedAt": "2026-09-12T13:07:58.716847600Z",
+        "environment": "demo",
+        "sampleAgeMs": 405,
+        "deploymentVersion": "sha256-a310042746f037f5a47e2de93d2303f000926a5871d63efdd7e375df55045785",
+        "collectionDurationMs": 1
+      }
+    },
+    {
+      "id": "479bbb8d-25ba-4642-b354-9544be8b2dd0",
+      "source": "logs",
+      "status": "UNAVAILABLE",
+      "start": "2026-09-12T13:07:55.737322Z",
+      "end": "2026-09-12T13:07:58.794845Z",
+      "locator": {
+        "service": "tracepilot-business",
+        "endpoint": "/ops/logs?start=2026-09-12T13%3A07%3A55.737322Z&end=2026-09-12T13%3A07%3A58.794845Z&limit=50&cursor=0&level=INFO",
+        "environment": "demo",
+        "queryFingerprint": "5913ba4e870517f61a8fd9a4de1119c4829616d1b3018b0ccb17e04c740e2f86"
+      },
+      "data": {
+        "httpStatus": 503
+      }
+    },
+    {
+      "id": "3ecf49d3-5204-4564-886a-ac4493a0a696",
+      "source": "logs",
+      "status": "UNAVAILABLE",
+      "start": "2026-09-12T13:07:55.737322Z",
+      "end": "2026-09-12T13:07:58.794845Z",
+      "locator": {
+        "service": "tracepilot-business",
+        "endpoint": "/ops/logs?start=2026-09-12T13%3A07%3A55.737322Z&end=2026-09-12T13%3A07%3A58.794845Z&limit=50&cursor=0&level=INFO",
+        "environment": "demo",
+        "queryFingerprint": "5913ba4e870517f61a8fd9a4de1119c4829616d1b3018b0ccb17e04c740e2f86"
+      },
+      "data": {
+        "httpStatus": 503
+      }
+    },
+    {
+      "id": "6e141f3a-6555-4dbb-9264-302802671408",
+      "source": "metrics",
+      "status": "UNAVAILABLE",
+      "start": "2026-09-12T13:07:55.737322Z",
+      "end": "2026-09-12T13:07:58.794845Z",
+      "locator": {
+        "service": "tracepilot-business",
+        "endpoint": "/ops/samples?start=2026-09-12T13%3A07%3A55.737322Z&end=2026-09-12T13%3A07%3A58.794845Z&limit=100&cursor=0",
+        "environment": "demo",
+        "queryFingerprint": "9b2c77d1b0409c467f2a7eff56c50c9884bd792a6c506154b2d0c2c1f8e14d42"
+      },
+      "data": {
+        "httpStatus": 503
+      }
+    },
+    {
+      "id": "cf896c76-4ec7-4d79-8480-80d27667fd04",
+      "source": "metrics",
+      "status": "UNAVAILABLE",
+      "start": "2026-09-12T13:07:55.737322Z",
+      "end": "2026-09-12T13:07:58.794845Z",
+      "locator": {
+        "service": "tracepilot-business",
+        "endpoint": "/ops/samples?start=2026-09-12T13%3A07%3A55.737322Z&end=2026-09-12T13%3A07%3A58.794845Z&limit=100&cursor=0",
+        "environment": "demo",
+        "queryFingerprint": "9b2c77d1b0409c467f2a7eff56c50c9884bd792a6c506154b2d0c2c1f8e14d42"
+      },
+      "data": {
+        "httpStatus": 503
+      }
+    }
+  ]
+}

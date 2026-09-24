@@ -1,0 +1,53 @@
+CREATE TABLE app_user (
+ id BIGINT PRIMARY KEY AUTO_INCREMENT, username VARCHAR(80) NOT NULL UNIQUE,
+ password_hash VARCHAR(100) NOT NULL, role VARCHAR(10) NOT NULL,
+ CHECK(role IN ('USER','ADMIN'))
+) ENGINE=InnoDB;
+CREATE TABLE auth_token (
+ token_hash CHAR(64) PRIMARY KEY, user_id BIGINT NOT NULL, expires_at TIMESTAMP(6) NOT NULL,
+ FOREIGN KEY(user_id) REFERENCES app_user(id)
+) ENGINE=InnoDB;
+CREATE TABLE resource (
+ id BIGINT PRIMARY KEY AUTO_INCREMENT, owner_id BIGINT NOT NULL, name VARCHAR(120) NOT NULL,
+ description VARCHAR(1000) NOT NULL, enabled BOOLEAN NOT NULL DEFAULT TRUE,
+ FOREIGN KEY(owner_id) REFERENCES app_user(id)
+) ENGINE=InnoDB;
+CREATE TABLE slot (
+ id BIGINT PRIMARY KEY AUTO_INCREMENT, resource_id BIGINT NOT NULL,
+ start_at TIMESTAMP(6) NOT NULL, end_at TIMESTAMP(6) NOT NULL,
+ capacity INT NOT NULL, reserved_count INT NOT NULL DEFAULT 0, open BOOLEAN NOT NULL DEFAULT TRUE,
+ FOREIGN KEY(resource_id) REFERENCES resource(id), CHECK(start_at < end_at),
+ CHECK(capacity > 0), CHECK(reserved_count >= 0 AND reserved_count <= capacity),
+ INDEX(resource_id,start_at)
+) ENGINE=InnoDB;
+CREATE TABLE participation (
+ id BIGINT PRIMARY KEY AUTO_INCREMENT, user_id BIGINT NOT NULL, slot_id BIGINT NOT NULL,
+ status VARCHAR(12) NOT NULL, created_at TIMESTAMP(6) NOT NULL DEFAULT CURRENT_TIMESTAMP(6),
+ updated_at TIMESTAMP(6) NOT NULL DEFAULT CURRENT_TIMESTAMP(6) ON UPDATE CURRENT_TIMESTAMP(6),
+ active_slot BIGINT GENERATED ALWAYS AS (CASE WHEN status IN ('RESERVED','WAITING') THEN slot_id ELSE NULL END) STORED,
+ UNIQUE(user_id,active_slot), FOREIGN KEY(user_id) REFERENCES app_user(id), FOREIGN KEY(slot_id) REFERENCES slot(id),
+ CHECK(status IN ('RESERVED','WAITING','CANCELLED','LEFT')), INDEX(slot_id,status,id)
+) ENGINE=InnoDB;
+CREATE TABLE idempotency (
+ user_id BIGINT NOT NULL, operation VARCHAR(160) NOT NULL, request_key VARCHAR(100) COLLATE utf8mb4_bin NOT NULL,
+ request_hash CHAR(64) NOT NULL, http_status INT, response_json JSON,
+ created_at TIMESTAMP(6) NOT NULL DEFAULT CURRENT_TIMESTAMP(6),
+ PRIMARY KEY(user_id,operation,request_key), FOREIGN KEY(user_id) REFERENCES app_user(id)
+) ENGINE=InnoDB;
+CREATE TABLE outbox (
+ id BIGINT PRIMARY KEY AUTO_INCREMENT, user_id BIGINT NOT NULL, participation_id BIGINT NOT NULL,
+ type VARCHAR(30) NOT NULL, payload JSON NOT NULL, status VARCHAR(12) NOT NULL DEFAULT 'PENDING',
+ attempts INT NOT NULL DEFAULT 0, last_error VARCHAR(500), next_at TIMESTAMP(6) NOT NULL DEFAULT CURRENT_TIMESTAMP(6),
+ lease_token CHAR(36), lease_until TIMESTAMP(6), created_at TIMESTAMP(6) NOT NULL DEFAULT CURRENT_TIMESTAMP(6),
+ FOREIGN KEY(user_id) REFERENCES app_user(id), FOREIGN KEY(participation_id) REFERENCES participation(id),
+ CHECK(status IN ('PENDING','PROCESSING','DONE','FAILED')), INDEX(status,next_at), INDEX(status,lease_until)
+) ENGINE=InnoDB;
+CREATE TABLE notification (
+ id BIGINT PRIMARY KEY AUTO_INCREMENT, event_id BIGINT NOT NULL UNIQUE, user_id BIGINT NOT NULL,
+ message JSON NOT NULL, created_at TIMESTAMP(6) NOT NULL DEFAULT CURRENT_TIMESTAMP(6),
+ FOREIGN KEY(event_id) REFERENCES outbox(id), FOREIGN KEY(user_id) REFERENCES app_user(id)
+) ENGINE=InnoDB;
+CREATE TABLE admin_audit (
+ id BIGINT PRIMARY KEY AUTO_INCREMENT, user_id BIGINT NOT NULL, operation VARCHAR(160) NOT NULL,
+ created_at TIMESTAMP(6) NOT NULL DEFAULT CURRENT_TIMESTAMP(6), FOREIGN KEY(user_id) REFERENCES app_user(id)
+) ENGINE=InnoDB;

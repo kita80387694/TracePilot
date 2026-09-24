@@ -1,0 +1,27 @@
+{
+  "capture": {
+    "body": {
+      "text": "{\"type\":\"xxxxxx\",\"report\":{\"summary\":\"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\",\"facts\":[{\"text\":\"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\",\"evidenceId\":\"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\",\"pointer\":\"xxxxxxxxxxxxxxx\",\"value\":1},{\"text\":\"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\",\"evidenceId\":\"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\",\"pointer\":\"xxxxxxxxxxxxxxx\",\"value\":\"xxxxxxxxx\"},{\"text\":\"xxxxxxxxxxxxxxxxxxxxxxx\",\"evidenceId\":\"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\",\"pointer\":\"xxxxxxxxxxxxxxx\",\"value\":111111111}],\"candidates\":[{\"cause\":\"xxxxxxxxxxxxxxxxxxxxxxxxxxxxx\",\"confidence\":\"xxxxxx\",\"xxxxxxxxxxxxxx\":\"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\",\"evidenceIds\":[\"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\",\"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\"],\"inference\":true,\"xxxxxxxxx\":\"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\",\"xxxxxxx\":\"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\",\"xxxxxxxxxxxxxx\":\"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\",\"xxxxxxxx\":[\"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\",\"xxxxxxxxxxxxxxxxxxxxx\",\"xxxxxxxxxxxxxxxxxxxxx\"],\"xxxxx\":\"xxxxxxxxxxxxxxxx\"}],\"conflicts\":[],\"gaps\":[\"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\",\"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\",\"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\"],\"actions\":[\"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\",\"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\"]}}",
+      "complete": true,
+      "truncated": false,
+      "originalCharacters": 1660
+    },
+    "line": 1,
+    "column": 1117,
+    "nearby": {
+      "text": "xx\",\"xxxxxxx\":\"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\",\"xxxxxxxxxxxxxx\":\"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\",\"xxxxxxxx\":[\"xxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+      "start": 1036,
+      "endExclusive": 1196
+    },
+    "offset": 1116,
+    "redaction": "syntax-only-v1: UTF-16 length preserved; prose/unknown keys/numbers masked; not original semantic values",
+    "parserText": {
+      "text": "{\"type\":\"xxxxxx\",\"report\":{\"summary\":\"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\",\"facts\":[{\"text\":\"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\",\"evidenceId\":\"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\",\"pointer\":\"xxxxxxxxxxxxxxx\",\"value\":1},{\"text\":\"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\",\"evidenceId\":\"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\",\"pointer\":\"xxxxxxxxxxxxxxx\",\"value\":\"xxxxxxxxx\"},{\"text\":\"xxxxxxxxxxxxxxxxxxxxxxx\",\"evidenceId\":\"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\",\"pointer\":\"xxxxxxxxxxxxxxx\",\"value\":111111111}],\"candidates\":[{\"cause\":\"xxxxxxxxxxxxxxxxxxxxxxxxxxxxx\",\"confidence\":\"xxxxxx\",\"xxxxxxxxxxxxxx\":\"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\",\"evidenceIds\":[\"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\",\"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\"],\"inference\":true,\"xxxxxxxxx\":\"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\",\"xxxxxxx\":\"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\",\"xxxxxxxxxxxxxx\":\"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\",\"xxxxxxxx\":[\"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\",\"xxxxxxxxxxxxxxxxxxxxx\",\"xxxxxxxxxxxxxxxxxxxxx\"],\"xxxxx\":\"xxxxxxxxxxxxxxxx\"}],\"conflicts\":[],\"gaps\":[\"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\",\"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\",\"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\"],\"actions\":[\"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\",\"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\"]}}",
+      "complete": true,
+      "truncated": false,
+      "originalCharacters": 1660
+    },
+    "positionUnit": "Jackson Reader UTF-16 charOffset (zero-based); line/column one-based; normalized parser text"
+  },
+  "qualification": "Original semantic keys masked; duplicate-key identity is not recoverable. This is the actual preserved syntax-only sample, not original unredacted output."
+}
